@@ -8,10 +8,11 @@
 
 
 #define RC_RECIPE_COLOUR GREEN
+#define RC_GITHUB_URL https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard
 
 
 <img src="IMG_SRC/pihwlogotm.png" width=180 />
-----------
+<hr>
 
 <img style="float:left" src="IMG_SRC/PiKitchenRecipe.png" width=180 /> <h1>Recipe Card</h1>
 
@@ -72,39 +73,44 @@ RC_SETTING_DESC<p>
 #endif
 #endif
 
-<h2>The Recipe Files</h2>
-Each recipe can use up to three files (one for each of the three main partitions - boot, root and data).
+You can download all the <a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/ingredients.zip">ingredient files</a>, and extract directly to the NOOBS SD-Card (ensuring you remove the zipfiles name from the directory - the files should be extracted to <code>/Pi-Kitchen</code>.<p>
 
+<h2>The Recipe Files</h2>
+Each recipe will use one file for each of the partitions it installs to - boot, root and data).<p>
+
+#ifdef RC_DATA
 <img style="float:left" src="IMG_SRC/note.png" height=40/>
-<b>NOTE:</b> The data partition does not normally exist for most installations unless manually selected.  However you can also include this partition automatically if desired (see the [Pi-Kitchen: Automatic Installations](PiKitchen-AutomaticInstallations.md) guide for more details).<p>
+<b>NOTE:</b> The data partition does not normally exist for most installations unless manually selected.  However you can also include this partition automatically if desired (see the <a href="http://pihw.wordpress.com/guides/pi-kitchen/automaticinstallations">Pi-Kitchen: Automatic Installations</a> guide for more details).<p>
+#endif
 
 You will need to suitably rename or copy the content of each of the following files into your recipe files (i.e. <code>RaspbianPiKitchen_root.txt</code>) and place them in your os folder in the NOOBS partition (i.e. <code>os/Raspbian</code>).<p>
 
-For more information see the [Pi-Kitchen: Creating Flavours](PiKitchen-CreatingFlavours.md) guide.<p>
+For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitchen/creatingflavours">Pi-Kitchen: Creating Flavours</a> guide.<p>
 
 #ifdef RC_BOOT
-<i><b>(flavour)_boot.txt</i></b>
+<i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b>
 <pre>
 #include RECIPE_FILE_boot.txt
 </pre>
 #endif
 
 #ifdef RC_ROOT
-<i><b>(flavour)_root.txt</i></b>
+<i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
 <pre>
 #include RECIPE_FILE_root.txt
 </pre>
 #endif
 
 #ifdef RC_DATA
-<i><b>(flavour)_data.txt</i></b>
+<i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_data.txt">(flavour)_data.txt</a></i></b>
 <pre>
 #include RECIPE_FILE_data.txt
 </pre>
 #endif
 
 
----------
-Enjoy baking your Raspberry Pi SD-Card fresh from the Pi-Kitchen.
+<hr>
+
+Enjoy baking your Raspberry Pi SD-Card fresh from the Pi-Kitchen.<p>
 
 <!--========================END FILE================-->

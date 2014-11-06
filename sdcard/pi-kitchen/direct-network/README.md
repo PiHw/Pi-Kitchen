@@ -29,7 +29,7 @@
 </font>
 
 <font color = GREEN>
-This recipe places the direct network connection scrips on to the SD-Card.<p>  See [Super Easy Direct Network Connection](http://pihw.wordpress.com/guides/direct-network-connection/super-easy-direct-network-connection/).  <p><img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/directconnection.png" width=400 /> <p>The cmdline.txt allows you to specify the IP address of the Raspberry Pi on boot.<p>This allows you to setup an IP address suitable for a direct network link (using a single network cable to a PC or laptop).<p>The resulting connection is just like a normal network so you can share files using SMB and remote connect using SSH, as well as use X-Forwarding to remotely run graphical programs (or use VNC).<p><p>The direct connection IP address is set to 169.254.69.69<p><p>
+This recipe places the direct network connection scrips on to the SD-Card.<p>  See <a href="http://pihw.wordpress.com/guides/direct-network-connection/super-easy-direct-network-connection/">Super Easy Direct Network Connection</a>.  <p><img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/directconnection.png" width=400 /> <p>The cmdline.txt allows you to specify the IP address of the Raspberry Pi on boot.<p>This allows you to setup an IP address suitable for a direct network link (using a single network cable to a PC or laptop).<p>The resulting connection is just like a normal network so you can share files using SMB and remote connect using SSH, as well as use X-Forwarding to remotely run graphical programs (or use VNC).<p><p>The direct connection IP address is set to 169.254.69.69<p><p>
 </font>
 
 <font color = GREEN>
