@@ -61,8 +61,8 @@ You will need the following _SETTINGS file(s):<p>
 RC_INGREDIENTS_SETTING<p>
 </font>
 
-> <img style="float:left" src="IMG_SRC/note.png" height=40/>
-> **NOTE:** Files which are configured manually or may contain sensitive information are placed in the _SETTTINGS directory on the SD-Card.  This is so that it is easier to support different configurations and remove sensitive information from the setup if needed.<p>
+<img style="float:left" src="IMG_SRC/note.png" height=40/>
+<b>NOTE:</b> Files which are configured manually or may contain sensitive information are placed in the _SETTTINGS directory on the SD-Card.  This is so that it is easier to support different configurations and remove sensitive information from the setup if needed.<p>
 
 #ifdef RC_SETTING_DESC
 Perform the following actions:<p>
@@ -76,7 +76,7 @@ RC_SETTING_DESC<p>
 Each recipe can use up to three files (one for each of the three main partitions - boot, root and data).
 
 <img style="float:left" src="IMG_SRC/note.png" height=40/>
-<b>NOTE:</b> The data partition does not normally exist for most installations unless manually selected.  However you can also include this partition automatically if desired (see the [Pi-Kitchen: Automatic Installations](PiKitchen-AutomaticInstallations.md) guide for more details).
+<b>NOTE:</b> The data partition does not normally exist for most installations unless manually selected.  However you can also include this partition automatically if desired (see the [Pi-Kitchen: Automatic Installations](PiKitchen-AutomaticInstallations.md) guide for more details).<p>
 
 You will need to suitably rename or copy the content of each of the following files into your recipe files (i.e. <code>RaspbianPiKitchen_root.txt</code>) and place them in your os folder in the NOOBS partition (i.e. <code>os/Raspbian</code>).<p>
 

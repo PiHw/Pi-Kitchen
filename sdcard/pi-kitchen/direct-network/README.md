@@ -29,7 +29,7 @@
 </font>
 
 <font color = GREEN>
-This recipe places the direct network connection scrips on to the SD-Card.<p>  See [Super Easy Direct Network Connection](http://pihw.wordpress.com/guides/direct-network-connection/super-easy-direct-network-connection/).  <p><img src="http://pihw.files.wordpress.com/2013/04/directconnect1.png" width=400 /> <p>The cmdline.txt allows you to specify the IP address of the Raspberry Pi on boot.<p>This allows you to setup an IP address suitable for a direct network link (using a single network cable to a PC or laptop).<p>The resulting connection is just like a normal network so you can share files using SMB and remote connect using SSH, as well as use X-Forwarding to remotely run graphical programs (or use VNC).<p>
+This recipe places the direct network connection scrips on to the SD-Card.<p>  See [Super Easy Direct Network Connection](http://pihw.wordpress.com/guides/direct-network-connection/super-easy-direct-network-connection/).  <p><img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/directconnection.png" width=400 /> <p>The cmdline.txt allows you to specify the IP address of the Raspberry Pi on boot.<p>This allows you to setup an IP address suitable for a direct network link (using a single network cable to a PC or laptop).<p>The resulting connection is just like a normal network so you can share files using SMB and remote connect using SSH, as well as use X-Forwarding to remotely run graphical programs (or use VNC).<p><p>The direct connection IP address is set to 169.254.69.69<p><p>
 </font>
 
 <font color = GREEN>
@@ -73,7 +73,7 @@ Ensure you update cmdline.internet with the PC's IP address as the gateway.<p>
 Each recipe can use up to three files (one for each of the three main partitions - boot, root and data).
 
 > <img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/note.png" height=40/>
-> **NOTE:** The data partition does not normally exist for most installations unless manually selected.  However you can also include this partition automatically if desired (see the [Pi-Kitchen: Automatic Installations](PiKitchen-AutomaticInstallations.md) guide for more details).
+> **NOTE:** The data partition does not normally exist for most installations unless manually selected.  However you can also include this partition automatically if desired (see the [Pi-Kitchen: Automatic Installations](PiKitchen-AutomaticInstallations.md) guide for more details).<p>
 
 You will need to suitably rename or copy the content of each of the following files into your recipe files (i.e. <code>RaspbianPiKitchen_root.txt</code>) and place them in your os folder in the NOOBS partition (i.e. <code>os/Raspbian</code>).<p>
 
@@ -86,16 +86,16 @@ For more information see the [Pi-Kitchen: Creating Flavours](PiKitchen-CreatingF
 #Configure the boot settings:
 #-- Only one cmdline.txt file should be applied at any one time (only comment one out)
 #- Direct network settings - for direct connections with a PC using just a network cable
-pi-kitchen/direct-network/direct/cmdline.txt
+../../pi-kitchen/direct-network/direct/cmdline.txt
 #- Normal network settings - for normal use with a standard home network
-#pi-kitchen/direct-network/normal/cmdline.txt
+#../../pi-kitchen/direct-network/normal/cmdline.txt
 #- Internet Connection Sharing requires specific settings for you own network so stored in _SETTINGS
-#pi-kitchen/_SETTINGS/direct-network/internet/cmdline.txt
+#../../pi-kitchen/_SETTINGS/direct-network/internet/cmdline.txt
 #
 #Add switchip files:
-pi-kitchen/direct-network/direct/cmdline.txt /direct
-pi-kitchen/direct-network/normal/cmdline.txt /normal
-pi-kitchen/_SETTINGS/direct-network/internet/cmdline.txt /internet</pre>
+../../pi-kitchen/direct-network/direct/cmdline.txt /direct
+../../pi-kitchen/direct-network/normal/cmdline.txt /normal
+../../pi-kitchen/_SETTINGS/direct-network/internet/cmdline.txt /internet</pre>
 
 ***(flavour)_root.txt***
 <pre>
@@ -103,7 +103,7 @@ pi-kitchen/_SETTINGS/direct-network/internet/cmdline.txt /internet</pre>
 #Recipe: direct-network
 #Add switchip files:
 #- switchip.sh should be set as executable
-pi-kitchen/direct-network/switchip.sh /home/pi/bin +x</pre>
+../../pi-kitchen/direct-network/switchip.sh /home/pi/bin +x</pre>
 
 
 
