@@ -1,0 +1,25 @@
+#define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
+
+#define RC_NUMBER	(001)
+#define RC_NAME		Direct Network Connection
+
+#define RC_DESC 	This recipe places the direct network connection scrips on to the SD-Card.<p>  See [Super Easy Direct Network Connection](http://pihw.wordpress.com/guides/direct-network-connection/super-easy-direct-network-connection/).  <p><img src="http://pihw.files.wordpress.com/2013/04/directconnect1.png" width=400 /> <p>The cmdline.txt allows you to specify the IP address of the Raspberry Pi on boot.<p>This allows you to setup an IP address suitable for a direct network link (using a single network cable to a PC or laptop).<p>The resulting connection is just like a normal network so you can share files using SMB and remote connect using SSH, as well as use X-Forwarding to remotely run graphical programs (or use VNC).<p><p>The direct connection IP address is set to 169.254.69.69<p>
+
+#define RC_HOWTOUSE	Enable/Disable by running <code>sudo ./bin/switch.sh</code>
+
+#define RC_SOURCE_LOCATION pi-kitchen/direct-network
+
+#define RC_INGREDIENTS	direct/cmdline.txt<p> normal/cmdline.txt<p> switch.ip<p>
+
+#define RC_SOURCE_LOCATION_SETTING pi-kitchen/_SETTINGS/direct-network
+
+#define RC_INGREDIENTS_SETTING	internet/cmdline.txt<p>
+
+#define RC_SETTING_DESC	Ensure you update cmdline.internet with the PC's IP address as the gateway.
+
+#define RC_BOOT
+#define RC_ROOT
+
+#define RC_TESTED	Raspbian
+
+#define RC_AUTHOR	@PiHardware

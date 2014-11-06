@@ -1,0 +1,13 @@
+#Noobs config file for RaspbianMeltwater_boot (June2014)
+#------------------------------------------------------
+#Format is: filename destination attributes user group
+
+RaspbianMeltwater_boot.txt
+RaspbianMeltwater_root.txt
+
+#Configure the boot settings
+#- Only one config.txt or cmdline.txt file will be applied at any one time
+custom/boot/sdtv/config.txt
+#custom/boot/directnetwork/cmdline.txt
+#- Internet Connection Sharing requires specific settings for you own network so stored in _SETTINGS
+#custom/_SETTINGS/directnetwork_ics/cmdline.txt

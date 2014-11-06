@@ -1,0 +1,2 @@
+#define IMG_SRC https://raw.githubusercontent.com/PiHw/Pi-Stop/master/markdown_source/img
+#define FILE_SRC "http://www.mywebpage.com/files"

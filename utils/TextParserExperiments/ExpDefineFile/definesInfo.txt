@@ -1,0 +1,6 @@
+WANT_MODEL_PLUS   #Enable sections for the new model plus (Post-July 2014)
+WANT_MODEL_ORG    #Enable sections for the older model (Pre-July 2014)
+WANT_ONLINE_IMG_PATH
+
+ONLINE_IMG_PATH https://raw.githubusercontent.com/PiHw/Pi-Stop/master/markdown_source/img
+LOCAL_IMG_PATH img

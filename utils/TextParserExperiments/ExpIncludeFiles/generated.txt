@@ -1,0 +1,10 @@
+<!--This is a standard comment-->
+This is some test text from another file.
+
+
+Keep this text
+
+
+<img src="IMG_SRC/PiLogotm.png" alt="some_text"> 
+
+Text always here

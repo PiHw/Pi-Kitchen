@@ -1,0 +1,2 @@
+WEB_FOOTER: This text will appear at the end of webpages.
+

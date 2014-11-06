@@ -1,0 +1,14 @@
+<!--This is a standard comment-->
+
+#define KEEP
+
+
+#ifdef KEEP
+Keep this text
+#endif
+
+#ifndef KEEP
+Do not keep this text
+#endif
+
+Text always here

@@ -1,0 +1,6 @@
+;Directory name followed by list of defines to use
+both_models,"IMG_PATH=../../markdown_source/markdown/img",WANT_MODEL_PLUS,WANT_MODEL_ORG
+model_plus_only,"IMG_PATH=../../markdown_source/markdown/img",WANT_MODEL_PLUS
+model_original_only,"IMG_PATH=../../markdown_source/markdown/img",WANT_MODEL_ORG
+web_version,"IMG_PATH=https://raw.githubusercontent.com/PiHw/Pi-Stop/master/markdown_source/markdown/img"
+local_version,"IMG_PATH=../../markdown_source/markdown/img"

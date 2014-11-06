@@ -1,0 +1,9 @@
+#Noobs config file for Raspbian_boot (DateOfEdit)
+#------------------------------------------------------
+#Format is: filename destination attributes user group
+
+Raspbian_boot.txt
+Raspbian_root.txt
+
+#------------------------------------------------------
+#End

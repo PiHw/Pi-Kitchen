@@ -1,0 +1,10 @@
+#Noobs config file for RaspbianPiKitchen_boot (DateOfEdit)
+#------------------------------------------------------
+#Format is: filename destination attributes user group
+
+RaspbianPiKitchen_boot.txt
+RaspbianPiKitchen_root.txt
+RaspbianPiKitchen_data.txt
+
+#------------------------------------------------------
+#End

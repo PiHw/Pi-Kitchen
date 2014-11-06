@@ -1,0 +1,53 @@
+#Noobs config file for RaspbianMeltwater_root (June2014)
+#------------------------------------------------------
+#Format is: filename destination attributes user group
+
+#Copy the Noobs config txt files to home directory for reference
+RaspbianMeltwater_boot.txt /home/pi
+RaspbianMeltwater_root.txt /home/pi
+
+#Setup rc.local startup script
+#- Mount recovery and userdata
+custom/startup/etc/rc.local /etc +x root root
+custom/startup/dummydir.txt /home/pi/recovery
+custom/startup/dummydir.txt /home/pi/userdata
+#- Setup startup.sh, runonce.sh and installonce.sh scripts
+custom/startup/bin/startup_normal.sh /home/pi/bin
+custom/startup/bin/startup.sh /home/pi/bin
+custom/startup/bin/runonce.sh /home/pi/bin
+custom/startup/runonce/runonce-end.sh /home/pi/bin/runonce
+custom/startup/bin/installonce.sh /home/pi/bin
+custom/startup/dummydir.txt /home/pi/bin/installonce
+
+
+#Setup Wifi
+custom/wifi/etc/network/interfaces /etc/network
+custom/_SETTINGS/wifi_home/wpa.conf /etc
+#-Add driver for ZyXel G202 USB Wifi Adaptor
+custom/wifi/runonce/install_zyxel-g202.sh /home/pi/bin/runonce
+#-Add driver for Realtek RALink 7601 USB Wifi Adaptor
+custom/wifi/ralink-7601/mt7601Usta.ko "/lib/modules/3.10.25+/kernel/drivers/net/wireless" 644
+custom/wifi/ralink-7601/RT2870STA.dat /etc/Wireless/RT2870STA 644
+custom/wifi/runonce/install_ralink-7601.sh /home/pi/bin/runonce
+
+#Install Scratch GPIO
+custom/scratchgpio/runonce/install_scratchgpio5.sh /home/pi/bin/runonce
+
+#Add files to setup SAMBA SMB folder share (need to run manually)
+custom/smb/installonce/install_smbshare.sh /home/pi/bin/installonce
+
+#Add utils
+custom/utils/bin/menu /home/pi/bin
+custom/utils/bin/menu.sh /home/pi/bin
+custom/utils/bin/powerdown.sh /home/pi/bin
+custom/utils/bin/svnc.sh /home/pi/bin
+
+#Add PiStop Demo Script
+#- Put scripts in user area
+custom/gpio/pistop/trafficA.py /home/pi/gpio/pistop
+#- Set it to run in the background on first boot!
+custom/gpio/pistop/runonce/run_pistop_bg.sh /home/pi/bin/runonce
+
+#Add automatic REBOOT or SHUTDOWN script at end of runonce sequence (optional)
+custom/startup/runonce/zzz-reboot.sh /home/pi/bin/runonce
+#custom/startup/runonce/zzz-shutdown.sh /home/pi/bin/runonce

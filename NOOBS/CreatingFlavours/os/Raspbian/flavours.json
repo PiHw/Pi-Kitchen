@@ -1,0 +1,16 @@
+{
+  "flavours": [
+    {
+      "name": "RaspbianPiKitchen",
+      "description": "Freshly baked Raspbian from the PiKitchen"
+    },
+    {
+      "name": "Raspbian - Boot to Scratch",
+      "description": "A version of Raspbian that boots straight into Scratch"
+    },
+    {
+      "name": "Raspbian",
+      "description": "A Debian wheezy port, optimised for the Raspberry Pi"
+    }  
+  ]
+}

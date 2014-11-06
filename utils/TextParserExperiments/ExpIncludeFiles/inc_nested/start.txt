@@ -1,0 +1,3 @@
+NESTEDINCLUDE: This is some test text from inc_nested AND inc_web.
+#include "../inc_web/start.txt"
+#define ENABLED
