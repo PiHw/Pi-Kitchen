@@ -12,7 +12,7 @@
 
 #Pi-Kitchen: Automatic Installations#
 
-The NOOBS system supports automated installations, and this functionality does work with noobsconfig.
+The NOOBS system supports automated installations, and this functionality does work nicely with noobsconfig.
 
 In order for an automated installation to occur (i.e. you can setup your SD-Card without needing to attach a keyboard, mouse or display) you need to remove any unwanted distributions and/or flavours on the card.
 
