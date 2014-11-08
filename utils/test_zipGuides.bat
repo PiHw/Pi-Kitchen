@@ -8,7 +8,7 @@ for %%A in (%GUIDE_LIST%) do (
   echo Processing guide: %%A
 
   cd ..\%SOURCE_DIR%\%%A
-  rm %TARGET_DIR%\%%A.zip
+  del %TARGET_DIR%\%%A.zip
   %ZIP_PROG% a -r %TARGET_DIR%\%%A.zip *.*
   cd ..\..\utils
 )

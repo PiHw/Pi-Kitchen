@@ -9,7 +9,7 @@ REM set TARGET_RECIPE=recipe_files.zip
 set EXCLUDED="..\utils\excluded.txt"
 
 cd ..\sdcard
-rm %TARGET_DIR%\%TARGET_NAME%
+del %TARGET_DIR%\%TARGET_NAME%
 %ZIP_PROG% a -r -xr@%EXCLUDED% %TARGET_DIR%\%TARGET_NAME% %SOURCE_DIR%\*.*
 
 %ZIP_PROG% a -r -xr@%EXCLUDED% %TARGET_DIR%\%TARGET_NAME% %SOURCE_SETTINGS_DIR%\*.*
