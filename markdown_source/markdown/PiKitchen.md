@@ -12,7 +12,7 @@
 > 
 > Do you want your Raspberry Pi SD-Card experience to just be simpler right from the start?
 
-***Well, welcome and come into my Pi-Kitchen!***
+***Well, welcome and come into the Pi-Kitchen!***
 
 The aim of the Pi-Kitchen is to provide a new way to customise and build your SD-Card even before you power up your Raspberry Pi.  It should allow you to bake your own bespoke installation which is ready to go right off the first power up, up to date and fully loaded with whatever you desire.
 

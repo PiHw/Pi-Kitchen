@@ -122,6 +122,6 @@ When you run NOOBS you should find your new flavour listed alongside all the oth
 ###What's next?###
 We have shown how to create additional flavours and to customise them how we want, now we are ready to start putting this to some good use.
 
-The remaining guides will show how we can use various techniques to automatically get our systems setup as we desire (and avoid all the manual messing around that comes with a typical new installation).
+The remaining guides will show how we can use various techniques to <a href="https://http://pihw.wordpress.com/guides/pi-kitchen/automaticinstallations/">automatically</a> get our systems setup as we desire (and avoid all the manual messing around that comes with a typical new installation).
 
 Use the examples provided in the guides to help you build up your recipe files, you'll find you can mix and match most recipes (just check which files are being updated to see if there are duplicates).
