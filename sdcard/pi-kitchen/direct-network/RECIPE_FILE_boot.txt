@@ -10,6 +10,6 @@
 #../../pi-kitchen/_SETTINGS/direct-network/internet/cmdline.txt
 #
 #Add switchip files:
-../../pi-kitchen/direct-network/direct/cmdline.txt /direct
-../../pi-kitchen/direct-network/normal/cmdline.txt /normal
-../../pi-kitchen/_SETTINGS/direct-network/internet/cmdline.txt /internet
+../../pi-kitchen/direct-network/direct/cmdline.txt /network/direct
+../../pi-kitchen/direct-network/normal/cmdline.txt /network/normal
+../../pi-kitchen/_SETTINGS/direct-network/internet/cmdline.txt /network/internet

@@ -1,12 +1,17 @@
 set RECIPE_NAME=direct-network
 
 set ZIP_PROG="..\utils\win-7zip\7z.exe"
-set TARGET_DIR="pi-kitchen\%RECIPE_NAME%"
-set TARGET_NAME=ingredients.zip
+set SOURCE_DIR="pi-kitchen\%RECIPE_NAME%"
+set SOURCE_SETTINGS_DIR="pi-kitchen\_SETTINGS\%RECIPE_NAME%"
+set TARGET_DIR="..\recipes"
+set TARGET_NAME=%RECIPE_NAME%_INGREDIENTS.zip
 REM set TARGET_RECIPE=recipe_files.zip
 set EXCLUDED="..\utils\excluded.txt"
 
 cd ..\sdcard
-%ZIP_PROG% a -r -xr@%EXCLUDED% %TARGET_DIR%\%TARGET_NAME% %TARGET_DIR%\*.*
+rm %TARGET_DIR%\%TARGET_NAME%
+%ZIP_PROG% a -r -xr@%EXCLUDED% %TARGET_DIR%\%TARGET_NAME% %SOURCE_DIR%\*.*
+
+%ZIP_PROG% a -r -xr@%EXCLUDED% %TARGET_DIR%\%TARGET_NAME% %SOURCE_SETTINGS_DIR%\*.*
 
 pause

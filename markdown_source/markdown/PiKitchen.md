@@ -1,6 +1,6 @@
-<img src="img/pihwlogotm.png" width=180 />
+<img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 ------------
-<img src="img/PiKitchen.png" width=400 />
+<img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/PiKitchen.png" width=400 />
 
 #Welcome to the Pi-Kitchen#
 
@@ -35,11 +35,11 @@ The Pi-Kitchen uses a small modification to the scripts used by NOOBS to perform
 In the most basic setup, we replace one file in the standard NOOBS install, and then just add the files we need.
 
 ###With thanks to...###
-A huge thanks to **Kevin Hill** who created [NOOBS-config](https://github.com/procount/noobsconfig) which performs the magic, and has kept modifying it to fit in with my ideas/plans for it.
+A huge thanks to **Kevin Hill** who created <a href="https://github.com/procount/noobsconfig">NOOBS-config</a> which performs the magic, and has kept modifying it to fit in with my ideas/plans for it.
 
-Also thanks also goes to the NOOBS team (**Andrew Scheller** etc) who created [NOOBS](https://github.com/raspberrypi/noobs) in the first place.
+Also thanks also goes to the NOOBS team (**Andrew Scheller** etc) who created <a href="https://github.com/raspberrypi/noobs">NOOBS</a> in the first place.
 
-> <img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Stop/master/markdown_source/markdown/img/note.png" height=40/>
+> <img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/note.png" height=40/>
 > **NOTE:** We do allow the Pi-Kitchen to break the golden NOOBS rule about not messing with the recovery partition (and in some cases we are actively encouraging it) so these methods will probably remain outside of the standard NOOBS system.
 
 ##What can the Pi-Kitchen do?##

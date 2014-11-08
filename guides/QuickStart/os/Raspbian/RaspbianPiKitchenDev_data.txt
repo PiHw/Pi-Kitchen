@@ -1,0 +1,11 @@
+#Noobs config file for RaspbianPiKitchenDev_data (DateOfEdit)
+#------------------------------------------------------
+#Format is: filename destination attributes user group
+
+#Copy the Noobs config txt files to home directory for reference
+RaspbianPiKitchenDev_boot.txt
+RaspbianPiKitchenDev_root.txt
+RaspbianPiKitchenDev_data.txt
+
+#------------------------------------------------------
+#End
