@@ -43,7 +43,7 @@ When it has finished copying, the root (top directory of the SD-Card/directory y
 ###Obtain noobsconfig###
 Obtain the [**noobsconfig**](https://github.com/procount/noobsconfig) files:
 
-Download [noobsconfig.zip](https://github.com/procount/noobsconfig/master/noobsconfig.zip)
+Download [noobsconfig.zip](https://github.com/procount/noobsconfig/blob/master/noobsconfig.zip?raw=true)
 
 The zip file contains a matching structure to a full NOOBS installation (including a selection of different os directories each containing a modified version of the `partition_setup.sh`).
 

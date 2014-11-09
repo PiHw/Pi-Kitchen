@@ -1,4 +1,4 @@
-set GUIDE_LIST=QuickStart,GettingStarted,CreatingFlavours,AutomaticInstallation,AutomaticInstallationWithData
+set GUIDE_LIST=QuickStartAuto,QuickStartFlavours,RecipeDirectNetwork,GettingStarted,CreatingFlavours,AutomaticInstallation,AutomaticInstallationWithData
 
 set ZIP_PROG="..\..\utils\win-7zip\7z.exe"
 set SOURCE_DIR=guides
