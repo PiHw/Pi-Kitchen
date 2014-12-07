@@ -25,7 +25,7 @@ In order for an automated installation to occur (i.e. you can setup your SD-Card
 
 This allows NOOBS to assume that the only option available is the desired one and will automatically install it when instructed to do so.
 
-So to install a custom flavour such as the **RaspbianPiKitchen** created in the <a href="https://github.com/PiHw/Pi-Kitchen/blob/master/markdown_source/markdown/PiKitchen-CreatingFlavours.md">Pi-Kitchen: Creating Flavours</a> guide, we need to remove all other `os` directories except `os/Raspbain` and we should edit (or rename the old one and create a new version) the flavours.json file as follows (removing the `"Raspbian - Boot to Scratch"` and pure `"Raspbain"` entries:
+So to install a custom flavour such as the **RaspbianPiKitchen** created in the <a href="https://github.com/PiHw/Pi-Kitchen/blob/master/markdown_source/markdown/PiKitchen-CreatingFlavours.md">Pi-Kitchen: Creating Flavours</a> guide, we need to remove all other `os` directories except `os/Raspbian` and we should edit (or rename the old one and create a new version) the flavours.json file as follows (removing the `"Raspbian - Boot to Scratch"` and pure `"Raspbian"` entries:
 
 <a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/guides/AutomaticInstallation/os/Raspbian/flavours.json">***flavours.json***</a>
 
