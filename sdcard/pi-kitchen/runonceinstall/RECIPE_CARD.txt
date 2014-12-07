@@ -1,0 +1,20 @@
+#define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
+
+#define RC_NUMBER	(000)
+#define RC_NAME		Start Up - Run Once Install
+
+#define RC_DESC
+
+#define RC_HOWTOUSE	Place any scripts required in the _RUNONCE, _RUNSTART and _RUNSTARTBG directories.
+
+#define RC_SOURCE_LOCATION pi-kitchen/runonceinstall
+
+#define RC_INGREDIENTS	_RUNONCE/runonce-end.sh<p> _RUNONCE/zzz-reboot.sh<p> _RUNONCE/zzz-shutdown.sh<p> bin/installonce.sh<p> bin/runonce.sh<p> bin/runstart.sh<p> bin/runstartbg.sh<p> bin/startup.sh<p> bin/startup_normal.sh<p> etc/rc.local<p> dummydir.txt<p>
+
+#define RC_REQUIRED_RECIPES
+
+#define RC_ROOT
+
+#define RC_TESTED	Raspbian
+
+#define RC_AUTHOR	@PiHardware

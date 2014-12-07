@@ -1,0 +1,31 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+#Mount the recovery and userdata partitions each time
+sudo mount -t vfat /dev/mmcblk0p1 /home/pi/recovery
+sudo mount -t ext4 /dev/mmcblk0p7 /home/pi/userdata
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+
+#Execute the startup.sh file
+#Normally this will log the IP address only
+#on first run it should also call runonce.sh which will
+#allow custom installations - it will then be replaced
+#with one which doesn't call runonce.sh
+sh /home/pi/bin/startup.sh
+
+exit 0
