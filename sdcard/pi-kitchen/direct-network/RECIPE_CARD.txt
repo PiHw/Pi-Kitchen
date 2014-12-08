@@ -11,6 +11,8 @@
 
 #define RC_INGREDIENTS	direct/cmdline.txt<p> normal/cmdline.txt<p> switch.ip<p>
 
+#define RC_ZIP direct-network_INGREDIENTS.zip
+
 #define RC_SOURCE_LOCATION_SETTING pi-kitchen/_SETTINGS/direct-network
 
 #define RC_INGREDIENTS_SETTING	internet/cmdline.txt<p>

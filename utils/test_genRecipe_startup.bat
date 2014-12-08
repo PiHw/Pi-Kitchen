@@ -1,4 +1,4 @@
-set RECIPE_NAME=runonceinstall
+set RECIPE_NAME=startup
 
 set GPP_PATH="./win-gpp/gpp"
 set TEXTPAR_PATH="./win-textparser/textparser.exe"

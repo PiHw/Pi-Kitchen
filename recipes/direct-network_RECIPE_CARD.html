@@ -19,6 +19,7 @@
 
 
 
+
 <img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 <hr>
 
@@ -28,10 +29,27 @@
 <h1>(001) : Direct Network Connection</h1>
 </font>
 
+<table style="width:35%" align="right" >
+  <tr>
+    <th bgcolor=black><font color=white>Recipe Files</th>		
+    <th bgcolor=black><font color=white>Ingredients</th>
+  </tr>
+  <tr>
+    <td>
+          <i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/direct-network/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b><p>
+              <i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/direct-network/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
+            </td>		
+    <td><i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/recipes/direct-network_INGREDIENTS.zip">direct-network_INGREDIENTS.zip</a></i></b></td>
+  </tr>
+</table>
+
+<br>
+<h2>Description</h2>
 <font color = GREEN>
 <!--<p> Moved description from RECIPE_CARD.txt to README.md file-->
 This recipe places the direct network connection scripts on to the SD-Card.<p>  See <a href="http://pihw.wordpress.com/guides/direct-network-connection/super-easy-direct-network-connection/">Super Easy Direct Network Connection</a>.  <p><img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/directconnection.png" width=400 /> <p>The cmdline.txt allows you to specify the IP address of the Raspberry Pi on boot.<p>This allows you to setup an IP address suitable for a direct network link (using a single network cable to a PC or laptop).<p>The resulting connection is just like a normal network so you can share files using SMB and remote connect using SSH, as well as use X-Forwarding to remotely run graphical programs (or use VNC).<p><p>The direct connection IP address is set to 169.254.69.69<p></font>
 
+<h2>How to use</h2>
 <font color = GREEN>
 Enable/Disable by running <code>sudo ./bin/switch.sh</code><p>
 </font>
@@ -69,7 +87,7 @@ Perform the following actions:<p>
 Ensure you update cmdline.internet with the PC's IP address as the gateway.<p>
 </font>
 
-You can download all the <a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/direct-network/ingredients.zip">ingredient files</a>, and extract directly to the NOOBS SD-Card (ensuring you remove the zipfiles name from the directory - the files should be extracted to <code>/Pi-Kitchen</code>.<p>
+You can download all the <a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/recipes/direct-network_INGREDIENTS.zip">ingredient files</a>, and extract directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>/Pi-Kitchen</code>).<p>
 
 <h2>The Recipe Files</h2>
 Each recipe will use one file for each of the partitions it installs to - boot, root and data).<p>

@@ -1,4 +1,4 @@
-set RECIPE_NAME=runonceinstall
+set RECIPE_NAME=startup
 
 set ZIP_PROG="..\utils\win-7zip\7z.exe"
 set SOURCE_DIR="pi-kitchen\%RECIPE_NAME%"
