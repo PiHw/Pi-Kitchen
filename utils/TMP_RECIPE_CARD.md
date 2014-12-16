@@ -14,7 +14,8 @@
 <img src="img/pihwlogotm.png" width=180 />
 <hr>
 
-<img style="float:left" src="img/PiKitchenRecipe.png" width=180 /> #Recipe Card#
+<img style="float:left" src="img/PiKitchenRecipe.png" width=180 />
+#Recipe Card#
 
 <!---#ifdef RC_NUMBER--->
 <!---#ifdef RC_NAME--->
