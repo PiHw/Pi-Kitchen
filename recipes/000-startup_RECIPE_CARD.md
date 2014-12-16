@@ -21,7 +21,8 @@
 <img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 <hr>
 
-<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/PiKitchenRecipe.png" width=180 /> #Recipe Card#
+<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/PiKitchenRecipe.png" width=180 />
+#Recipe Card#
 
 <font color = GREEN>
 <h1>(000) : Start Up - Run Once Install </h1>

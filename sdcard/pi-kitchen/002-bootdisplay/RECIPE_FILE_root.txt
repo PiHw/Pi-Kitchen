@@ -1,0 +1,5 @@
+#
+#Recipe: 002-bootdisplay
+#Add switchdisp files:
+#- switchdisp.sh should be set as executable
+../../pi-kitchen/002-bootdisplay/switchdisp.sh /home/pi/bin +x

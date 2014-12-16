@@ -1,4 +1,4 @@
-set RECIPE_NAME=001-direct-network
+set RECIPE_NAME=002-bootdisplay
 
 set GPP_PATH="./win-gpp/gpp"
 set TEXTPAR_PATH="./win-textparser/textparser.exe"

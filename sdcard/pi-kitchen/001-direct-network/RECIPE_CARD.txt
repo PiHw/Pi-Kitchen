@@ -5,11 +5,11 @@
 
 #define RC_DESC
 
-#define RC_HOWTOUSE	Enable/Disable by running <code>sudo ./bin/switch.sh</code>
+#define RC_HOWTOUSE	Enable/Disable by running <code>sudo ./bin/switchip.sh</code>
 
 #define RC_SOURCE_LOCATION pi-kitchen/001-direct-network
 
-#define RC_INGREDIENTS	direct/cmdline.txt<p> normal/cmdline.txt<p> switch.ip<p>
+#define RC_INGREDIENTS	direct/cmdline.txt<p> normal/cmdline.txt<p> switchip.sh<p>
 
 #define RC_ZIP 001-direct-network_INGREDIENTS.zip
 

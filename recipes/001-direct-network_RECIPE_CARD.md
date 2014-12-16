@@ -23,7 +23,8 @@
 <img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 <hr>
 
-<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/PiKitchenRecipe.png" width=180 /> #Recipe Card#
+<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/PiKitchenRecipe.png" width=180 />
+#Recipe Card#
 
 <font color = GREEN>
 <h1>001 : Direct Network Connection</h1>
@@ -61,7 +62,7 @@ The direct connection IP address is set to 169.254.69.69</font>
 
 ##How to use##
 <font color = GREEN>
-Enable/Disable by running <code>sudo ./bin/switch.sh</code><p>
+Enable/Disable by running <code>sudo ./bin/switchip.sh</code><p>
 </font>
 
 ##Ingredients##
@@ -73,7 +74,7 @@ pi-kitchen/001-direct-network<p>
 
 This recipe uses the following files:<p>
 <font color = GREEN>
-direct/cmdline.txt<p> normal/cmdline.txt<p> switch.ip<p><p>
+direct/cmdline.txt<p> normal/cmdline.txt<p> switchip.sh<p><p>
 </font>
 
 <b>Plus the following files in the _SETTINGS folder:</b><p>

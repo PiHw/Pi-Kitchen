@@ -1,0 +1,18 @@
+#
+#Recipe: 002-bootdisplay
+#Configure the boot settings:
+#-- Only one config.txt file should be applied at any one time (only comment one out)
+#- HDMI Normal - Default setting will detect HDMI connection on power up
+../../pi-kitchen/002-bootdisplay/hdminormal/config.txt
+#- HDMI Forced - Will always select HDMI output
+#../../pi-kitchen/002-bootdisplay/hdmiforced/config.txt
+#- SD PAL - Set composite video output to PAL
+#../../pi-kitchen/002-bootdisplay/sdtvpal/config.txt
+#- SD NTSC - Set composite video output to PAL
+#../../pi-kitchen/002-bootdisplay/sdtvntsc/config.txt
+#
+#Add switchdisp files:
+../../pi-kitchen/002-bootdisplay/hdminormal/config.txt /display/hdminormal
+../../pi-kitchen/002-bootdisplay/hdmiforced/config.txt /display/hdmiforced
+../../pi-kitchen/002-bootdisplay/sdtvpal/config.txt /display/sdtvpal
+../../pi-kitchen/002-bootdisplay/sdtvntsc/config.txt /display/sdtvntsc

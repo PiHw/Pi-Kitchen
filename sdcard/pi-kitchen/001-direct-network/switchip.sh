@@ -13,7 +13,7 @@ internet () { sudo cp /boot/network/internet/cmdline.txt /boot/cmdline.txt;}
 echo "Select IP Address? Use: Direct / ICS / Auto / Keep (d/i/a/k)?"
 read answer
 case $answer in
- d|D) echo "Use Direct IP;direct";;
+ d|D) echo "Use Direct IP";direct;;
  i|I) echo "Use Internet (ICS) Direct IP";internet;;
  a|A) echo "Use Auto IP (normal LAN)";normal;;
  *) echo "Keep - No Change";;
