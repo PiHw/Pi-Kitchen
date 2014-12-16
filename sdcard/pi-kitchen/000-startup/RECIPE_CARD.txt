@@ -7,11 +7,11 @@
 
 #define RC_HOWTOUSE	Place any scripts required in the _RUNONCE, _RUNSTART and _RUNSTARTBG directories.
 
-#define RC_SOURCE_LOCATION pi-kitchen/startup
+#define RC_SOURCE_LOCATION pi-kitchen/000-startup
 
 #define RC_INGREDIENTS	_RUNONCE/runonce-end.sh<p> _RUNONCE/zzz-reboot.sh<p> _RUNONCE/zzz-shutdown.sh<p> bin/installonce.sh<p> bin/runonce.sh<p> bin/runstart.sh<p> bin/runstartbg.sh<p> bin/startup.sh<p> bin/startup_normal.sh<p> etc/rc.local<p> dummydir.txt<p>
 
-#define RC_ZIP startup_INGREDIENTS.zip
+#define RC_ZIP 000-startup_INGREDIENTS.zip
 
 #define RC_REQUIRED_RECIPES
 
