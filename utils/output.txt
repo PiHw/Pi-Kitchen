@@ -8,8 +8,7 @@
 
 
 #define RC_RECIPE_COLOUR GREEN
-#define RC_GITHUB_URL https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard
-
+#define RC_GITHUB_URL https://github.com/PiHw/Pi-Kitchen/raw/master/-->
 
 <img src="IMG_SRC/pihwlogotm.png" width=180 />
 <hr>
@@ -33,18 +32,26 @@
   <tr>
     <td>
     #ifdef RC_BOOT
-      <i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b><p>
+      <i><b><a href="RC_GITHUB_URL/sdcard/RC_SOURCE_LOCATION/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b><p>
     #endif
     #ifdef RC_ROOT
-      <i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
+      <i><b><a href="RC_GITHUB_URL/sdcard/RC_SOURCE_LOCATION/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
     #endif
     #ifdef RC_DATA
-      <i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_data.txt">(flavour)_data.txt</a></i></b><p>
+      <i><b><a href="RC_GITHUB_URL/sdcard/RC_SOURCE_LOCATION/RECIPE_FILE_data.txt">(flavour)_data.txt</a></i></b><p>
     #endif
     </td>		
     <td><i><b><a href="RC_GITHUB_URL/recipes/RC_ZIP">RC_ZIP</a></i></b></td>
   </tr>
 </table>
+
+#ifdef RC_REQUIRED
+<img style="float:left" src="IMG_SRC/warn.png" height=40/>
+<b>WARNING:</b> This recipe also requires the following recipe(s) to be setup on the SD-Card:<p>
+<font color = RC_RECIPE_COLOUR>
+<a href="RC_GITHUB_URL/recipe/RC_REQUIRED">RC_REQUIRED</a><p>
+</font>
+#endif
 
 <br>
 #ifdef RC_DESC
@@ -63,10 +70,10 @@ RC_HOWTOUSE<p>
 #endif
 
 ##Ingredients##
-Unless otherwise stated files should be placed in the following location on the NOOBS RECOVERY partition:<p>
+The ingredient files should be placed in the following location on the NOOBS RECOVERY partition:<p>
 
 <font color = RC_RECIPE_COLOUR>
-RC_SOURCE_LOCATION<p>
+<code>RC_SOURCE_LOCATION</code><p>
 </font>
 
 This recipe uses the following files:<p>
@@ -99,7 +106,7 @@ RC_SETTING_DESC<p>
 #endif
 #endif
 
-You can download all the <a href="RC_GITHUB_URL/recipes/RC_ZIP">ingredient files</a>, and extract directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>/Pi-Kitchen</code>).<p>
+You can download all the <a href="RC_GITHUB_URL/recipes/RC_ZIP">ingredient files</a>, and extracted directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>RC_SOURCE_LOCATION</code>).<p>
 
 ##The Recipe Files##
 Each recipe will use one file for each of the partitions it installs to - boot, root and data).<p>
@@ -114,21 +121,21 @@ You will need to suitably rename or copy the content of each of the following fi
 For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitchen/creatingflavours">Pi-Kitchen: Creating Flavours</a> guide.<p>
 
 #ifdef RC_BOOT
-<i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b>
+<i><b><a href="RC_GITHUB_URL/sdcard/RC_SOURCE_LOCATION/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b>
 <pre>
 #include RECIPE_FILE_boot.txt
 </pre>
 #endif
 
 #ifdef RC_ROOT
-<i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
+<i><b><a href="RC_GITHUB_URL/sdcard/RC_SOURCE_LOCATION/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
 <pre>
 #include RECIPE_FILE_root.txt
 </pre>
 #endif
 
 #ifdef RC_DATA
-<i><b><a href="RC_GITHUB_URL/RC_SOURCE_LOCATION/RECIPE_FILE_data.txt">(flavour)_data.txt</a></i></b>
+<i><b><a href="RC_GITHUB_URL/sdcard/RC_SOURCE_LOCATION/RECIPE_FILE_data.txt">(flavour)_data.txt</a></i></b>
 <pre>
 #include RECIPE_FILE_data.txt
 </pre>

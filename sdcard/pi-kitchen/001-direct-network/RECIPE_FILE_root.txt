@@ -1,5 +1,5 @@
 #
-#Recipe: direct-network
+#Recipe: 001-direct-network
 #Add switchip files:
 #- switchip.sh should be set as executable
 ../../pi-kitchen/001-direct-network/switchip.sh /home/pi/bin +x

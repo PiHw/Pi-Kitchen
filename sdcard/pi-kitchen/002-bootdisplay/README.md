@@ -1,4 +1,4 @@
-This recipe places a selection of selectable display settings on to the SD-Card.
+This recipe places a range of selectable display settings on to the SD-Card.
 
 The config.txt allows you to specify the configuration of the Raspberry Pi on boot (such as the display).
 
