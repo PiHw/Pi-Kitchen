@@ -19,7 +19,6 @@
 
 
 
-
 <img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 <hr>
 
@@ -37,14 +36,17 @@
   </tr>
   <tr>
     <td>
-          <i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/001-direct-network/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b><p>
-              <i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/001-direct-network/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
+          <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/001-direct-network/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b><p>
+              <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/001-direct-network/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
             </td>		
-    <td><i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/recipes/001-direct-network_INGREDIENTS.zip">001-direct-network_INGREDIENTS.zip</a></i></b></td>
+    <td><i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/001-direct-network_INGREDIENTS.zip">001-direct-network_INGREDIENTS.zip</a></i></b></td>
   </tr>
 </table>
 
+
 <br>
+
+
 ##Description##
 <font color = GREEN>
 <!--<p> Moved description from RECIPE_CARD.txt to README.md file-->
@@ -66,10 +68,10 @@ Enable/Disable by running <code>sudo ./bin/switchip.sh</code><p>
 </font>
 
 ##Ingredients##
-Unless otherwise stated files should be placed in the following location on the NOOBS RECOVERY partition:<p>
+The ingredient files should be placed in the following location on the NOOBS RECOVERY partition:<p>
 
 <font color = GREEN>
-pi-kitchen/001-direct-network<p>
+<code>pi-kitchen/001-direct-network</code><p>
 </font>
 
 This recipe uses the following files:<p>
@@ -98,7 +100,7 @@ Perform the following actions:<p>
 Ensure you update cmdline.internet with the PC's IP address as the gateway.<p>
 </font>
 
-You can download all the <a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/recipes/001-direct-network_INGREDIENTS.zip">ingredient files</a>, and extract directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>/Pi-Kitchen</code>).<p>
+You can download all the <a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/001-direct-network_INGREDIENTS.zip">ingredient files</a>, and extracted directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>pi-kitchen/001-direct-network</code>).<p>
 
 ##The Recipe Files##
 Each recipe will use one file for each of the partitions it installs to - boot, root and data).<p>
@@ -108,7 +110,7 @@ You will need to suitably rename or copy the content of each of the following fi
 
 For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitchen/creatingflavours">Pi-Kitchen: Creating Flavours</a> guide.<p>
 
-<i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/001-direct-network/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b>
+<i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/001-direct-network/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b>
 <pre>
 #
 #Recipe: 001-direct-network
@@ -126,10 +128,10 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 ../../pi-kitchen/001-direct-network/normal/cmdline.txt /network/normal
 ../../pi-kitchen/_SETTINGS/001-direct-network/internet/cmdline.txt /network/internet</pre>
 
-<i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/001-direct-network/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
+<i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/001-direct-network/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
 <pre>
 #
-#Recipe: direct-network
+#Recipe: 001-direct-network
 #Add switchip files:
 #- switchip.sh should be set as executable
 ../../pi-kitchen/001-direct-network/switchip.sh /home/pi/bin +x</pre>

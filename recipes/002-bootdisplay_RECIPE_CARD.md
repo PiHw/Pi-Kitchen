@@ -16,7 +16,6 @@
 
 
 
-
 <img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 <hr>
 
@@ -34,18 +33,21 @@
   </tr>
   <tr>
     <td>
-          <i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/002-bootdisplay/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b><p>
-              <i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/002-bootdisplay/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
+          <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/002-bootdisplay/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b><p>
+              <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/002-bootdisplay/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
             </td>		
-    <td><i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/recipes/002-bootdisplay_INGREDIENTS.zip">002-bootdisplay_INGREDIENTS.zip</a></i></b></td>
+    <td><i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/002-bootdisplay_INGREDIENTS.zip">002-bootdisplay_INGREDIENTS.zip</a></i></b></td>
   </tr>
 </table>
 
+
 <br>
+
+
 ##Description##
 <font color = GREEN>
 <!--<p> Moved description from RECIPE_CARD.txt to README.md file-->
-This recipe places a selection of selectable display settings on to the SD-Card.
+This recipe places a range of selectable display settings on to the SD-Card.
 
 The config.txt allows you to specify the configuration of the Raspberry Pi on boot (such as the display).
 
@@ -73,10 +75,10 @@ Enable/Disable by running <code>sudo ./bin/switchdisp.sh</code><p>
 </font>
 
 ##Ingredients##
-Unless otherwise stated files should be placed in the following location on the NOOBS RECOVERY partition:<p>
+The ingredient files should be placed in the following location on the NOOBS RECOVERY partition:<p>
 
 <font color = GREEN>
-pi-kitchen/002-bootdisplay<p>
+<code>pi-kitchen/002-bootdisplay</code><p>
 </font>
 
 This recipe uses the following files:<p>
@@ -85,7 +87,7 @@ hdminormal/config.txt<p> hdmiforced/config.txt<p> sdtvpal/config.txt<p> sdtvntsc
 </font>
 
 
-You can download all the <a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/recipes/002-bootdisplay_INGREDIENTS.zip">ingredient files</a>, and extract directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>/Pi-Kitchen</code>).<p>
+You can download all the <a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/002-bootdisplay_INGREDIENTS.zip">ingredient files</a>, and extracted directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>pi-kitchen/002-bootdisplay</code>).<p>
 
 ##The Recipe Files##
 Each recipe will use one file for each of the partitions it installs to - boot, root and data).<p>
@@ -95,7 +97,7 @@ You will need to suitably rename or copy the content of each of the following fi
 
 For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitchen/creatingflavours">Pi-Kitchen: Creating Flavours</a> guide.<p>
 
-<i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/002-bootdisplay/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b>
+<i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/002-bootdisplay/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b>
 <pre>
 #
 #Recipe: 002-bootdisplay
@@ -116,7 +118,7 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 ../../pi-kitchen/002-bootdisplay/sdtvpal/config.txt /display/sdtvpal
 ../../pi-kitchen/002-bootdisplay/sdtvntsc/config.txt /display/sdtvntsc</pre>
 
-<i><b><a href="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/sdcard/pi-kitchen/002-bootdisplay/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
+<i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/002-bootdisplay/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
 <pre>
 #
 #Recipe: 002-bootdisplay
