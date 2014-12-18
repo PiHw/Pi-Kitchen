@@ -55,7 +55,7 @@
 <!---#endif--->
 
 <!---#ifdef RC_RECIPECARD--->
-See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
+For the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
 <a href="RC_GITHUBMD_URL/RC_RECIPECARD">RC_NUMBER-RC_NAME.md</a>
 <!---#endif--->
 
