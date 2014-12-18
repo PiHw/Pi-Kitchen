@@ -16,6 +16,7 @@
 
 
 
+
 <img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 <hr>
 
@@ -28,7 +29,7 @@
 
 <table style="width:35%" align="right" >
   <tr>
-    <th bgcolor=black><font color=white>Recipe Files</th>		
+    <th bgcolor=black><font color=white>Recipe Files</th>
     <th bgcolor=black><font color=white>Ingredients</th>
   </tr>
   <tr>
@@ -40,6 +41,9 @@
   </tr>
 </table>
 
+
+See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
+<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/002-bootdisplay_RECIPE_CARD.md">002-Boot Display.md</a>
 
 <br>
 

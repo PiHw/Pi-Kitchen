@@ -17,6 +17,7 @@
 
 
 
+
 <img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 <hr>
 
@@ -24,22 +25,25 @@
 #Recipe Card#
 
 <font color = GREEN>
-<h1>(000) : Start Up - Run Once Install </h1>
+<h1>(001) : Start Up - Run Once Install </h1>
 </font>
 
 <table style="width:35%" align="right" >
   <tr>
-    <th bgcolor=black><font color=white>Recipe Files</th>		
+    <th bgcolor=black><font color=white>Recipe Files</th>
     <th bgcolor=black><font color=white>Ingredients</th>
   </tr>
   <tr>
     <td>
-              <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/000-startup/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
+              <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/001-startup/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b><p>
             </td>		
-    <td><i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/000-startup_INGREDIENTS.zip">000-startup_INGREDIENTS.zip</a></i></b></td>
+    <td><i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/001-startup_INGREDIENTS.zip">001-startup_INGREDIENTS.zip</a></i></b></td>
   </tr>
 </table>
 
+
+See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
+<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/001-startup_RECIPE_CARD.md">(001)-Start Up - Run Once Install .md</a>
 
 <br>
 
@@ -131,7 +135,7 @@ Place any scripts required in the _RUNONCE, _RUNSTART and _RUNSTARTBG directorie
 The ingredient files should be placed in the following location on the NOOBS RECOVERY partition:<p>
 
 <font color = GREEN>
-<code>pi-kitchen/000-startup</code><p>
+<code>pi-kitchen/001-startup</code><p>
 </font>
 
 This recipe uses the following files:<p>
@@ -140,7 +144,7 @@ _RUNONCE/runonce-end.sh<p> _RUNONCE/zzz-reboot.sh<p> _RUNONCE/zzz-shutdown.sh<p>
 </font>
 
 
-You can download all the <a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/000-startup_INGREDIENTS.zip">ingredient files</a>, and extracted directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>pi-kitchen/000-startup</code>).<p>
+You can download all the <a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/001-startup_INGREDIENTS.zip">ingredient files</a>, and extracted directly to the NOOBS SD-Card (ensuring you remove the ZIP file's name from the directory - the files should be extracted to <code>pi-kitchen/001-startup</code>).<p>
 
 ##The Recipe Files##
 Each recipe will use one file for each of the partitions it installs to - boot, root and data).<p>
@@ -151,7 +155,7 @@ You will need to suitably rename or copy the content of each of the following fi
 For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitchen/creatingflavours">Pi-Kitchen: Creating Flavours</a> guide.<p>
 
 
-<i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/000-startup/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
+<i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/001-startup/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
 <pre>
 #
 #Recipe: 000-startup

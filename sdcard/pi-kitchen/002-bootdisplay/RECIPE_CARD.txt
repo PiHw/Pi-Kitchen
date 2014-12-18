@@ -13,6 +13,8 @@
 
 #define RC_ZIP 002-bootdisplay_INGREDIENTS.zip
 
+#define RC_RECIPECARD 002-bootdisplay_RECIPE_CARD.md
+
 #define RC_BOOT
 #define RC_ROOT
 

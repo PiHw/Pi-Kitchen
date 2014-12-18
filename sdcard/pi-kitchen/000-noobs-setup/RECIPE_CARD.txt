@@ -1,17 +1,19 @@
 #define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
 
-#define RC_NUMBER	003
+#define RC_NUMBER	000
 #define RC_NAME		NOOBS Setup
 
 #define RC_DESC
 
 #define RC_HOWTOUSE	Change the NOOBS setup by running <code>sudo ./bin/switchnoobs.sh</code>
 
-#define RC_SOURCE_LOCATION pi-kitchen/003-noobs-setup
+#define RC_SOURCE_LOCATION pi-kitchen/000-noobs-setup
 
 #define RC_INGREDIENTS	switchnoobs.sh<p> auto\recovery.cmdline<p> install\recovery.cmdline<p> install-sdtv\recovery.cmdline<p> auto-sdtv\recovery.cmdline<p> normal\recovery.cmdline<p> _flavours\flavours.json.normal<p> _flavours\flavours.json.auto<p> _flavours\flavours.json.autodev<p> _flavours\RaspbianPiKitchenDev.png<p> _flavours\RaspbianPiKitchen.png<p>
 
-#define RC_ZIP 003-noobs-setup_INGREDIENTS.zip
+#define RC_ZIP 000-noobs-setup_INGREDIENTS.zip
+
+#define RC_RECIPECARD 000-noobs-setup_RECIPE_CARD.md
 
 #define RC_ROOT
 

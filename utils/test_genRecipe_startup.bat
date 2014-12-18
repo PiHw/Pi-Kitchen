@@ -1,4 +1,4 @@
-set RECIPE_NAME=000-startup
+set RECIPE_NAME=001-startup
 
 set GPP_PATH="./win-gpp/gpp"
 set TEXTPAR_PATH="./win-textparser/textparser.exe"

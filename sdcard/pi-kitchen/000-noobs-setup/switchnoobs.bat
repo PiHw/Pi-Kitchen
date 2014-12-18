@@ -69,10 +69,10 @@ REM Until recovery.cmdline file supports specifying an OS/Flavour from the cmdli
 REM we have to adjust the setup so only one option is available.
 
 REM - Replace flavours.json with single flavour version
-copy %FLAVOUR% %DISTRO%\flavours.json /Y
+copy %FLAVOUR% %DISTRO%\flavours.json /Y >nul 2>&1
 
 REM - Rename os.json files in other os directories
-for /r "..\..\os\" %%i in (os.json) do rename "%%i" "%%~ni.disabled"
+for /r "..\..\os\" %%i in (os.json) do rename "%%i" "%%~ni.disabled" >nul 2>&1
 REM Re-enable the selected distro
 rename %DISTRO%\os.disabled "os.json"
 
@@ -89,10 +89,10 @@ REM we have to undo any changes made by the automatic installation option.
 
 REM - Replace flavours.json with multi flavour version
 SET FLAVOUR=".\_flavours\flavours.json.normal" 
-copy %FLAVOUR% %DISTRO%\flavours.json /Y
+copy %FLAVOUR% %DISTRO%\flavours.json /Y >nul 2>&1
 
 REM - Restore os.json files in all os directories
-for /r "..\..\os\" %%i in (os.disabled) do rename "%%i" "%%~ni.json"
+for /r "..\..\os\" %%i in (os.disabled) do rename "%%i" "%%~ni.json" >nul 2>&1
 
 GOTO cmdline
 
@@ -100,13 +100,21 @@ GOTO cmdline
 
 :cmdline
 REM Replace the recovery.cmdline file
-copy %SOURCE% %DEST% /Y
+copy %SOURCE% %DEST% /Y  >nul 2>&1
 REM If PNG files don't exist then copy (i.e. Provide icons for clean NOOBS setup)
 for /r ".\_flavours\" %%i in (*.png) do (
-  if not exist "%DISTRO%\%%~nxi" copy "%%i" "%DISTRO%\*.*"
+  if not exist "%DISTRO%\%%~nxi" copy "%%i" "%DISTRO%\*.*" >nul 2>&1
   )
 
+GOTO datapart
 
+:datapart
+REM Replace partitions.json file
+copy ".\_flavours\partitions.json" %DISTRO% /Y  >nul 2>&1
+REM Add data.tar.xz (if not present)
+if not exist "%DISTRO%\data.tar.xz" copy ".\_flavours\data.tar.xz" "%DISTRO%\*.*" >nul 2>&1
+
+GOTO end
 
 :end
 echo recovery.cmdline is:

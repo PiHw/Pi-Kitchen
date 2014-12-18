@@ -1,4 +1,4 @@
-set RECIPE_NAME=001-direct-network
+set RECIPE_NAME=003-direct-network
 
 set ZIP_PROG="..\utils\win-7zip\7z.exe"
 set SOURCE_DIR="pi-kitchen\%RECIPE_NAME%"

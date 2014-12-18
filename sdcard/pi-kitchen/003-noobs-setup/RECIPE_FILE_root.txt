@@ -1,5 +1,0 @@
-#
-#Recipe: 003-noobs-setup
-#Add switchnoobs files:
-#- switchnoobs.sh should be set as executable
-../../pi-kitchen/003-noobs-setup/switchnoobs.sh /home/pi/bin +x

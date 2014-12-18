@@ -1,4 +1,4 @@
-set RECIPE_NAME=003-noobs-setup
+set RECIPE_NAME=000-noobs-setup
 
 set GPP_PATH="./win-gpp/gpp"
 set TEXTPAR_PATH="./win-textparser/textparser.exe"
