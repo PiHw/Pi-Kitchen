@@ -1,12 +1,13 @@
 #!/bin/sh
 # Switch recovery.cmdline for NOOBS install and setup for auto/gui installs
 # We assume this script is located in ~/bin
-DEST="../recovery/recovery.cmdline"
-DISTRO="../recovery/os/Raspbian"
-RECIPEPATH="../recovery/pi-kitchen/000-noobs-setup"
+HOME="/home/pi"
+DEST=$HOME"/recovery/recovery.cmdline"
+DISTRO=$HOME"/recovery/os/Raspbian"
+RECIPEPATH=$HOME"/recovery/pi-kitchen/000-noobs-setup"
 FLAVOURPATH=$RECIPEPATH"/_flavours"
 FLAVOUR="flavours.json.auto"
-OSPATH="../recovery/os"
+OSPATH=$HOME"/recovery/os"
 
 datapart(){
 # Replace partitions.json file

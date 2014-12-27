@@ -1,0 +1,8 @@
+#
+#Recipe: 005-wifi
+#- Setup Wifi interfaces file
+../../pi-kitchen/005-wifi/etc/network/interfaces /etc/network
+#- Apply the user wifi SETTINGS
+../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
+#-Install driver(s) for Wifi Adaptor(s)
+../../pi-kitchen/005-wifi/_RUNONCE/install_wifi-devices.sh /home/pi/bin/_RUNONCE

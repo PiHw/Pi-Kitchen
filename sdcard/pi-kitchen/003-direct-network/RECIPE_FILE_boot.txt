@@ -1,15 +1,15 @@
 #
-#Recipe: 001-direct-network
+#Recipe: 003-direct-network
 #Configure the boot settings:
 #-- Only one cmdline.txt file should be applied at any one time (only comment one out)
 #- Direct network settings - for direct connections with a PC using just a network cable
-../../pi-kitchen/001-direct-network/direct/cmdline.txt
+../../pi-kitchen/003-direct-network/direct/cmdline.txt
 #- Normal network settings - for normal use with a standard home network
-#../../pi-kitchen/001-direct-network/normal/cmdline.txt
+#../../pi-kitchen/003-direct-network/normal/cmdline.txt
 #- Internet Connection Sharing requires specific settings for you own network so stored in _SETTINGS
-#../../pi-kitchen/_SETTINGS/001-direct-network/internet/cmdline.txt
+#../../pi-kitchen/_SETTINGS/003-direct-network/internet/cmdline.txt
 #
 #Add switchip files:
-../../pi-kitchen/001-direct-network/direct/cmdline.txt /network/direct
-../../pi-kitchen/001-direct-network/normal/cmdline.txt /network/normal
-../../pi-kitchen/_SETTINGS/001-direct-network/internet/cmdline.txt /network/internet
+../../pi-kitchen/003-direct-network/direct/cmdline.txt /network/direct
+../../pi-kitchen/003-direct-network/normal/cmdline.txt /network/normal
+../../pi-kitchen/_SETTINGS/003-direct-network/internet/cmdline.txt /network/internet

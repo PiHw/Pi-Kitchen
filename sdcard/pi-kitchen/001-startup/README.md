@@ -51,6 +51,9 @@ It is intended that any one off installation or configuration scripts are placed
 
 You can also place a script here to automatically perform a shutdown of the Raspberry Pi (so you can power off safely when the installation has completed), to restart (to ensure new settings have been applied) or perhaps activate some hardware to indicate when your Pi has finished "cooking".
 
+###The `zzz-reboot.sh` and `zzz-shutdown.sh` scripts###
+You can optionally add either of these scripts to the **Runonce** directory so that when all the other scripts have run (they are run alphabetically) the Raspberry Pi will be rebooted or shutdown.
+
 ##The Runstart Directory##
 
 Located at <code>/home/pi/bin/_RUNSTART</code> and also <code>/home/pi/recovery/_USER/_RUNSTART</code> (physically located on the Recovery partition of the SD-Card, which is accessible from windows).
@@ -63,7 +66,7 @@ Located at <code>/home/pi/bin/_RUNSTARTBG</code> and also <code>/home/pi/recover
 
 Just like the standard Runstart directory, the <code>startup.sh</code> script will run these scripts, but will do so as a background process.  This is an easy way to run scripts without waiting for them to complete.  This allows you to monitor for GPIO inputs, run backups or use LEDs as indicators, for example.
 
-#The purpose of <code>installonce.sh</code>#
+##The purpose of <code>installonce.sh</code>##
 
 The <code>installonce.sh</code> script, will not be run automatically, but should be run by the user at a later point.  As like the other directories, any scripts placed within <code>/home/pi/bin/_INSTALLONCE</code> will be run.
 

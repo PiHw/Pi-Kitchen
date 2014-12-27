@@ -32,7 +32,7 @@
 
 <table style="width:35%" align="right" >
   <tr>
-    <th bgcolor=black><font color=white>Recipe Files</th>
+    <th bgcolor=black><font color=white>Recipe Files</th>		
     <th bgcolor=black><font color=white>Ingredients</th>
   </tr>
   <tr>
@@ -44,9 +44,6 @@
   </tr>
 </table>
 
-
-For the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
-<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/003-direct-network_RECIPE_CARD.md">003-Direct Network Connection.md</a>
 
 <br>
 
@@ -117,28 +114,28 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/003-direct-network/RECIPE_FILE_boot.txt">(flavour)_boot.txt</a></i></b>
 <pre>
 #
-#Recipe: 001-direct-network
+#Recipe: 003-direct-network
 #Configure the boot settings:
 #-- Only one cmdline.txt file should be applied at any one time (only comment one out)
 #- Direct network settings - for direct connections with a PC using just a network cable
-../../pi-kitchen/001-direct-network/direct/cmdline.txt
+../../pi-kitchen/003-direct-network/direct/cmdline.txt
 #- Normal network settings - for normal use with a standard home network
-#../../pi-kitchen/001-direct-network/normal/cmdline.txt
+#../../pi-kitchen/003-direct-network/normal/cmdline.txt
 #- Internet Connection Sharing requires specific settings for you own network so stored in _SETTINGS
-#../../pi-kitchen/_SETTINGS/001-direct-network/internet/cmdline.txt
+#../../pi-kitchen/_SETTINGS/003-direct-network/internet/cmdline.txt
 #
 #Add switchip files:
-../../pi-kitchen/001-direct-network/direct/cmdline.txt /network/direct
-../../pi-kitchen/001-direct-network/normal/cmdline.txt /network/normal
-../../pi-kitchen/_SETTINGS/001-direct-network/internet/cmdline.txt /network/internet</pre>
+../../pi-kitchen/003-direct-network/direct/cmdline.txt /network/direct
+../../pi-kitchen/003-direct-network/normal/cmdline.txt /network/normal
+../../pi-kitchen/_SETTINGS/003-direct-network/internet/cmdline.txt /network/internet</pre>
 
 <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/003-direct-network/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
 <pre>
 #
-#Recipe: 001-direct-network
+#Recipe: 003-direct-network
 #Add switchip files:
 #- switchip.sh should be set as executable
-../../pi-kitchen/001-direct-network/switchip.sh /home/pi/bin +x</pre>
+../../pi-kitchen/003-direct-network/switchip.sh /home/pi/bin +x</pre>
 
 
 

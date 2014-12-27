@@ -1,6 +1,6 @@
 <!-- How to use comments in these files -->
 <!-- ---------------------------------- -->
-<!--Comments have been put in this file so that they can be customised for a range of workshops and uses.
+<!--Comments have been put in this file so that they can be automatically generated.
 
 [How to customise the Markdown documents](CustomMarkdown.md)-->
 
@@ -55,7 +55,7 @@
 <!---#endif--->
 
 <!---#ifdef RC_RECIPECARD--->
-For the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
+See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
 <a href="RC_GITHUBMD_URL/RC_RECIPECARD">RC_NUMBER-RC_NAME.md</a>
 <!---#endif--->
 

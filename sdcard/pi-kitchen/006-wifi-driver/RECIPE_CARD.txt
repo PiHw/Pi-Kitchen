@@ -1,0 +1,29 @@
+#define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
+
+#define RC_NUMBER	006
+#define RC_NAME		Wifi Driver Configuration
+
+#define RC_DESC
+
+#define RC_HOWTOUSE	1.Identify your Wifi adaptor.<p>2.Obtain the device package and create a script to install it or use the scripts for `ralink-7601` and `zyxtel-g202`.<p>3.Insert your Wifi settings into the `wpa.conf` file.
+
+#define RC_SOURCE_LOCATION pi-kitchen/006-wifi-driver
+
+#define RC_INGREDIENTS	etc/network/interfaces<p> _RUNONCE/install_zyxel-g202.sh<p> _RUNONCE/install_ralink-7601.sh<p>
+ralink-7601/3.10.25/mt7601Usta.ko<p>ralink-7601/3.12.22/mt7601Usta.ko<p>ralink-7601/3.6.11/mt7601Usta.ko<p> ralink-7601/RT2870STA.dat<p>
+
+#define RC_ZIP 006-wifi-driver_INGREDIENTS.zip
+
+#define RC_RECIPECARD 006-wifi-driver_RECIPE_CARD.md
+
+#define RC_SOURCE_LOCATION_SETTING pi-kitchen/_SETTINGS/005-wifi
+
+#define RC_INGREDIENTS_SETTING	005-wifi/wifi_example/wpa.conf<p>
+
+#define RC_SETTING_DESC	Ensure you update wpa.config with your own Wifi SSID and pass-phrase.
+
+#define RC_ROOT
+
+#define RC_TESTED	Raspbian
+
+#define RC_AUTHOR	@PiHardware

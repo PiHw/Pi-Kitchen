@@ -30,7 +30,7 @@
 
 <table style="width:35%" align="right" >
   <tr>
-    <th bgcolor=black><font color=white>Recipe Files</th>
+    <th bgcolor=black><font color=white>Recipe Files</th>		
     <th bgcolor=black><font color=white>Ingredients</th>
   </tr>
   <tr>
@@ -41,9 +41,6 @@
   </tr>
 </table>
 
-
-For the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
-<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/001-startup_RECIPE_CARD.md">(001)-Start Up - Run Once Install .md</a>
 
 <br>
 
@@ -158,25 +155,25 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 <i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/sdcard/pi-kitchen/001-startup/RECIPE_FILE_root.txt">(flavour)_root.txt</a></i></b>
 <pre>
 #
-#Recipe: 000-startup
+#Recipe: 001-startup
 #Setup rc.local startup script
-../../pi-kitchen/000-startup/etc/rc.local /etc +x root root
+../../pi-kitchen/001-startup/etc/rc.local /etc +x root root
 #- Mount recovery and userdata
-../../pi-kitchen/000-startup/dummydir.txt /home/pi/recovery
-../../pi-kitchen/000-startup/dummydir.txt /home/pi/userdata
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/recovery
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/userdata
 #- Create _RUNSTART, _RUNSTARTBG, _RUNONCE and _INSTALLONCE directories
-../../pi-kitchen/000-startup/dummydir.txt /home/pi/bin/_RUNSTART
-../../pi-kitchen/000-startup/dummydir.txt /home/pi/bin/_RUNSTARTBG
-../../pi-kitchen/000-startup/dummydir.txt /home/pi/bin/_RUNONCE
-../../pi-kitchen/000-startup/dummydir.txt /home/pi/bin/_INSTALLONCE
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/bin/_RUNSTART
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/bin/_RUNSTARTBG
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/bin/_RUNONCE
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/bin/_INSTALLONCE
 #- Setup startup.sh, runstart.sh, runstartbg.sh, runonce.sh and installonce.sh scripts
-../../pi-kitchen/000-startup/bin/startup_normal.sh /home/pi/bin
-../../pi-kitchen/000-startup/bin/startup.sh /home/pi/bin
-../../pi-kitchen/000-startup/bin/runstart.sh /home/pi/bin
-../../pi-kitchen/000-startup/bin/runstartbg.sh /home/pi/bin
-../../pi-kitchen/000-startup/bin/runonce.sh /home/pi/bin
-../../pi-kitchen/000-startup/_RUNONCE/runonce-end.sh /home/pi/bin/_RUNONCE
-../../pi-kitchen/000-startup/bin/installonce.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/startup_normal.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/startup.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/runstart.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/runstartbg.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/runonce.sh /home/pi/bin
+../../pi-kitchen/001-startup/_RUNONCE/runonce-end.sh /home/pi/bin/_RUNONCE
+../../pi-kitchen/001-startup/bin/installonce.sh /home/pi/bin
 </pre>
 
 

@@ -1,0 +1,5 @@
+#
+#Recipe: 004-no-raspiconfig
+#- Stop raspi-config being run on first boot by replacing the defaults file
+../../pi-kitchen/004-no-raspiconfig/etc/profile.d/raspi-config.sh /etc/profile.d # root root
+../../pi-kitchen/004-no-raspiconfig/etc/inittab /etc 644 root root

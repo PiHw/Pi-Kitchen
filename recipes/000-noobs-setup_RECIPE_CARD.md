@@ -29,7 +29,7 @@
 
 <table style="width:35%" align="right" >
   <tr>
-    <th bgcolor=black><font color=white>Recipe Files</th>
+    <th bgcolor=black><font color=white>Recipe Files</th>		
     <th bgcolor=black><font color=white>Ingredients</th>
   </tr>
   <tr>
@@ -40,9 +40,6 @@
   </tr>
 </table>
 
-
-For the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
-<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/000-noobs-setup_RECIPE_CARD.md">000-NOOBS Setup.md</a>
 
 <br>
 
