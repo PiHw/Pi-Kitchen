@@ -65,7 +65,6 @@ See the markdown version of this recipe on the <a href="https://github.com/PiHw/
 <!---#ifdef RC_DESC--->
 ##Description##
 <font color = RC_RECIPE_COLOUR>
-<!--RC_DESC<p> Moved description from RECIPE_CARD.txt to README.md file-->
 <!---#include "README.md"--->
 </font>
 <!---#endif--->

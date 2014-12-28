@@ -1,6 +1,6 @@
 <!-- How to use comments in these files -->
 <!-- ---------------------------------- -->
-<!--Comments have been put in this file so that they can be customised for a range of workshops and uses.
+<!--Comments have been put in this file so that they can be automatically generated.
 
 [How to customise the Markdown documents](CustomMarkdown.md)-->
 
@@ -48,7 +48,6 @@ See the markdown version of this recipe on the <a href="https://github.com/PiHw/
 
 ##Description##
 <font color = GREEN>
-<!--<p> Moved description from RECIPE_CARD.txt to README.md file-->
 The standard NOOBS install also triggers a program called `raspi-config` to run on the first boot of the operating system.
 
 Although this program contains many useful settings, we can now apply our own settings using the Pi-Kitchen so we do not need this.  

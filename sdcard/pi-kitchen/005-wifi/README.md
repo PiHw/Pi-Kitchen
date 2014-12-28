@@ -1,4 +1,4 @@
-<img style="float:left" src="IMG_SCR/warn.png" height=40/>
+<img style="float:left" src="IMG_SRC/warn.png" height=40/>
 <b>WARNING:</b> The following assumes that you have a working wired network (or a wireless adaptor which doesn't need additional drivers).
 
 Check out the <a href="RC_GITHUBMD_URL/006-wifi-driver_RECIPE_CARD.md">Wifi driver recipe</a> if you need help identifying the wifi adaptor or want to install the drivers without a **working** network connection.
@@ -34,7 +34,7 @@ This replaces the standard `etc\network\interfaces` file with one which uses `et
     wpa-conf /etc/wpa.conf
 
 
-<img style="float:left" src="IMG_SCR/note.png" height=40/>
+<img style="float:left" src="IMG_SRC/note.png" height=40/>
 <b>NOTE:</b> Some devices will have different names to `wlan0` (i.e. `ra0`) so you may need to adjust this file.
 
 
@@ -55,7 +55,7 @@ The `wpa.conf` file should detail the wifi settings as follows:
 
 
 
-<img style="float:left" src="IMG_SCR/note.png" height=40/>
+<img style="float:left" src="IMG_SRC/note.png" height=40/>
 <b>NOTE:</b> We place this file in **_SETTINGS** so that it is easier to remove sensitive information from our configurations.
 > 
 > An example `wpa.conf` is provided in `pi-kitchen\005-wifi\etc` directory.

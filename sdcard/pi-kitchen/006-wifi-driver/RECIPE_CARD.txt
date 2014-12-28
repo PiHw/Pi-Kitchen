@@ -9,8 +9,7 @@
 
 #define RC_SOURCE_LOCATION pi-kitchen/006-wifi-driver
 
-#define RC_INGREDIENTS	etc/network/interfaces<p> _RUNONCE/install_zyxel-g202.sh<p> _RUNONCE/install_ralink-7601.sh<p>
-ralink-7601/3.10.25/mt7601Usta.ko<p>ralink-7601/3.12.22/mt7601Usta.ko<p>ralink-7601/3.6.11/mt7601Usta.ko<p> ralink-7601/RT2870STA.dat<p>
+#define RC_INGREDIENTS	etc/network/interfaces<p>_RUNONCE/install_zyxel-g202.sh<p>_RUNONCE/install_ralink-7601.sh<p>ralink-7601/3.10.25/mt7601Usta.ko<p>ralink-7601/3.12.22/mt7601Usta.ko<p>ralink-7601/3.6.11/mt7601Usta.ko<p>ralink-7601/RT2870STA.dat<p>
 
 #define RC_ZIP 006-wifi-driver_INGREDIENTS.zip
 

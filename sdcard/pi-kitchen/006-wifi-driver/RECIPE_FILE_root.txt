@@ -1,14 +1,14 @@
 #
 #Recipe: 005-wifi
 #Setup Wifi
-../../pi-kitchen/005-wifi/etc/network/interfaces /etc/network
+../../pi-kitchen/006-wifi-driver/etc/network/interfaces /etc/network
 ../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
 #-Add driver for ZyXel G202 USB Wifi Adaptor
-../../pi-kitchen/005-wifi/_RUNONCE/install_zyxel-g202.sh /home/pi/bin/_RUNONCE
+../../pi-kitchen/006-wifi-driver/_RUNONCE/install_zyxel-g202.sh /home/pi/bin/_RUNONCE
 #-Add driver for Realtek RALink 7601 USB Wifi Adaptor
-../../pi-kitchen/005-wifi/ralink-7601/3.6.11/mt7601Usta.ko "/lib/modules/3.6.11+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/005-wifi/ralink-7601/3.10.25/mt7601Usta.ko "/lib/modules/3.10.25+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/005-wifi/ralink-7601/3.12.22/mt7601Usta.ko "/lib/modules/3.12.22+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/005-wifi/ralink-7601/3.12.28/mt7601Usta.ko "/lib/modules/3.12.28+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/005-wifi/ralink-7601/RT2870STA.dat /etc/Wireless/RT2870STA 644
-../../pi-kitchen/005-wifi/_RUNONCE/install_ralink-7601.sh /home/pi/bin/_RUNONCE
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.6.11/mt7601Usta.ko "/lib/modules/3.6.11+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.10.25/mt7601Usta.ko "/lib/modules/3.10.25+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.22/mt7601Usta.ko "/lib/modules/3.12.22+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.28/mt7601Usta.ko "/lib/modules/3.12.28+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/RT2870STA.dat /etc/Wireless/RT2870STA 644
+../../pi-kitchen/006-wifi-driver/_RUNONCE/install_ralink-7601.sh /home/pi/bin/_RUNONCE

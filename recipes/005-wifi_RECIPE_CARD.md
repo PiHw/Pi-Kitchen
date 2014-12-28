@@ -52,8 +52,7 @@ See the markdown version of this recipe on the <a href="https://github.com/PiHw/
 
 ##Description##
 <font color = GREEN>
-<!--<p> Moved description from RECIPE_CARD.txt to README.md file-->
-<img style="float:left" src="IMG_SCR/warn.png" height=40/>
+<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/warn.png" height=40/>
 <b>WARNING:</b> The following assumes that you have a working wired network (or a wireless adaptor which doesn't need additional drivers).
 
 Check out the <a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/006-wifi-driver_RECIPE_CARD.md">Wifi driver recipe</a> if you need help identifying the wifi adaptor or want to install the drivers without a **working** network connection.
@@ -89,7 +88,7 @@ This replaces the standard `etcnetworkinterfaces` file with one which uses `etcw
     wpa-conf /etc/wpa.conf
 
 
-<img style="float:left" src="IMG_SCR/note.png" height=40/>
+<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/note.png" height=40/>
 <b>NOTE:</b> Some devices will have different names to `wlan0` (i.e. `ra0`) so you may need to adjust this file.
 
 
@@ -110,7 +109,7 @@ The `wpa.conf` file should detail the wifi settings as follows:
 
 
 
-<img style="float:left" src="IMG_SCR/note.png" height=40/>
+<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/note.png" height=40/>
 <b>NOTE:</b> We place this file in **_SETTINGS** so that it is easier to remove sensitive information from our configurations.
 > 
 > An example `wpa.conf` is provided in `pi-kitchen005-wifietc` directory.
@@ -174,7 +173,6 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 ../../pi-kitchen/005-wifi/etc/network/interfaces /etc/network
 #- Apply the user wifi SETTINGS
 ../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
-../../pi-kitchen/_SETTINGS/005-wifi/wifi_home/wpa.conf /etc
 #-Install driver(s) for Wifi Adaptor(s)
 ../../pi-kitchen/005-wifi/_RUNONCE/install_wifi-devices.sh /home/pi/bin/_RUNONCE
 </pre>

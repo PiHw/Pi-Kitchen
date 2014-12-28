@@ -9,7 +9,6 @@
 
 
 
-ralink-7601/3.10.25/mt7601Usta.ko<p>ralink-7601/3.12.22/mt7601Usta.ko<p>ralink-7601/3.6.11/mt7601Usta.ko<p> ralink-7601/RT2870STA.dat<p>
 
 
 
@@ -53,8 +52,13 @@ See the markdown version of this recipe on the <a href="https://github.com/PiHw/
 
 ##Description##
 <font color = GREEN>
-<!--<p> Moved description from RECIPE_CARD.txt to README.md file-->
+Most Wifi adaptors require additional drivers to be installed in order to work.  However, normally a working network connection is required to install drivers using `apt-get`.  If a wired network connection isn't available (or you have a model A Raspberry Pi) then it can be particularly difficult to install drivers on the operating system.
+
+This recipe allows you to install the required drivers without connecting to the internet first.
+
 ##Drivers##
+Many drivers are available from `apt-get` which we can use to download the driver package so we can install them at a later stage.
+
 Some devices are not supported by the drivers available in the apt-get repository.  These can be installed manually, if you are able to find the appropriate files.
 
 ###Identifying your device###
@@ -91,7 +95,7 @@ And:
 ##Example zyxtel-g202##
 This will provide the drivers for ZyXel G-202 USB Wifi Dongle (`zd1211-firmware_2.21.0.0-1_all.deb`).
 
-<img src="IMG_SCR/zyxtel-g202.png" height=300/>
+<img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/zyxtel-g202.png" height=300/>
 Device details:
 
 VID_0586 PID_3410 REV_4810
@@ -114,7 +118,7 @@ The driver package can be installed using `dpkg`:
 ##Example ralink-7601##
 This will install the files required to use a USB RALink 7601 Wifi dongle.
 
-<img src="IMG_SCR/ralink-7601.png" height=300/>
+<img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/ralink-7601.png" height=300/>
 Device details:
 
 VID_148F PID_7601
@@ -125,7 +129,7 @@ This requires two files to be placed in the following locations:
 
 `/lib/modules/3.12.28+/kernel/drivers/net/wireless/mt7601Usta.ko`
 
-<img style="float:left" src="IMG_SCR/note.png" height=40/>
+<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/note.png" height=40/>
 <b>NOTE:</b> The `mt7601Usta.ko` file is dependent on the Kernel version, so the version of this file should match the Kernel version of the OS you plan to use it with.  Fortunately, you can copy all the available versions and the OS will only use the file in the appropriate folder.
 
 You can find out the Kernel version with the following command:
@@ -161,7 +165,7 @@ This replaces the standard `etcnetworkinterfaces` file with one which uses `etcw
 
 The recipe file can be set to use the `wpa.conf` files located in the `_SETTINGS` directory.
 
-<img style="float:left" src="IMG_SCR/note.png" height=40/>
+<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/note.png" height=40/>
 <b>NOTE:</b> We place this file in **_SETTINGS** so that it is easier to remove sensitive information from our configurations.
 
 An example `wpa.conf` is provided in `pi-kitchen005-wifietc` directory.
@@ -181,7 +185,7 @@ The ingredient files should be placed in the following location on the NOOBS REC
 
 This recipe uses the following files:<p>
 <font color = GREEN>
-etc/network/interfaces<p> _RUNONCE/install_zyxel-g202.sh<p> _RUNONCE/install_ralink-7601.sh<p><p>
+etc/network/interfaces<p>_RUNONCE/install_zyxel-g202.sh<p>_RUNONCE/install_ralink-7601.sh<p>ralink-7601/3.10.25/mt7601Usta.ko<p>ralink-7601/3.12.22/mt7601Usta.ko<p>ralink-7601/3.6.11/mt7601Usta.ko<p>ralink-7601/RT2870STA.dat<p><p>
 </font>
 
 <b>Plus the following files in the _SETTINGS folder:</b><p>
@@ -221,17 +225,17 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 #
 #Recipe: 005-wifi
 #Setup Wifi
-../../pi-kitchen/005-wifi/etc/network/interfaces /etc/network
-../../pi-kitchen/_SETTINGS/005-wifi/wifi_home/wpa.conf /etc
+../../pi-kitchen/006-wifi-driver/etc/network/interfaces /etc/network
+../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
 #-Add driver for ZyXel G202 USB Wifi Adaptor
-../../pi-kitchen/005-wifi/_RUNONCE/install_zyxel-g202.sh /home/pi/bin/_RUNONCE
+../../pi-kitchen/006-wifi-driver/_RUNONCE/install_zyxel-g202.sh /home/pi/bin/_RUNONCE
 #-Add driver for Realtek RALink 7601 USB Wifi Adaptor
-../../pi-kitchen/005-wifi/ralink-7601/3.6.11/mt7601Usta.ko "/lib/modules/3.6.11+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/005-wifi/ralink-7601/3.10.25/mt7601Usta.ko "/lib/modules/3.10.25+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/005-wifi/ralink-7601/3.12.22/mt7601Usta.ko "/lib/modules/3.12.22+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/005-wifi/ralink-7601/3.12.28/mt7601Usta.ko "/lib/modules/3.12.28+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/005-wifi/ralink-7601/RT2870STA.dat /etc/Wireless/RT2870STA 644
-../../pi-kitchen/005-wifi/_RUNONCE/install_ralink-7601.sh /home/pi/bin/_RUNONCE</pre>
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.6.11/mt7601Usta.ko "/lib/modules/3.6.11+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.10.25/mt7601Usta.ko "/lib/modules/3.10.25+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.22/mt7601Usta.ko "/lib/modules/3.12.22+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.28/mt7601Usta.ko "/lib/modules/3.12.28+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/RT2870STA.dat /etc/Wireless/RT2870STA 644
+../../pi-kitchen/006-wifi-driver/_RUNONCE/install_ralink-7601.sh /home/pi/bin/_RUNONCE</pre>
 
 
 
