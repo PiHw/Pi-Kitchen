@@ -1,4 +1,0 @@
-both_models
-model_plus_only
-model_original_only
-web_version

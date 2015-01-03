@@ -1,0 +1,4 @@
+#
+#Recipe: 007-network-share
+#- Add files to setup SAMBA SMB folder share (need to run manually)
+../../pi-kitchen/007-network-share/_INSTALLONCE/install_smbshare.sh /home/pi/bin/_INSTALLONCE

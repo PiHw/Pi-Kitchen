@@ -15,6 +15,6 @@
 
 #define RC_ROOT
 
-#define RC_TESTED	Raspbian
+#define RC_TESTED	Testing in progress
 
 #define RC_AUTHOR	@PiHardware

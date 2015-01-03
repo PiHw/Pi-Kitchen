@@ -3,6 +3,7 @@
 <!--Comments have been put in this file so that they can be automatically generated.
 
 [How to customise the Markdown documents](CustomMarkdown.md)-->
+<!--Template 03/01/2015-->
 
 <!---#include "RECIPE_CARD.txt"--->
 
@@ -44,6 +45,13 @@
     </td>		
     <td><i><b><a href="RC_GITHUB_URL/recipes/RC_ZIP">RC_ZIP</a></i></b></td>
   </tr>
+  <!---#ifdef RC_TESTED--->
+  <tr>
+    <td>
+      <i><b>Tested: RC_TESTED</i></b>
+    </td>
+  </tr>
+  <!---#endif--->
 </table>
 
 <!---#ifdef RC_REQUIRED--->

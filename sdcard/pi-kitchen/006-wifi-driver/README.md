@@ -78,6 +78,8 @@ This requires two files to be placed in the following locations:
 <img style="float:left" src="IMG_SRC/note.png" height=40/>
 <b>NOTE:</b> The `mt7601Usta.ko` file is dependent on the Kernel version, so the version of this file should match the Kernel version of the OS you plan to use it with.  Fortunately, you can copy all the available versions and the OS will only use the file in the appropriate folder.
 
+I've collected a few versions which work with the most recent kernel versions (be sure to check the links below if they become out-dated).
+
 You can find out the Kernel version with the following command:
 
 `uname -a`
@@ -91,10 +93,18 @@ The `install_ralink-7601.sh` will install the driver using modprobe:
 Run `sudo depmod -a` to apply immediately (may not be needed following a reboot).
 
 
-This device will be called `ra0` (this is set within the dat file).
+By default this device will be called `ra0`.
+
+###`70-persistent-net.rules`###
+By placing this file in `etc/udev/rules.d` the `ra0` adaptor will be renamed to be `wlan0` (the same as other Wifi adaptors).
+
+This is very helpful since there can be issues if you have multiple settings in the `interfaces` file for each adaptor.  This way, they are able share the settings.
 
 ###Driver details:###
 Driver files and install information thanks to the following resources.
+
+*I am very thankful for the effort put into compiling and sharing these drivers. MrEngman, James Foley, alfonder, Gowtham, Thomas Wenzlaff etc.*
+
 [http://gowthamgowtham.blogspot.co.uk/2013/11/mediatekralink-wifi-adapter-in.html](http://gowthamgowtham.blogspot.co.uk/2013/11/mediatekralink-wifi-adapter-in.html)
 
 [https://github.com/jamesfoley/raspberry-pi-MT7601](https://github.com/jamesfoley/raspberry-pi-MT7601)
@@ -103,11 +113,15 @@ Driver files and install information thanks to the following resources.
 
 [http://www.raspberrypi.org/forums/viewtopic.php?f=28&t=49864&start=100](http://www.raspberrypi.org/forums/viewtopic.php?f=28&t=49864&start=100)
 
-##Wifi Settings##
-###The `interfaces` file###
-This replaces the standard `etc\network\interfaces` file with one which uses `etc\wpa.conf` for the wifi settings.  The version within this recipe will also add support for device `ra0` too.
+Kernel 3.12.35+ support plus ra0 to wlan0 rename info:
+[http://blog.wenzlaff.de/?p=4805](http://blog.wenzlaff.de/?p=4805)
 
-###wpa.conf###
+##Wifi Settings##
+
+###The `interfaces` file###
+This is the same as the `etc/network/interfaces` file used  with **005-wifi recipe** which uses `etc/wpa.conf` for the Wifi settings.
+
+###`wpa.conf`###
 
 The recipe file can be set to use the `wpa.conf` files located in the `_SETTINGS` directory.
 

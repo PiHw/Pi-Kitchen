@@ -1,0 +1,5 @@
+#
+#Recipe: 008-vnc
+#- Add files to setup VNC (need to run manually)
+../../pi-kitchen/008-vnc/_INSTALLONCE/install_vnc.sh /home/pi/bin/_INSTALLONCE
+../../pi-kitchen/008-vnc/bin/svnc.sh /home/pi/bin

@@ -1,8 +1,9 @@
 <!-- How to use comments in these files -->
 <!-- ---------------------------------- -->
-<!--Comments have been put in this file so that they can be customised for a range of workshops and uses.
+<!--Comments have been put in this file so that they can be automatically generated.
 
 [How to customise the Markdown documents](CustomMarkdown.md)-->
+<!--Template 03/01/2015-->
 
 
 
@@ -30,7 +31,7 @@
 
 <table style="width:35%" align="right" >
   <tr>
-    <th bgcolor=black><font color=white>Recipe Files</th>		
+    <th bgcolor=black><font color=white>Recipe Files</th>
     <th bgcolor=black><font color=white>Ingredients</th>
   </tr>
   <tr>
@@ -39,15 +40,22 @@
             </td>		
     <td><i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/001-startup_INGREDIENTS.zip">001-startup_INGREDIENTS.zip</a></i></b></td>
   </tr>
-</table>
+    <tr>
+    <td>
+      <i><b>Tested: Raspbian</i></b>
+    </td>
+  </tr>
+  </table>
 
+
+See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
+<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/001-startup_RECIPE_CARD.md">(001)-Start Up - Run Once Install .md</a>
 
 <br>
 
 
 ##Description##
 <font color = GREEN>
-<!--<p> Moved description from RECIPE_CARD.txt to README.md file-->
 This startup recipe forms the foundation for many of the other recipes used in the Pi-Kitchen.
 
 The recipe provides the following features (which will be used by other recipes):
@@ -101,6 +109,9 @@ It is intended that any one off installation or configuration scripts are placed
 
 You can also place a script here to automatically perform a shutdown of the Raspberry Pi (so you can power off safely when the installation has completed), to restart (to ensure new settings have been applied) or perhaps activate some hardware to indicate when your Pi has finished "cooking".
 
+###The `zzz-reboot.sh` and `zzz-shutdown.sh` scripts###
+You can optionally add either of these scripts to the **Runonce** directory so that when all the other scripts have run (they are run alphabetically) the Raspberry Pi will be rebooted or shutdown.
+
 ##The Runstart Directory##
 
 Located at <code>/home/pi/bin/_RUNSTART</code> and also <code>/home/pi/recovery/_USER/_RUNSTART</code> (physically located on the Recovery partition of the SD-Card, which is accessible from windows).
@@ -113,7 +124,7 @@ Located at <code>/home/pi/bin/_RUNSTARTBG</code> and also <code>/home/pi/recover
 
 Just like the standard Runstart directory, the <code>startup.sh</code> script will run these scripts, but will do so as a background process.  This is an easy way to run scripts without waiting for them to complete.  This allows you to monitor for GPIO inputs, run backups or use LEDs as indicators, for example.
 
-#The purpose of <code>installonce.sh</code>#
+##The purpose of <code>installonce.sh</code>##
 
 The <code>installonce.sh</code> script, will not be run automatically, but should be run by the user at a later point.  As like the other directories, any scripts placed within <code>/home/pi/bin/_INSTALLONCE</code> will be run.
 
@@ -174,6 +185,9 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 ../../pi-kitchen/001-startup/bin/runonce.sh /home/pi/bin
 ../../pi-kitchen/001-startup/_RUNONCE/runonce-end.sh /home/pi/bin/_RUNONCE
 ../../pi-kitchen/001-startup/bin/installonce.sh /home/pi/bin
+#- Add automatic REBOOT or SHUTDOWN script at end of runonce sequence (optional)
+../../pi-kitchen/001-startup/_RUNONCE/zzz-reboot.sh /home/pi/bin/_RUNONCE
+#../../pi-kitchen/001-startup/_RUNONCE/zzz-shutdown.sh /home/pi/bin/_RUNONCE
 </pre>
 
 

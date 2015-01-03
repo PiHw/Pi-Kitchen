@@ -3,6 +3,7 @@
 <!--Comments have been put in this file so that they can be automatically generated.
 
 [How to customise the Markdown documents](CustomMarkdown.md)-->
+<!--Template 03/01/2015-->
 
 
 
@@ -41,7 +42,12 @@
             </td>		
     <td><i><b><a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipes/005-wifi_INGREDIENTS.zip">005-wifi_INGREDIENTS.zip</a></i></b></td>
   </tr>
-</table>
+    <tr>
+    <td>
+      <i><b>Tested: Raspbian</i></b>
+    </td>
+  </tr>
+  </table>
 
 
 See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
@@ -172,7 +178,8 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 #- Setup Wifi interfaces file
 ../../pi-kitchen/005-wifi/etc/network/interfaces /etc/network
 #- Apply the user wifi SETTINGS
-../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
+#../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
+../../pi-kitchen/_SETTINGS/005-wifi/wifi_home/wpa.conf /etc
 #-Install driver(s) for Wifi Adaptor(s)
 ../../pi-kitchen/005-wifi/_RUNONCE/install_wifi-devices.sh /home/pi/bin/_RUNONCE
 </pre>

@@ -1,0 +1,5 @@
+#
+#Recipe: 010-scratch-gpio
+#- Add script to _INSTALLONCE folder
+../../pi-kitchen/010-scratch-gpio/_INSTALLONCE/install_scratchgpio.sh /home/pi/bin/_INSTALLONCE
+

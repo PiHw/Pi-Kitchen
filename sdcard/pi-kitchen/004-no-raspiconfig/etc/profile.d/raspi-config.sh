@@ -20,3 +20,4 @@
 if [ $(id -u) -eq 0 ]; then
   exec login -f pi
 fi
+TERM=xterm

@@ -1,0 +1,7 @@
+#
+#Recipe: 009-map-network-share
+#- Create mount location
+../../pi-kitchen/009-map-network-share/dummydir.txt /home/pi/network
+#- Add script to _RUNSTART folder
+../../pi-kitchen/_SETTINGS/009-map-network-share/mapnetworkshare.sh /home/pi/bin/_RUNSTART
+
