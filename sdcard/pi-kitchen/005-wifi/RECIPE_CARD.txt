@@ -3,7 +3,7 @@
 #define RC_NUMBER	005
 #define RC_NAME		Wifi Configuration
 
-#define RC_DESC
+#define RC_DESC      This recipe allows the Wifi to be pre-configured using the Pi-Kitchen so that the Raspberry Pi is able to connect to your wifi network on first boot.<p> <b>Note:</b> This particular recipe does require a working wired network connection, for off-line installation of wifi drivers see the next recipe (Recipe: <a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/006-wifi-driver_RECIPE_CARD.md">006-Wifi Driver Configuration</a><p>).
 
 #define RC_HOWTOUSE	1.Identify your Wifi adaptor.<p>2.Ensure `install_wifi-devices.sh` will install the correct **package** for your device.<p>3.Insert your Wifi settings into the `wpa.conf` file.
 

@@ -58,13 +58,8 @@
 <img style="float:left" src="img/warn.png" height=40/>
 <b>WARNING:</b> This recipe also requires the following recipe(s) to be setup on the SD-Card:<p>
 <font color = RC_RECIPE_COLOUR>
-<a href="RC_GITHUB_URL/recipe/RC_REQUIRED">RC_REQUIRED</a><p>
+<a href="RC_GITHUBMD_URL/RC_REQUIRED">RC_REQUIRED</a><p>
 </font>
-<!---#endif--->
-
-<!---#ifdef RC_RECIPECARD--->
-See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
-<a href="RC_GITHUBMD_URL/RC_RECIPECARD">RC_NUMBER-RC_NAME.md</a>
 <!---#endif--->
 
 <br>

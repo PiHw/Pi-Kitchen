@@ -50,11 +50,8 @@
 <img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/warn.png" height=40/>
 <b>WARNING:</b> This recipe also requires the following recipe(s) to be setup on the SD-Card:<p>
 <font color = GREEN>
-<a href="https://github.com/PiHw/Pi-Kitchen/raw/master/recipe/Recipe 001-Startup">Recipe 001-Startup</a><p>
+<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/Recipe 001-Startup">Recipe 001-Startup</a><p>
 </font>
-
-See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
-<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/008-vnc_RECIPE_CARD.md">008-VNC.md</a>
 
 <br>
 

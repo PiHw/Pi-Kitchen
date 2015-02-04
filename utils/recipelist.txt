@@ -1,3 +1,4 @@
+#Ignore any recipes with # at the start of the line 
 000-noobs-setup
 001-startup
 002-bootdisplay
@@ -9,3 +10,6 @@
 008-vnc
 009-map-network-share
 010-scratch-gpio
+011-boot-to-desktop
+012-shutdown-button
+013-enable-i2c-spi

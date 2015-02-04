@@ -1,8 +1,0 @@
-{
-  "flavours": [
-    {
-      "name": "RaspbianPiKitchen",
-      "description": "Freshly baked Raspbian from the Pi-Kitchen"
-    }
-  ]
-}

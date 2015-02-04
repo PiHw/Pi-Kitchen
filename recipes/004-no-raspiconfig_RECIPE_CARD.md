@@ -46,9 +46,6 @@
   </table>
 
 
-See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
-<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/004-no-raspiconfig_RECIPE_CARD.md">004-No Rasp-Config.md</a>
-
 <br>
 
 

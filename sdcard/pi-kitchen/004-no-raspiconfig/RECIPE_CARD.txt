@@ -3,7 +3,7 @@
 #define RC_NUMBER	004
 #define RC_NAME		No Rasp-Config
 
-#define RC_DESC
+#define RC_DESC      This recipe allows the raspi-config program which normally runs on first power up to be stopped from running (otherwise this may cause our automated startup scripts not to run/cause the Raspberry Pi to need user input).<p><b>Note:</b>This recipe is not quite ready yet (it has unwanted side-effects).
 
 #define RC_SOURCE_LOCATION pi-kitchen/004-no-raspiconfig
 

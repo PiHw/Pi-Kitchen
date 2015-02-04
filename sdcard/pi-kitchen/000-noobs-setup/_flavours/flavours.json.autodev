@@ -1,8 +1,0 @@
-{
-  "flavours": [
-    {
-      "name": "RaspbianPiKitchenDev",
-      "description": "A Pi-Kitchen creation under development"
-    }
-  ]
-}

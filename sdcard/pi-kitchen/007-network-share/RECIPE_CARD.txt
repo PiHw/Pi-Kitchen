@@ -3,7 +3,7 @@
 #define RC_NUMBER	007
 #define RC_NAME		Network Share
 
-#define RC_DESC
+#define RC_DESC      This recipe allows the Raspberry Pi to share the Pi home directory on the network as a Windows Shared Folder.  This makes it easy to manage your files and back them up etc.
 
 #define RC_HOWTOUSE	Following installation of the OS, run the `_INSTALLONCE/installonce.sh` script and follow the steps to setup the network share.<p>
 

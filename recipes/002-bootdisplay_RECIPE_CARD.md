@@ -48,9 +48,6 @@
   </table>
 
 
-See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
-<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/002-bootdisplay_RECIPE_CARD.md">002-Boot Display.md</a>
-
 <br>
 
 

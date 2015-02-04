@@ -6,7 +6,7 @@ DEST=$HOME"/recovery/recovery.cmdline"
 DISTRO=$HOME"/recovery/os/Raspbian"
 RECIPEPATH=$HOME"/recovery/pi-kitchen/000-noobs-setup"
 FLAVOURPATH=$RECIPEPATH"/_flavours"
-FLAVOUR="flavours.json.auto"
+FLAVOUR=PiKitchen
 OSPATH=$HOME"/recovery/os"
 
 datapart(){
@@ -34,7 +34,8 @@ auto(){
 # we have to adjust the setup so only one option is available.
 
 # - Replace flavours.json with single flavour version
-sudo cp $FLAVOURPATH/$FLAVOUR $DISTRO/flavours.json
+gen_flavours.sh $FLAVOUR
+#sudo cp $FLAVOURPATH/$FLAVOUR $DISTRO/flavours.json
 
 # - Rename os.json files in other os directories
 find $OSPATH -name "os.json" -exec sudo rename "s/\.json$/\.disabled/i" {} \;
@@ -51,8 +52,11 @@ gui(){
 # we have to undo any changes made by the automatic installation option.
 
 # - Replace flavours.json with multi flavour version
-FLAVOUR="flavours.json.normal"
-sudo cp $FLAVOURPATH/$FLAVOUR $DISTRO/flavours.json
+#FLAVOUR="flavours.json.normal"
+#sudo cp $FLAVOURPATH/$FLAVOUR $DISTRO/flavours.json
+FLAVOUR=ALL
+gen_flavours.sh $FLAVOUR
+
 # - Restore os.json files in all os directories
 find $OSPATH -name "os.disabled" -exec sudo rename "s/\.disabled$/\.json/i" {} \;
 cmdline
@@ -60,23 +64,27 @@ cmdline
 
 autohdmi(){
 SOURCE="$RECIPEPATH/auto/recovery.cmdline"
+FLAVOUR=PiKitchen
 auto
 }
 
 autohdmidev() {
 SOURCE="$RECIPEPATH/auto/recovery.cmdline"
-FLAVOUR="$RECIPEPATH/_flavours/flavours.json.autodev"
+#FLAVOUR="$RECIPEPATH/_flavours/flavours.json.autodev"
+FLAVOUR=PiKitchenDev
 auto
 }
 
 autosdtv() {
 SOURCE="$RECIPEPATH/auto-sdtv/recovery.cmdline"
+FLAVOUR=PiKitchen
 auto
 }
 
 autosdtvdev() {
 SOURCE="$RECIPEPATH/auto-sdtv/recovery.cmdline"
-FLAVOUR="$RECIPEPATH/_flavours/flavours.json.autodev"
+#FLAVOUR="$RECIPEPATH/_flavours/flavours.json.autodev"
+FLAVOUR=PiKitchenDev
 auto
 }
 

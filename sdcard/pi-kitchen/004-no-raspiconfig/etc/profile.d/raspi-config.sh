@@ -17,7 +17,13 @@
 #  #This file has been edited to stop raspi-config being forced to run
 #  #which isn't needed if we are using noobs-config to setup #everything up
 #  #raspi-config would be run here
+
 if [ $(id -u) -eq 0 ]; then
+    sed -i /etc/inittab \
+      -e "s/^#\(.*\)#\s*RPICFG_TO_ENABLE\s*/\1/" \
+      -e "/#\s*RPICFG_TO_DISABLE/d"
+    telinit q
   exec login -f pi
+  rm -f /etc/profile.d/raspi-config.sh
 fi
 TERM=xterm

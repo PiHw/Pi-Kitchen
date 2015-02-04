@@ -3,7 +3,7 @@
 #define RC_NUMBER	000
 #define RC_NAME		NOOBS Setup
 
-#define RC_DESC
+#define RC_DESC      This recipe will allow easy setup of the NOOBS configurations and allow you to switch between GUI based installs and automatic ones, as well as selecting which custom flavour you want to automatically install.  It also provides a way to quickly add the standard set of Pi-Kitchen flavours to a new clean NOOBS card.<p>It’ll even allow you to pre-select the display output NOOBS will use (although NOOBS 1.3.10 has a bug which ignores the video setting from the cmdline file, this should work for other versions of NOOBS, including any new ones).
 
 #define RC_HOWTOUSE	Change the NOOBS setup by running <code>sudo ./bin/switchnoobs.sh</code>
 

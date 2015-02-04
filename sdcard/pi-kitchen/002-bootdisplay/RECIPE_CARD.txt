@@ -3,7 +3,7 @@
 #define RC_NUMBER	002
 #define RC_NAME		Boot Display
 
-#define RC_DESC
+#define RC_DESC      This allow you to pre-set a number of display settings (and other settings) which are set in the config.txt file of the boot partition.  This includes a script, switchdisp.sh which allows easy changing once installed on the Raspberry Pi.<p><b>Note:</b> This also fixes the forced HDMI settings which NOOBS 1.3.10 adds, even when composite video out is selected.
 
 #define RC_HOWTOUSE	Enable/Disable by running <code>sudo ./bin/switchdisp.sh</code>
 

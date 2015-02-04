@@ -3,7 +3,7 @@
 #define RC_NUMBER	(001)
 #define RC_NAME		Start Up - Run Once Install 
 
-#define RC_DESC
+#define RC_DESC      This is a recipe which will allow a huge amount of customisation to your setup.  Enabling scripts to run on first boot (for automated installations etc), scripts to run on start-up and a run-once option (for installations which need user input) this recipe will be very useful.  It even allows scripts to be automatically from from the RECOVERY partition (so you can drop files on there from windows and they will run next time you boot your Raspberry Pi).
 
 #define RC_HOWTOUSE	Place any scripts required in the _RUNONCE, _RUNSTART and _RUNSTARTBG directories.
 

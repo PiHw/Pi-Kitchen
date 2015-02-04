@@ -3,7 +3,7 @@
 #define RC_NUMBER	009
 #define RC_NAME		Map Network Share
 
-#define RC_DESC
+#define RC_DESC      This recipe allows the Raspberry Pi to map a Windows Shared Folder as a local directory.
 
 #define RC_HOWTOUSE	Update the details in the 'mapnetworkshare.sh' script to include the network path of the shared directory (and username and password if applicable).<p>
 
@@ -21,7 +21,7 @@
 
 #define RC_SETTING_DESC	Ensure you update the 'mapnetworkshare.sh' script to include the network path of the shared directory (and username and password if applicable).
 
-#define RC_REQUIRED 	Recipe 001-Startup
+#define RC_REQUIRED 	001-startup_RECIPE_CARD.md
 
 #define RC_ROOT
 

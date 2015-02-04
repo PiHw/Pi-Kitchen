@@ -50,9 +50,6 @@
   </table>
 
 
-See the markdown version of this recipe on the <a href="https://github.com/PiHw/Pi-Kitchen">Pi-Kitchen GitHub</a> site see:
-<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/006-wifi-driver_RECIPE_CARD.md">006-Wifi Driver Configuration.md</a>
-
 <br>
 
 
@@ -256,6 +253,8 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 ../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.22/mt7601Usta.ko "/lib/modules/3.12.22+/kernel/drivers/net/wireless" 644
 ../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.28/mt7601Usta.ko "/lib/modules/3.12.28+/kernel/drivers/net/wireless" 644
 ../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.35/mt7601Usta.ko "/lib/modules/3.12.35+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.5/mt7601Usta.ko "/lib/modules/3.18.5+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.5v7/mt7601Usta.ko "/lib/modules/3.18.5-v7+/kernel/drivers/net/wireless" 644
 ../../pi-kitchen/006-wifi-driver/ralink-7601/RT2870STA.dat /etc/Wireless/RT2870STA 644
 ../../pi-kitchen/006-wifi-driver/etc/udev/rules.d/70-persistent-net.rules /etc/udev/rules.d
 ../../pi-kitchen/006-wifi-driver/_RUNONCE/install_ralink-7601.sh /home/pi/bin/_RUNONCE</pre>

@@ -3,7 +3,7 @@
 #define RC_NUMBER	003
 #define RC_NAME		Direct Network Connection
 
-#define RC_DESC
+#define RC_DESC      This implements a recipe which allows easy setup of a direct network connection between a PC or Laptop and the Raspberry Pi (including sharing the PC’s Wifi network connection).  Once you have your configuration setup, you can install and connect to your Raspberry Pi, right out of the box.<p><img style="float:left" src="https://pihw.files.wordpress.com/2013/06/icsrpi.png?w=379&h=182" width=180 /><p>Laptop connected to internet via WiFi, share Wifi using ICS with Wired Connection, use Wired Connection address as Gateway (and part of RPi IP address).<p>This also includes a script switchip.sh to change configurations and to select standard network settings (as required).
 
 #define RC_HOWTOUSE	Enable/Disable by running <code>sudo ./bin/switchip.sh</code>
 

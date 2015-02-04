@@ -12,8 +12,8 @@ if [%1] == [] (
 echo Recipe List File: %THERECIPEFILE%
 
 
-::read %THECSVFILE% and loop through each line
-for /F "usebackq eol=; tokens=* delims=" %%A in (%THERECIPEFILE%) do (
+::read %THERECIPEFILE% and loop through each line (ignore lines with #)
+for /F "usebackq eol=# tokens=* delims=" %%A in (%THERECIPEFILE%) do (
     echo Directory: %%A
 	cd ..\utils\
 	genRecipe.bat %%A

@@ -3,7 +3,7 @@
 #define RC_NUMBER	010
 #define RC_NAME		Scratch GPIO
 
-#define RC_DESC
+#define RC_DESC      This recipe allows the Scratch GPIO to be setup as part of the Pi-Kitchen.
 
 #define RC_HOWTOUSE	Run the `installonce.sh` script to install Scratch GPIO.<p>
 

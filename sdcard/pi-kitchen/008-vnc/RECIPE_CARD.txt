@@ -3,7 +3,7 @@
 #define RC_NUMBER	008
 #define RC_NAME		VNC
 
-#define RC_DESC
+#define RC_DESC      This recipe enables VNC so we are able to remote connect and control the Raspberry Pi using a VNC connection.
 
 #define RC_HOWTOUSE	Following installation of the OS, run the `_INSTALLONCE/installonce.sh` script and follow the steps to setup VNC. Use `svnc.sh` to start the VNC server.<p>
 

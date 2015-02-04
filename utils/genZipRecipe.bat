@@ -9,7 +9,7 @@ if [%1] == [] (
 )
 echo Recipe: %RECIPE_NAME%
 
-set ZIP_PROG="..\utils\win-7zip\7z.exe"
+set ZIP_PROG="..\utils\win-7zip\7z.bat"
 set SOURCE_DIR="pi-kitchen\%RECIPE_NAME%"
 set SOURCE_SETTINGS_DIR="pi-kitchen\_SETTINGS\%RECIPE_NAME%"
 set TARGET_DIR="..\recipes"

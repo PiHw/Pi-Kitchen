@@ -3,7 +3,7 @@
 #define RC_NUMBER	006
 #define RC_NAME		Wifi Driver Configuration
 
-#define RC_DESC
+#define RC_DESC      This recipe allows the Wifi Drivers to be installed as part of the Raspberry Pi first boot.  This allows the Raspberry Pi to automatically install the Wifi Drivers, configure the Wifi settings and connect when it starts up.<p><b>Note:</b> Although this requires a little more configuration upfront it does mean you do not need to connect to the internet to install the Wifi drivers.  This recipe allows the driver files to be stored on the SD-Card so the Wifi can be setup without needing a wired network connection (just power up and wait for it to install).
 
 #define RC_HOWTOUSE	1.Identify your Wifi adaptor.<p>2.Obtain the device package and create a script to install it or use the scripts for `ralink-7601` and `zyxtel-g202`.<p>3.Insert your Wifi settings into the `wpa.conf` file.
 

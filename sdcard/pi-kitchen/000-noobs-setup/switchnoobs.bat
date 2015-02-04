@@ -1,123 +1,254 @@
 @echo off
+setlocal EnableDelayedExpansion
 REM Switch recovery.cmdline for NOOBS install and setup for auto/gui installs
+REM
+REM Will perform the following steps (if cmdline isn't set):
+REM 1. Select NOOBS run mode (Normal/GUI/Auto/Keep)
+REM 2. Select video mode (for Normal, GUI and Auto only)
+REM [N/A yet] 3. Select distro (for Auto only)
+REM 4. Select flavour (for Auto only)
+REM
+REM switchnoobs.bat runmode videomode flavour distro
+
+CALL :cmdlineSettings
+
+SET DISTRO=Raspbian
 SET DEST="..\..\recovery.cmdline"
-SET DISTRO="..\..\os\Raspbian"
-SET FLAVOUR=".\_flavours\flavours.json.auto"
+SET DISTRO_PATH=..\..\os\%DISTRO%
+SET RUNMODE_LIST=(normal,gui,auto,exit)
+SET VIDEOMODE_LIST=(HDMI,HDMIsafemode,PAL,NFSC,Default)
+SET DATA_PARTITION=TRUE
 
-echo Set NOOBS to run on next startup with one of the following options:
-echo 1	Normal - Press shift on boot
-echo 2	Automated Install (HDMI + PiKitchen)
-echo 3	Automated Install (HDMI + PiKitchenDev)
-echo 4	Automated Install (PAL + PiKitchen)
-echo 5	Automated Install (PAL + PiKitchenDev)
-echo 6	Run GUI (HDMI)
-echo 7	Run GUI (PAL)
-echo 0	Keep Setting
+REM 1. Handle NOOBS runmode
+if [%RUNMODE%]==[ASK] (
+  CALL :selectRUNMODE
+)
+echo Selected Run mode = %RUNMODE%
+if [%RUNMODE%]==[exit] goto end
+CALL :applyRUNMODE
+cls
 
+REM 2. Handle video mode
+if [%VIDEOMODE%]==[ASK] (
+  CALL :selectVIDEOMODE
+)
+if %VIDEOMODE% LEQ 4 (
+  CALL :applyVIDEOMODE
+)
+cls
 
+REM 3. Handle select distro (for Auto only)
+if [%RUNMODE%] NEQ [auto] (
+  CALL :applyAllFlavours
+  GOTO finishSetup
+)
+echo Distro Selected: %DISTRO%
+REM 4. Select flavour (for Auto only)
+if [%FLAVOUR%]==[ASK] (
+  CALL :selectFLAVOUR
+)
+CALL :applyFLAVOUR
+echo Flavour Selected: %FLAVOUR%
+GOTO finishSetup
 
-choice /C 12345670
+REM ==============================================
+:cmdlineSettings
+REM Read in the command line inputs:
+REM RUNMODE
+if [%1] == [] (
+  set RUNMODE=ASK
+) else (
+  set RUNMODE=%1
+  echo RUNMODE=%RUNMODE%
+)
+REM VIDEOMODE
+if [%2] == [] (
+  set VIDEOMODE=ASK
+) else (
+  set VIDEOMODE=%2
+  echo VIDEOMODE=%VIDEOMODE%
+)
 
-IF %ERRORLEVEL% == 255 GOTO end
-IF %ERRORLEVEL% == 1 GOTO normal
-IF %ERRORLEVEL% == 2 GOTO auto-hdmi
-IF %ERRORLEVEL% == 3 GOTO auto-hdmi-dev
-IF %ERRORLEVEL% == 4 GOTO auto-sdtv
-IF %ERRORLEVEL% == 5 GOTO auto-sdtv-dev
-IF %ERRORLEVEL% == 6 GOTO gui-hdmi
-IF %ERRORLEVEL% == 7 GOTO gui-sdtv
-IF %ERRORLEVEL% == 8 GOTO end
+REM FLAVOUR
+if [%3] == [] (
+  set FLAVOUR=ASK
+) else (
+  set FLAVOUR=%3
+  echo FLAVOUR=%FLAVOUR%
+)
 
+REM DISTRO
+if [%4] == [] (
+  set DISTRO=ASK
+) else (
+  set DISTRO=%4
+  echo DISTRO=%DISTRO%
+)
+goto :eof
+REM ==============================================
 
-GOTO end
+REM ==============================================
+:selectRUNMODE
+REM Use menu to get the required run mode
+echo Select the required NOOBS Run Mode.
+echo (normal) Starts OS normally - Press shift on boot to start NOOBS
+echo (gui)    Starts the NOOBS GUI on next power up
+echo (auto)   Automatically install the selected distribution and flavour
+echo (exit)   Keep current settings and exit
+echo.
+set i=0
+for %%a in %RUNMODE_LIST% do (
+   set /A i+=1
+   set "name[!i!]=%%a"
+   echo !i! %%a
+)
+set lastOpt=%i%
+:getOption
+set /P "opt=Enter desired option: "
+if %opt% gtr %lastOpt% (
+   echo Invalid option
+   goto getOption
+)
+echo Process %opt%:!name[%opt%]!
+set RUNMODE=!name[%opt%]!
+goto :eof
+REM ==============================================
 
-:auto-hdmi
-SET SOURCE=".\auto\recovery.cmdline"
-GOTO auto
+REM ==============================================
+:applyRUNMODE
+echo Apply %RUNMODE%
+SET SOURCE=".\%RUNMODE%\recovery.cmdline"
+REM Replace the recovery.cmdline file
+copy %SOURCE% %DEST% /Y  >nul 2>&1
+goto :eof
+REM ==============================================
 
-:auto-hdmi-dev
-SET SOURCE=".\auto\recovery.cmdline"
-SET FLAVOUR=".\_flavours\flavours.json.autodev"
-GOTO auto
+REM ==============================================
+:selectVIDEOMODE
+REM Use menu to get the required video mode
+echo Select the required NOOBS Video Mode.
+echo (HDMI)         Standard HDMI video ouput
+echo (HDMIsafemode) High compatability HDMI output
+echo (PAL)          Analogue video output (PAL mode) - Europe/Asia
+echo (NTFC)         Analogue video output (NTFC mode) - US etc
+echo (Default)      Use the default setting
+echo.
+set i=0
+for %%a in %VIDEOMODE_LIST% do (
+   set /A i+=1
+   set "name[!i!]=%%a"
+   echo !i! %%a
+)
+set lastOpt=%i%
+:getOption
+set /P "opt=Enter desired option: "
+if %opt% gtr %lastOpt% (
+   echo Invalid option
+   goto getOption
+)
+echo Process %opt%:!name[%opt%]!
+set VIDEOMODE=%opt%
+goto :eof
+REM ==============================================
 
-:auto-sdtv
-SET SOURCE=".\auto-sdtv\recovery.cmdline"
-GOTO auto
+REM ==============================================
+:applyVIDEOMODE
+echo Apply display mode:%VIDEOMODE%
+REM Append the video mode to the recovery.cmdline file
+for /F "delims=" %%a in (..\..\recovery.cmdline) do (
+  echo|set /p=%%a display=%VIDEOMODE% > recovery.cmdline.new
+)
+copy recovery.cmdline.new %DEST% /Y  >nul 2>&1
+del recovery.cmdline.new
+goto :eof
 
-:auto-sdtv-dev
-SET SOURCE=".\auto-sdtv\recovery.cmdline"
-SET FLAVOUR=".\_flavours\flavours.json.autodev"
-GOTO auto
+REM ==============================================
+:selectFLAVOUR
+REM List all the flavour files in the _flavours directory to select from
+set i=0
+for %%F in (.\_flavours\*.json) do (
+   set /A i+=1
+   set "name[!i!]=%%~nF"
+   echo !i! %%~nF
+)
+set lastOpt=%i%
+:getOption
+REM Get the selected option
+set /P "opt=Select the flavour to install: "
+if %opt% gtr %lastOpt% (
+   echo Invalid option
+   goto getOption
+)
+set FLAVOUR=!name[%opt%]!
+echo Process !name[%opt%]!
+goto:eof
+REM ==============================================
 
-:gui-hdmi
-SET SOURCE=".\install\recovery.cmdline"
-GOTO gui
-
-:gui-sdtv
-SET SOURCE=".\install-sdtv\recovery.cmdline"
-GOTO gui
-
-:normal
-SET SOURCE=".\normal\recovery.cmdline"
-GOTO gui
-
-:auto
-REM Change other files here for automatic install
-REM 
-REM NOTE:
-REM Until recovery.cmdline file supports specifying an OS/Flavour from the cmdline.txt
-REM we have to adjust the setup so only one option is available.
-
-REM - Replace flavours.json with single flavour version
-copy %FLAVOUR% %DISTRO%\flavours.json /Y >nul 2>&1
-
+REM ==============================================
+:applyFLAVOUR
+cls
+echo Apply flavour:%FLAVOUR%
+CALL gen_flavours.bat %FLAVOUR% %DISTRO%
 REM - Rename os.json files in other os directories
 for /r "..\..\os\" %%i in (os.json) do rename "%%i" "%%~ni.disabled" >nul 2>&1
 REM Re-enable the selected distro
-rename %DISTRO%\os.disabled "os.json"
+rename ..\..\os\%DISTRO%\os.disabled "os.json" >nul 2>&1
+goto:eof
+REM ==============================================
 
-GOTO cmdline
-
-
-
-:gui
-REM Change other files here for GUI install
-REM 
-REM NOTE:
-REM Until cmdline.txt file supports specifying an OS/Flavour from the cmdline.txt
-REM we have to undo any changes made by the automatic installation option.
-
-REM - Replace flavours.json with multi flavour version
-SET FLAVOUR=".\_flavours\flavours.json.normal" 
-copy %FLAVOUR% %DISTRO%\flavours.json /Y >nul 2>&1
+REM ==============================================
+:applyAllFlavours
+cls
+SET FLAVOUR=ALL
+CALL gen_flavours.bat %FLAVOUR% %DISTRO%
 
 REM - Restore os.json files in all os directories
 for /r "..\..\os\" %%i in (os.disabled) do rename "%%i" "%%~ni.json" >nul 2>&1
+goto:eof
+REM ==============================================
 
-GOTO cmdline
-
-
-
-:cmdline
-REM Replace the recovery.cmdline file
-copy %SOURCE% %DEST% /Y  >nul 2>&1
+REM ==============================================
+:applyIconsAndSlides
+REM Add icon files:
+echo Adding icon files...
 REM If PNG files don't exist then copy (i.e. Provide icons for clean NOOBS setup)
 for /r ".\_flavours\" %%i in (*.png) do (
-  if not exist "%DISTRO%\%%~nxi" copy "%%i" "%DISTRO%\*.*" >nul 2>&1
+  if not exist "..\..\os\%DISTRO%\%%~nxi" copy "%%i" "..\..\os\%DISTRO%\*.*" >nul 2>&1
   )
+REM Add slides:
+echo Adding slides files...
+for /r ".\slides_vga\" %%i in (*.png) do (
+  if not exist "..\..\os\%DISTRO%\slides_vga\%%~nxi" copy "%%i" "..\..\os\%DISTRO%\slides_vga\*.*" >nul 2>&1
+  )
+goto:eof
+REM ==============================================
 
-GOTO datapart
+REM ==============================================
+:applydatapart
+if %DATA_PARTITION% == TRUE  (
+  echo Adding data paration...
+  REM Replace partitions.json file to include datapartition
+  copy ".\_partitions\datapartitions.json" ..\..\os\%DISTRO%\partitions.json /Y  >nul 2>&1
+  REM Add data.tar.xz (if not present)
+  if not exist "..\..\os\%DISTRO%\data.tar.xz" copy ".\_partitions\data.tar.xz" "..\..\os\%DISTRO%\*.*" >nul 2>&1
+) else (
+  REM Replace partitions.json file
+  copy ".\_partitions\standardpartitions.json" ..\..\os\%DISTRO%\partitions.json /Y  >nul 2>&1
+)
+goto:eof
+REM ==============================================
 
-:datapart
-REM Replace partitions.json file
-copy ".\_flavours\partitions.json" %DISTRO% /Y  >nul 2>&1
-REM Add data.tar.xz (if not present)
-if not exist "%DISTRO%\data.tar.xz" copy ".\_flavours\data.tar.xz" "%DISTRO%\*.*" >nul 2>&1
+REM ==============================================
+:finishSetup
+cls
+CALL :applydatapart
+CALL :applyIconsAndSlides
+goto end
+REM ==============================================
 
-GOTO end
 
 :end
 echo recovery.cmdline is:
 type %DEST%
-echo .
+echo.
 pause
