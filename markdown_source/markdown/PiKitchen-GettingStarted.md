@@ -17,7 +17,7 @@ To create our PiKitchen setup, follow these steps:
 We need to first download NOOBS (you can obtain the latest version from the [Raspberry Pi website](http://www.raspberrypi.org/downloads/)).  You can use either the full NOOBS version or the network install (obviously for the network install you will need a working wired network connection - installation through a WiFi adaptor is not supported).
 
 ###2 - Extract NOOBS ###
-Extract the NOOBS installation directly on to a new SD-Card (alternatively you can extract them locally on your hard-drive and transfer them to the SD-Card when you have made your changes).
+Extract the NOOBS installation directly on to a new SD-Card.
 
 Copy the contents of the `NOOBS_vX.zip` file onto the SD Card.  In windows right-click on the file and select Extract All…
 Use Browse… to Locate your SD Card drive and select it as the location to extract the files to.
@@ -177,6 +177,4 @@ The recipe files support comments marked with # characters at the beginning of a
 ##Zero Sized SD-Card Issue##
 **Problem:** This issue is when you start NOOBS it reports it is unable to resize the partitions or it shows there no space available.
 
-**Fix:** Often occurs with SD-Cards which have been used with Android (for example in a mobile phone).
-
-Performing a format (with Format Size Adjustment enabled) as described above should always resolve this issue.
+**Fix:** To fix this perform a format (with Format Size Adjustment enabled) and re-extact the NOOBS files directly to the SD-Card.  You **must** extract the files directly from the NOOBS ZIP file (the order they are written to the SD-Card appears to makes a big difference in this case and has resolved the problem when any number of reformats has failed).

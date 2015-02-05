@@ -1,4 +1,5 @@
 @echo off
+REM www.pihardware.com Pi-Kitchen
 REM This script will build the flavour files (i.e. RaspbianPiKitchen_boot.txt etc).
 REM 04buildFlavours target flavour
 echo #### Build Flavours ####

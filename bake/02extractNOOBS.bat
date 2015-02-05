@@ -1,8 +1,9 @@
 @echo off
+REM www.pihardware.com Pi-Kitchen
 REM This script will extract the NOOBS setup files from the zip file.
 REM Command line:
 REM 01extractNOOBS target noobssource noobsconfig
-echo #### Extract NOO ####
+echo #### Extract NOOBS ####
 
 REM Read in the command line inputs:
 REM SDCARD_TARGET
@@ -15,7 +16,7 @@ echo SDCard Location: %SDCARD_TARGET%
 
 REM NOOBS_SOURCE
 if [%2] == [] (
-  set NOOBS_SOURCE=..\..\..\NOOBS_v1_3_11.zip
+  set NOOBS_SOURCE=..\..\..\NOOBS_v1_3_12.zip
 ) else (
   set NOOBS_SOURCE=%2
 )

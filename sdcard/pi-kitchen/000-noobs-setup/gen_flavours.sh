@@ -7,7 +7,8 @@
 #
 # Read in the command line inputs:
 # FLAVOUR
-if [$1] == []; then
+if ["$1" =  ""]
+then
   FLAVOUR=ALL
 else
   FLAVOUR=$1
@@ -15,7 +16,8 @@ fi
 echo Flavour: $FLAVOUR
 
 # DISTRO
-if [$2] == []; then
+if ["$2" =  ""]
+then
   DISTRO=Raspbian
 else
   DISTRO=$2
@@ -28,26 +30,27 @@ FLAVOUR_SOURCE=_flavours/*.json
 
 AddFlavour() {
 echo Add Flavour: $1
-type "_flavours\$1.json" >> $DISTRO_PATH/$FLAVOUR_FILE
-echo.>> $DISTRO_PATH/$FLAVOUR_FILE
+more "./_flavours/$1.json" >> $DISTRO_PATH/$FLAVOUR_FILE
+echo >> $DISTRO_PATH/$FLAVOUR_FILE
 }
 
 
 # Add start of flavours.json file:
 echo {> $DISTRO_PATH/$FLAVOUR_FILE
 echo   "flavours": [>> $DISTRO_PATH/$FLAVOUR_FILE
-echo     {>> $DISTRO_PATH/$FLAVOUR_FILE
+echo "    {">> $DISTRO_PATH/$FLAVOUR_FILE
 # Add required flavour(s):
-if [$FLAVOUR] == [ALL]; then
+if [ "$FLAVOUR" = "ALL" ]
+then
    list=`ls $FLAVOUR_SOURCE`
-   for F in list
+   for F in $list
    do
       #Get flavour name from path/filename.json
-      y=${x%.*}
+      y=${F%.*}
       ADDFLAVOUR=${y##*/}
       AddFlavour $ADDFLAVOUR
-      echo     },>> $DISTRO_PATH/$FLAVOUR_FILE
-      echo     {>> $DISTRO_PATH/$FLAVOUR_FILE
+      echo "     },">> $DISTRO_PATH/$FLAVOUR_FILE
+      echo "    {">> $DISTRO_PATH/$FLAVOUR_FILE
 
    done
    # Remove the last two lines so the json entry can be closed
@@ -59,8 +62,8 @@ else
    AddFlavour $ADDFLAVOUR
 fi
 # Add end of flavours.json file:
-echo     }>> $DISTRO_PATH/$FLAVOUR_FILE
-echo   ]>> $DISTRO_PATH/$FLAVOUR_FILE
-echo }>> $DISTRO_PATH/$FLAVOUR_FILE
+echo "    }">> $DISTRO_PATH/$FLAVOUR_FILE
+echo "  ]">> $DISTRO_PATH/$FLAVOUR_FILE
+echo "}">> $DISTRO_PATH/$FLAVOUR_FILE
 
 

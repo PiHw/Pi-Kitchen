@@ -1,4 +1,5 @@
 @echo off
+REM www.pihardware.com Pi-Kitchen
 REM This script will allow you to select how NOOBS will run.
 REM 05setNOOBSmode target
 echo #### Set NOOBS mode ####

@@ -16,7 +16,7 @@ SET DISTRO=Raspbian
 SET DEST="..\..\recovery.cmdline"
 SET DISTRO_PATH=..\..\os\%DISTRO%
 SET RUNMODE_LIST=(normal,gui,auto,exit)
-SET VIDEOMODE_LIST=(HDMI,HDMIsafemode,PAL,NFSC,Default)
+SET VIDEOMODE_LIST=(HDMI,HDMIsafemode,PAL,NTSC,Default)
 SET DATA_PARTITION=TRUE
 
 REM 1. Handle NOOBS runmode
@@ -130,7 +130,7 @@ echo Select the required NOOBS Video Mode.
 echo (HDMI)         Standard HDMI video ouput
 echo (HDMIsafemode) High compatability HDMI output
 echo (PAL)          Analogue video output (PAL mode) - Europe/Asia
-echo (NTFC)         Analogue video output (NTFC mode) - US etc
+echo (NTSC)         Analogue video output (NTSC mode) - US etc
 echo (Default)      Use the default setting
 echo.
 set i=0
@@ -166,7 +166,7 @@ REM ==============================================
 :selectFLAVOUR
 REM List all the flavour files in the _flavours directory to select from
 set i=0
-for %%F in (.\_flavours\*.json) do (
+for /F "delims=" %%F in ('dir /b /o:n .\_flavours\*.json') do (
    set /A i+=1
    set "name[!i!]=%%~nF"
    echo !i! %%~nF
