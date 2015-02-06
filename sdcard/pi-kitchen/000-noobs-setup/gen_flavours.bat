@@ -39,9 +39,16 @@ if "%FLAVOUR%" == "ALL" (
       echo     {>> %DISTRO_PATH%/%FLAVOUR_FILE%
    )
    REM Remove the last two lines so the json entry can be closed
-   sed '$d' %DISTRO_PATH%/%FLAVOUR_FILE% > temp.txt
-   sed '$d' temp.txt > %DISTRO_PATH%/%FLAVOUR_FILE%
-   del temp.txt
+   call :RemoveLine
+   REM sed not available for all windows!
+   REM sed '$d' %DISTRO_PATH%/%FLAVOUR_FILE% > temp.txt
+   REM sed '$d' temp.txt > %DISTRO_PATH%/%FLAVOUR_FILE%
+   REM del temp.txt
+   call :RemoveLine
+   copy temp.txt "%DISTRO_PATH%/%FLAVOUR_FILE%" /Y >nul 2>&1
+   call :RemoveLine
+   copy temp.txt "%DISTRO_PATH%/%FLAVOUR_FILE%" /Y >nul 2>&1
+   del temp.txt >nul 2>&1
 ) else (
    set ADDFLAVOUR=%FLAVOUR%
    call :AddFlavour
@@ -53,6 +60,15 @@ echo }>> %DISTRO_PATH%/%FLAVOUR_FILE%
 
 goto TheEnd
 
+:RemoveLine
+setlocal EnableDelayedExpansion
+del temp.txt >nul 2>&1
+set row=
+for /F "delims=" %%j in (%DISTRO_PATH%/%FLAVOUR_FILE%) do (
+  if  defined row echo.!row!>> temp.txt
+  set row=%%j
+)
+goto :eof
 
 
 :AddFlavour

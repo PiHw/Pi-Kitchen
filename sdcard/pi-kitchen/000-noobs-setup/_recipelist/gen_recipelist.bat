@@ -2,7 +2,7 @@
 REM Create a list of the recipes available in the Pi-Kitchen (based on the directory names)
 REM List list is used for generating the documentation and the combined recipe files (i.e. RaspbianPiKitchen_root.txt)
 
-set RECIPE_PATH="..\..\pi-kitchen\"
+set RECIPE_PATH="..\..\..\pi-kitchen\"
 set LIST=recipelist.txt
 
 del %LIST%

@@ -8,7 +8,7 @@ set BAKE_PATH=%~p0
 
 REM Setup defaults:
 set SDCARD_TARGET=F:
-set FORMAT_SDCARD_PROG="C:\Program Files (x86)\SDFormatter\SDFormatter.exe"
+set FORMAT_SDCARD_PROG="C:\Program Files (x86)\SD Formatter\SDFormatter.exe"
 set NOOBS_SOURCE=..\NOOBS_v1_3_12.zip
 set NOOBSCONFIG_SOURCE=..\noobsconfig.zip
 set RECIPE_SOURCE=..\..\Pi-Kitchen-master\sdcard\pi-kitchen
@@ -25,21 +25,25 @@ REM 01formatSDCard target sdformatterprog
 CALL 01formatSDCard.bat %SDCARD_TARGET% %FORMAT_SDCARD_PROG%
 %BAKE_DRIVE%
 cd %BAKE_PATH%
+cls
 
 REM 02extractNOOBS target noobssource noobsconfig
 CALL 02extractNOOBS.bat %SDCARD_TARGET% %NOOBS_SOURCE% %NOOBSCONFIG_SOURCE%
 %BAKE_DRIVE%
 cd %BAKE_PATH%
+cls
 
 REM 03installRecipes target recipesource
 CALL 03installRecipes %SDCARD_TARGET% %RECIPE_SOURCE%
 %BAKE_DRIVE%
 cd %BAKE_PATH%
+cls
 
 REM 04buildFlavours target flavour
 CALL 04buildFlavours %SDCARD_TARGET% %FLAVOUR%
 %BAKE_DRIVE%
 cd %BAKE_PATH%
+cls
 
 REM 05setNOOBSmode target
 CALL 05setNOOBSmode %SDCARD_TARGET%

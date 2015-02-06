@@ -37,7 +37,7 @@ if [%2] == [] (
 ) else (
   set RECIPELIST=%2
 )
-if not exist .\%RECIPELIST% (
+if not exist .\_recipelist\%RECIPELIST% (
   set RECIPELIST=recipelist.txt
 )
 echo Recipe List File: %RECIPELIST%
@@ -89,7 +89,7 @@ if "%PART%" == "root" (
 echo.>>%FLAVOUR%_%PART%.txt
 
 ::read %RECIPE_FILE% and loop through each line (ignore lines with #)
-for /F "usebackq eol=# tokens=* delims=" %%A in (%RECIPELIST%) do (
+for /F "usebackq eol=# tokens=* delims=" %%A in (.\_recipelist\%RECIPELIST%) do (
    set RECIPE=%%A
    call :ProcessRecipeFileLine
 )
@@ -100,7 +100,7 @@ echo #------------------------------------------------------------------->>%FLAV
 echo #End>>%FLAVOUR%_%PART%.txt
 
 REM Move to OS directory
-move %FLAVOUR%_%PART%.txt %DISTRO_PATH%\%FLAVOUR%_%PART%.txt
+move %FLAVOUR%_%PART%.txt %DISTRO_PATH%\%FLAVOUR%_%PART%.txt >nul 2>&1
 
 goto :eof
 

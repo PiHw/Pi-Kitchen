@@ -29,6 +29,12 @@ The "Bake" scripts will do all the complicated parts for you, so you just need t
 
 - noobsconfig zip file (shown here located in the root of the Pi-Kitchen setup - one level above the bake folder)
    set NOOBSCONFIG_SOURCE=..\noobsconfig.zip
+   
+> <img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/note.png" height=40/>
+> **NOTE:** Windows text files created using Notepad have different line-ending characters to those used and created using the Raspberry Pi (UNIX format).
+> 
+> Therefore it is highly recommended you use a different editor which supports both formats when working with files which are to be used on the the Raspberry Pi (for example the freeware program <a href="http://www.notepadpp.com">Notepad++</a>). While noobsconfig does support non-UNIX format recipe files, it is recommended the UNIX/OSX end of line settings is used (in Notepad++ this is under edit->EOL Setting->UNIX/OSX).
+> To keep things consistent you should find that all the Pi-Kitchen files also use UNIX/OSX format (as many will be used on the Raspberry Pi too).
 
 ##Ingredients - Customise your flavour(s)##
 To get the most out of the Pi-Kitchen you will need to customise the flavours to include the specific recipes you wish to use and to include your required settings.

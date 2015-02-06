@@ -4,7 +4,7 @@
 002-bootdisplay
 #003-direct-network
 004-no-raspiconfig
-005-wifi
+#005-wifi
 006-wifi-driver
 007-network-share
 008-vnc
