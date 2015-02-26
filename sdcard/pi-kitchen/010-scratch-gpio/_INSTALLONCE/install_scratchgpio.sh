@@ -1,9 +1,9 @@
 #!/bin/sh
 
-name="Scratch GPIO (v6)"
+name="Scratch GPIO (v7)"
 source_path="/home/pi/recovery/pi-kitchen/010-scratch-gpio/install/"
-url="http://goo.gl/xzJlz7"
-package="install_scratchgpio6.sh"
+url="http://bit.ly/1wxrqdp"
+package="install_scratchgpio7.sh"
 
 f_default(){
 echo "Default: Install using local files"
@@ -23,7 +23,8 @@ sudo bash $package
 f_network(){
 echo "Install $name from internet"
 #Get file:
-wget $url
+cd $source_path
+sudo wget $url -O $package
 #Install:
 sudo bash $package
 #Remove file:
@@ -33,11 +34,11 @@ rm $package
 #Update install files from apt-get and install
 f_update(){
 echo "Update install files from internet then install locally"
-echo $deb_path
-cd $deb_path
+echo $source_path
+cd $source_path
 sudo mv $package $package.old -f
 #Get file:
-wget $url
+sudo wget $url -O $package
 #Install locally:
 f_local
 }
@@ -53,6 +54,12 @@ echo "[U] Update the local files using apt-get and then install?"
 echo "[S] Skip install, just reconfigure?"
 echo "Installing from the network will fetch the latest version using wget"
 echo "If the above ping command failed, you probably will not be able to install from the network"
+echo "."
+echo "WARNING: You will need to have run the desktop at least"
+echo "         once for the Scratch GPIO icons to be installed"
+echo "         correctly. Skip install and run startx first if"
+echo "         you haven't already run the desktop."
+echo "."
 echo ">>>"
 
 read option

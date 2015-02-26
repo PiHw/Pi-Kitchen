@@ -7,9 +7,9 @@
 ###Installation###
 The recipe includes the Scratch GPIO installation script, allowing it to be installed without requiring an internet connection.  You can also choose to download and install the latest version of the script and also update the script stored in the recipe.
 
-The installation script (`install_scratchgpio.sh`) is placed in the `_INSTALLONCE` directory, so the user can select the method of installation.
+The installation script (`install_scratchgpioX.sh`) is placed in the `_INSTALLONCE` directory, so the user can select the method of installation.
 
-If the **Scratch GPIO** link changes (i.e. if a new version is released) then update `install_scratchgpio.sh` as required.
+If the **Scratch GPIO** link changes (i.e. if a new version is released) then update `install_scratchgpioX.sh` as required.
 
 > <img style="float:left" src="IMG_SRC/warn.png" height=40/>
 > <b>WARNING: Using Scratch with remote connections </b>

@@ -12,8 +12,10 @@
 ../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.22/mt7601Usta.ko "/lib/modules/3.12.22+/kernel/drivers/net/wireless" 644
 ../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.28/mt7601Usta.ko "/lib/modules/3.12.28+/kernel/drivers/net/wireless" 644
 ../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.35/mt7601Usta.ko "/lib/modules/3.12.35+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.5/mt7601Usta.ko "/lib/modules/3.18.5+/kernel/drivers/net/wireless" 644
-../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.5v7/mt7601Usta.ko "/lib/modules/3.18.5-v7+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.6/mt7601Usta.ko "/lib/modules/3.18.5+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.6/mt7601Usta.ko "/lib/modules/3.18.6+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.7/mt7601Usta.ko "/lib/modules/3.18.7+/kernel/drivers/net/wireless" 644
+#../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.7v7/mt7601Usta.ko "/lib/modules/3.18.7-v7+/kernel/drivers/net/wireless" 644
 ../../pi-kitchen/006-wifi-driver/ralink-7601/RT2870STA.dat /etc/Wireless/RT2870STA 644
 ../../pi-kitchen/006-wifi-driver/etc/udev/rules.d/70-persistent-net.rules /etc/udev/rules.d
 ../../pi-kitchen/006-wifi-driver/_RUNONCE/install_ralink-7601.sh /home/pi/bin/_RUNONCE
