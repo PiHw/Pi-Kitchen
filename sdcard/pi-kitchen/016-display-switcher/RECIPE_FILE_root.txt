@@ -1,0 +1,6 @@
+#
+#Recipe: 016-display-switcher
+#- Add script to bin folder and replace inittab
+#../../pi-kitchen/016-display-switcher/bin/display_switcher.sh /home/pi/bin +x
+../../pi-kitchen/016-display-switcher/bin/display_switcher.py /home/pi/bin +x
+../../pi-kitchen/016-display-switcher/etc/inittab /etc 644 root root

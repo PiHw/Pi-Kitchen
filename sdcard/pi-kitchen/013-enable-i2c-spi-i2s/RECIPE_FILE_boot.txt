@@ -1,0 +1,10 @@
+#
+#Recipe: 013-enable-i2c-spi-i2s
+#NOTE: Driver will be enabled by adding/removing the overlay file in the boot/overlay folder
+#The device is disabled if the overlay file i.e. enable-i2s-overlay.dtb is moved to /boot/overlays/disabled
+../../pi-kitchen/013-enable-i2c-spi-i2s/boot/overlays/enable-i2c-arm-overlay.dtb /overlays
+../../pi-kitchen/013-enable-i2c-spi-i2s/boot/overlays//enable-i2s-overlay.dtb /overlays
+../../pi-kitchen/013-enable-i2c-spi-i2s/boot/overlays/enable-spi-overlay.dtb /overlays
+../../pi-kitchen/013-enable-i2c-spi-i2s/boot/overlays/README.txt /overlays/disabled
+#Example config.txt file (not needed if 002-bootdisplay recipe is used
+#../../pi-kitchen/013-enable-i2c-spi-i2s/boot/config.txt

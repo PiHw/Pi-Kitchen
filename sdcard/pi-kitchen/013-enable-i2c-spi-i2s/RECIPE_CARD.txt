@@ -1,0 +1,24 @@
+#define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
+
+#define RC_NUMBER	013
+#define RC_NAME		Enable I2C, SPI and I2S
+
+#define RC_DESC      This recipe allows the I2C, SPI and I2S to be enabled as standard and will also add the I2C Tools to the _INSTALLONCE list.
+
+#define RC_HOWTOUSE	
+
+#define RC_SOURCE_LOCATION pi-kitchen/013-enable-i2c-spi-i2s
+
+#define RC_INGREDIENTS	bin/_INSTALLONCE/install_i2ctools.sh<p>bin/_RUNONCE/enable_i2c-spi.sh<p>boot/config.txt<p>boot/overlays/enable-i2c-arm-overlay.dtb<p>boot/overlays/enable-i2s-overlay.dtb<p>boot/overlays/enable-spi-overlay.dtb
+
+#define RC_ZIP 013-enable-i2c-spi-i2s_INGREDIENTS.zip
+
+#define RC_RECIPECARD 013-enable-i2c-spi-i2s_RECIPE_CARD.md
+
+#define RC_REQUIRED 	Recipe 001-Startup
+
+#define RC_ROOT
+
+#define RC_TESTED	Raspbian
+
+#define RC_AUTHOR	@PiHardware

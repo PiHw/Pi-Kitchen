@@ -1,0 +1,5 @@
+#
+#Recipe: 011-boot-to-desktop
+#- Add script to _RUNONCE folder
+../../pi-kitchen/011-boot-to-desktop/_RUNONCE/boot-to-desktop.sh /home/pi/bin/_RUNONCE
+

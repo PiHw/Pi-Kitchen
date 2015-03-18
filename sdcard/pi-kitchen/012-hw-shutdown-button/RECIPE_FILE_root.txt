@@ -1,0 +1,6 @@
+#
+#Recipe: 012-hw-shutdown-button
+#- Add script to _RUNSTARTBG folder and bin folder
+../../pi-kitchen/012-hw-shutdown-button/_RUNSTARTBG/shtdwn.sh /home/pi/bin/_RUNSTARTBG
+../../pi-kitchen/012-hw-shutdown-button/bin/shtdwn.py /home/pi/bin
+

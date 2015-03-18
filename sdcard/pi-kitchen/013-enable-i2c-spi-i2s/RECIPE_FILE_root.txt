@@ -1,0 +1,7 @@
+#
+#Recipe: 013-enable-i2c-spi-i2s
+#NOTE: Driver will be enabled by adding/removing the overlay file in the boot/overlay folder
+#- Add scripts to _RUNONCE and _INSTALLONCE folders
+../../pi-kitchen/013-enable-i2c-spi-i2s/_RUNONCE/enable_i2c-spi.sh /home/pi/bin/_RUNONCE
+../../pi-kitchen/013-enable-i2c-spi-i2s/_INSTALLONCE/install_i2ctools.sh /home/pi/bin/_INSTALLONCE
+

@@ -1,0 +1,6 @@
+#
+#Recipe: 015-hw-pistop-lighthouse
+#- Add pistop class and files
+../../pi-kitchen/015-hw-pistop-lighthouse/pistop/pistop.py /home/pi/pistop
+../../pi-kitchen/015-hw-pistop-lighthouse/pistop/trafficlights.py /home/pi/pistop
+../../pi-kitchen/015-hw-pistop-lighthouse/pistop/runtrafficlight.sh /home/pi/pistop

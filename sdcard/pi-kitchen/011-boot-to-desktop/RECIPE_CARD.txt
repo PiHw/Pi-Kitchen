@@ -1,0 +1,24 @@
+#define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
+
+#define RC_NUMBER	011
+#define RC_NAME		Boot to desktop
+
+#define RC_DESC
+
+#define RC_HOWTOUSE	This recipe allows the Raspberry Pi to automatically boot straight to the desktop as the default Pi user.<p><b>Note:</b>This recipe is not quite ready yet (it has unwanted side-effects).
+
+#define RC_SOURCE_LOCATION pi-kitchen/001-boot-to-desktop
+
+#define RC_INGREDIENTS	bin/_RUNONCE/boot-to-desktop.sh
+
+#define RC_ZIP 011-boot-to-desktop_INGREDIENTS.zip
+
+#define RC_RECIPECARD 011-boot-to-desktop_RECIPE_CARD.md
+
+#define RC_REQUIRED 	Recipe 001-Startup
+
+#define RC_ROOT
+
+#define RC_TESTED	Testing in progress
+
+#define RC_AUTHOR	@PiHardware

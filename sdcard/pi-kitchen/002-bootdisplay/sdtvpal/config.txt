@@ -40,3 +40,20 @@ sdtv_mode=2
 #arm_freq=800
 
 # for more options see http://elinux.org/RPi_config.txt
+
+#Information for device tree setups
+#The following will disable the device tree behaviour
+#device_tree=
+#
+# Enable i2c
+# dtparam=i2c_arm=on
+# Enable i2s
+#dtparam=i2s=on
+# Enable spi
+#dtparam=spi=on
+
+#Support for Pi-Kitchen recipe 013-enable-i2c-spi-i2s
+#Allows the driver to be enabled if the listed overlay file is present in /boot/overlays
+dtoverlay=enable-i2c-arm
+dtoverlay=enable-i2s
+dtoverlay=enable-spi

@@ -16,6 +16,7 @@ echo $deb_path
 cd $deb_path
 #Dependencies are:
 installpgk=$package"*.deb"
+sudo dpkg -i xfonts-base*.deb
 sudo dpkg -i $installpgk
 }
 

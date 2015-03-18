@@ -1,0 +1,9 @@
+#
+#Recipe: 014-hw-ip-dongle
+#- Install smbus using _RUNONCE folder
+../../pi-kitchen/014-hw-ip-dongle/_RUNONCE/install_smbus.sh /home/pi/bin/_RUNONCE
+#- Add script to _RUNSTARTBG folder and bin folder
+../../pi-kitchen/014-hw-ip-dongle/_RUNSTARTBG/run_ipd.sh /home/pi/bin/_RUNSTARTBG
+../../pi-kitchen/014-hw-ip-dongle/bin/ipd03.py /home/pi/bin
+#- Add IP dongle example program (optional)
+../../pi-kitchen/014-hw-ip-dongle/bin/count.py /home/pi/bin
