@@ -53,6 +53,9 @@ config_hdmi_boost=4
 # Enable spi
 #dtparam=spi=on
 
+#Boost USB power output
+#max_usb_current=1
+
 #Support for Pi-Kitchen recipe 013-enable-i2c-spi-i2s
 #Allows the driver to be enabled if the listed overlay file is present in /boot/overlays
 dtoverlay=enable-i2c-arm

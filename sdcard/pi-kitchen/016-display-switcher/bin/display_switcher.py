@@ -90,7 +90,7 @@ def saveDisplayMode():
 def showHelp():
    print("Switch Video Modes\n")
    print("==================\n")
-   print("s/Enter - show details of current display mode\n")
+   print("Enter - show details of current display mode\n")
    print("1-9 - select specific display mode\n")
    print("0/Space - switch display off\n")
    print("Left/Right - select previous/next display mode\n")

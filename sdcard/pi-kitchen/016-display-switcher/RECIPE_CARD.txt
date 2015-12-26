@@ -1,0 +1,24 @@
+#define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
+
+#define RC_NUMBER	016
+#define RC_NAME		Display Switcher
+
+#define RC_DESC      This recipe installs a script which allows easy switching of the display settings (while the Raspberry Pi is running!).  It also enables the keyboard shortcut ALT+UP to trigger the program and change the current display setting.  This allows you to select the correct display settings for your screen on-the-fly!
+
+#define RC_HOWTOUSE
+
+#define RC_SOURCE_LOCATION pi-kitchen/016-display-switcher
+
+#define RC_INGREDIENTS	bin/display_switcher.py<p>bin/videomode.py<p>etc/inittab<p>
+
+#define RC_ZIP 016-display-switcher_INGREDIENTS.zip
+
+#define RC_RECIPECARD 016-display-switcher_RECIPE_CARD.md
+
+#define RC_REQUIRED
+
+#define RC_ROOT
+
+#define RC_TESTED	Raspbian
+
+#define RC_AUTHOR	@PiHardware

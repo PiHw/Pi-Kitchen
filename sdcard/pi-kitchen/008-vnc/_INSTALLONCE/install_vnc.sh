@@ -24,7 +24,7 @@ sudo dpkg -i $installpgk
 f_network(){
 echo "Install $name from apt-get"
 sudo apt-get update
-sudo apt-get -y install $package
+sudo apt-get -y install $package xfonts-base
 }
 
 #Update install files from apt-get and install

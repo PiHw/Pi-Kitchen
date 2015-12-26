@@ -65,7 +65,7 @@ We can stop `raspi-config` running by replacing the script which normally runs i
 The recipe will replace `etc/profile.d/raspi-config.sh` which doesn't include the call to `raspi-config`.
 
 ##Performing post `raspi-config` steps##
-Once `raspi-config` runs, it performs two actions:
+Once `raspi-config` runs (located at `/usr/bin/raspi-config`), it performs two actions:
 
 1. It deletes the `etc/profile.d/raspi-config.sh` script (we don't need to do this since our version doesn't run `raspi-config`).
 2. It modifies `etc/inittab`.

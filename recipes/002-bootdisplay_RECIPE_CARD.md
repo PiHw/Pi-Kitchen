@@ -117,7 +117,7 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 #../../pi-kitchen/002-bootdisplay/hdmiadapt/config.txt
 #- SD PAL - Set composite video output to PAL
 #../../pi-kitchen/002-bootdisplay/sdtvpal/config.txt
-#- SD NTSC - Set composite video output to PAL
+#- SD NTSC - Set composite video output to NTSC
 #../../pi-kitchen/002-bootdisplay/sdtvntsc/config.txt
 #
 #Add switchdisp files:

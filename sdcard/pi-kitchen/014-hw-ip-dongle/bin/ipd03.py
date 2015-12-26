@@ -124,24 +124,16 @@ def displayIP():
       length = len(split_data)
       print 'Length', length
       if length > 8:
+         ipaddr = split_data[split_data.index('src')+1]
+         print ipaddr
          waiting = False
       else:
          #No IP address found
-         scroll("0.0.0.0", 2) #Scroll 0's twice
-   ipaddr = split_data[split_data.index('src')+1]
-   print ipaddr
-   #parts = ipaddr.split('.')
-   #print parts[0]
-   #print parts[1]
-   #print parts[2]
-   #print parts[3]
-   #print int(parts[3])
-   #iDisplay(int(parts[3]))
-   #sDisplay(parts[3])
+         ipaddr = "0.0.0.0" #Scroll 0's instead
+         waiting = False
    scroll(ipaddr, 5) #Scroll 5 times
    bus.write_byte_data(addr, 0x13, 0xff) # Set all of bank 1 to High (Off) 
 
-      
 if __name__=="__main__":
    """The following code is only run when the file is
      run directly, so we can put test code here."""
