@@ -3,18 +3,17 @@
     {
       "label": "boot",
       "filesystem_type": "FAT",
-      "partition_size_nominal": 60,
+      "partition_size_nominal": 63,
       "want_maximised": false,
-      "uncompressed_tarball_size": 11,
-      "mkfs_options": "-F 32"
+      "uncompressed_tarball_size": 21
     },
     {
       "label": "root",
       "filesystem_type": "ext4",
-      "partition_size_nominal": 2700,
+      "partition_size_nominal": 3482,
       "want_maximised": true,
       "mkfs_options": "-O ^huge_file",
-      "uncompressed_tarball_size": 2203
+      "uncompressed_tarball_size": 3082
     },
     {
       "label": "data",

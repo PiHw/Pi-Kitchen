@@ -178,7 +178,62 @@ i.e. `RaspbianPiKitchen_recipelist.txt`
 i.e. `RaspbianPiKitchen_RECIPE_FILE_boot.txt`
 
 ><img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/tip.png" height=40/>
->**TIP:** This allows you to create recipe variations for a particular flavour (i.e. using different Wifi settings or default displays).</font>
+>**TIP:** This allows you to create recipe variations for a particular flavour (i.e. using different Wifi settings or default displays).
+
+##Support for NOOBS v1.5.0##
+###recovery.cmdline###
+Since the release of **NOOBS v1.5.0** the `recovery.cmdline` file was changed.
+
+For **NOOBS v1.4.2 and before** the `recovery.cmdline` file is:
+<pre>quiet vt.cur_default=1 coherent_pool=6M elevator=deadline</pre>
+
+For **NOOBS v1.5.0 and later** the `recovery.cmdline` file is:
+<pre>runinstaller quiet ramdisk_size=32768 root=/dev/ram0 init=/init vt.cur_default=1 elevator=deadline</pre>
+
+###partions.json###
+The partitions have also been adjusted for **NOOBS v1.5.0**.
+
+For **NOOBS v1.4.2 and before**:
+<pre>
+  "partitions": [
+    {
+      "label": "boot",
+      "filesystem_type": "FAT",
+      "partition_size_nominal": 60,
+      "want_maximised": false,
+      "uncompressed_tarball_size": 11,
+      "mkfs_options": "-F 32"
+    },
+    {
+      "label": "root",
+      "filesystem_type": "ext4",
+      "partition_size_nominal": 2700,
+      "want_maximised": true,
+      "mkfs_options": "-O ^huge_file",
+      "uncompressed_tarball_size": 2203
+    },
+</pre>
+
+For **NOOBS v1.5.0 and later**:
+<pre>
+  "partitions": [
+    {
+      "label": "boot",
+      "filesystem_type": "FAT",
+      "partition_size_nominal": 63,
+      "want_maximised": false,
+      "uncompressed_tarball_size": 21
+    },
+    {
+      "label": "root",
+      "filesystem_type": "ext4",
+      "partition_size_nominal": 3482,
+      "want_maximised": true,
+      "mkfs_options": "-O ^huge_file",
+      "uncompressed_tarball_size": 3082
+    }
+  ]
+</pre></font>
 
 ##How to use##
 <font color = GREEN>
