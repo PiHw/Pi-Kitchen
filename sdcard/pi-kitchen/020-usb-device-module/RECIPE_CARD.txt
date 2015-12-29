@@ -1,0 +1,24 @@
+#define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
+
+#define RC_NUMBER	020
+#define RC_NAME		USB Device Module
+
+#define RC_DESC      The Raspberry Pi Model A and Raspberry Pi Zero have the ability to be setup as USB devices (since they are wired directly to the Broadcom processor).  This recipe provides the kernel modifications for these USB Modes. 
+
+#define RC_HOWTOUSE
+
+#define RC_SOURCE_LOCATION pi-kitchen/020-usb-device-module
+
+#define RC_INGREDIENTS	_RUNONCE/install_0_usbdevicemodule.sh<p>module/gadgetmodulekernel.tgz<p>
+
+#define RC_ZIP 020-usb-device-module_INGREDIENTS.zip
+
+#define RC_RECIPECARD 020-usb-device-module_RECIPE_CARD.md
+
+#define RC_REQUIRED
+
+#define RC_ROOT
+
+#define RC_TESTED	Raspbian
+
+#define RC_AUTHOR	@PiHardware

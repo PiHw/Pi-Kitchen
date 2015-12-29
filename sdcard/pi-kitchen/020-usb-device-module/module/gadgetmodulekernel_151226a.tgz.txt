@@ -1,0 +1,2 @@
+File: gadgetmodulekernel_151226a.tgz
+Source: http://adafruit-download.s3.amazonaws.com/gadgetmodulekernel_151226a.tgz

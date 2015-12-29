@@ -41,6 +41,7 @@ if not exist .\_recipelist\%RECIPELIST% (
   set RECIPELIST=recipelist.txt
 )
 echo Recipe List File: %RECIPELIST%
+set TMPRECIPELIST=TMP_%RECIPELIST%
 
 REM DISTRO
 if [%3] == [] (
@@ -53,6 +54,14 @@ echo Distribution: %DISTRO%
 set DISTRO_PATH=..\..\os\%DISTRO%
 set RECIPE_PATH=..\..\pi-kitchen
 set HOME_PATH=/home/pi
+set ADD_LINE_START=ADD
+
+::read %RECIPE_FILE% and loop through each line (ignore lines with #)
+echo #Generated Recipe List>%TMPRECIPELIST%
+for /F "usebackq eol=# tokens=* delims=" %%A in (.\_recipelist\%RECIPELIST%) do (
+   set RECIPE=%%A
+   call :GenerateAddedRecipe
+)
 
 :GenerateFileSet
 set PART=root
@@ -61,7 +70,22 @@ set PART=boot
 call :GenerateFlavourRecipeFile
 set PART=data
 call :GenerateFlavourRecipeFile
+del %TMPRECIPELIST%
 goto TheEnd
+
+:GenerateAddedRecipe
+::Look for ADD_LINE_START and insert the content of any recipe_list file.
+if "%RECIPE:~0,4%"=="%ADD_LINE_START% " (
+   REM Insert recipelist into temp recipe.
+   echo.>>%TMPRECIPELIST%
+   echo #ADD %RECIPE:~4,100%_recipelist.txt>>%TMPRECIPELIST%
+   type .\_recipelist\%RECIPE:~4,100%_recipelist.txt>>%TMPRECIPELIST%
+   echo.>>%TMPRECIPELIST%
+) else (
+   echo %RECIPE%>>%TMPRECIPELIST%
+)
+goto :eof
+
 
 :GenerateFlavourRecipeFile
 REM Add header to the flavour recipe file:
@@ -89,7 +113,7 @@ if "%PART%" == "root" (
 echo.>>%FLAVOUR%_%PART%.txt
 
 ::read %RECIPE_FILE% and loop through each line (ignore lines with #)
-for /F "usebackq eol=# tokens=* delims=" %%A in (.\_recipelist\%RECIPELIST%) do (
+for /F "usebackq eol=# tokens=* delims=" %%A in (.\%TMPRECIPELIST%) do (
    set RECIPE=%%A
    call :ProcessRecipeFileLine
 )

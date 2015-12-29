@@ -1,0 +1,4 @@
+#
+#Recipe: 020-usb-device-module
+#- Add script to _RUNONCE folder
+../../pi-kitchen/020-usb-device-module/_RUNONCE/install_0_usbdevicemodule.sh /home/pi/bin/_RUNONCE

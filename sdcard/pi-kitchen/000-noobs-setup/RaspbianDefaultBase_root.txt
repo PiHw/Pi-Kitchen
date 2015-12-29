@@ -1,0 +1,99 @@
+#Noobs config file for RaspbianDefaultBase_root (27/12/2015  08:27 PM)
+#-------------------------------------------------------------------
+#
+#Format is: filename destination attributes user group
+#Copy the Noobs config txt files to home directory for reference
+RaspbianDefaultBase_boot.txt /home/pi
+RaspbianDefaultBase_root.txt /home/pi
+RaspbianDefaultBase_data.txt /home/pi
+
+#
+#Recipe: 000-noobs-setup
+#Add switchnoobs files:
+#- switchnoobs.sh should be set as executable
+../../pi-kitchen/000-noobs-setup/switchnoobs.sh /home/pi/bin +x
+#
+#Recipe: 001-startup
+#Setup rc.local startup script
+../../pi-kitchen/001-startup/etc/rc.local /etc +x root root
+#- Mount recovery and userdata
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/recovery
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/userdata
+#- Create _RUNSTART, _RUNSTARTBG, _RUNONCE and _INSTALLONCE directories
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/bin/_RUNSTART
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/bin/_RUNSTARTBG
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/bin/_RUNONCE
+../../pi-kitchen/001-startup/dummydir.txt /home/pi/bin/_INSTALLONCE
+#- Setup startup.sh, runstart.sh, runstartbg.sh, runonce.sh and installonce.sh scripts
+../../pi-kitchen/001-startup/bin/startup_normal.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/startup.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/runstart.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/runstartbg.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/runonce.sh /home/pi/bin
+../../pi-kitchen/001-startup/_RUNONCE/runonce-end.sh /home/pi/bin/_RUNONCE
+../../pi-kitchen/001-startup/bin/installonce.sh /home/pi/bin
+#- Add automatic REBOOT or SHUTDOWN script at end of runonce sequence (optional)
+../../pi-kitchen/001-startup/_RUNONCE/zzz-reboot.sh /home/pi/bin/_RUNONCE
+#../../pi-kitchen/001-startup/_RUNONCE/zzz-shutdown.sh /home/pi/bin/_RUNONCE
+
+#
+#Recipe: 002-bootdisplay
+#Add switchdisp files:
+#- switchdisp.sh should be set as executable
+../../pi-kitchen/002-bootdisplay/switchdisp.sh /home/pi/bin +x
+#
+#Recipe: 006-wifi-driver
+#Setup Wifi Driver Configuration
+../../pi-kitchen/006-wifi-driver/etc/network/interfaces /etc/network
+#../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
+../../pi-kitchen/_SETTINGS/005-wifi/wifi_home/wpa.conf /etc
+#-Add driver for ZyXel G202 USB Wifi Adaptor
+../../pi-kitchen/006-wifi-driver/_RUNONCE/install_zyxel-g202.sh /home/pi/bin/_RUNONCE
+#-Add driver for Realtek RALink 7601 USB Wifi Adaptor
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.6.11/mt7601Usta.ko "/lib/modules/3.6.11+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.10.25/mt7601Usta.ko "/lib/modules/3.10.25+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.22/mt7601Usta.ko "/lib/modules/3.12.22+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.28/mt7601Usta.ko "/lib/modules/3.12.28+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.12.35/mt7601Usta.ko "/lib/modules/3.12.35+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.6/mt7601Usta.ko "/lib/modules/3.18.5+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.6/mt7601Usta.ko "/lib/modules/3.18.6+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.7/mt7601Usta.ko "/lib/modules/3.18.7+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/3.18.7v7/mt7601Usta.ko "/lib/modules/3.18.7-v7+/kernel/drivers/net/wireless" 644
+../../pi-kitchen/006-wifi-driver/ralink-7601/RT2870STA.dat /etc/Wireless/RT2870STA 644
+../../pi-kitchen/006-wifi-driver/etc/udev/rules.d/70-persistent-net.rules /etc/udev/rules.d
+../../pi-kitchen/006-wifi-driver/_RUNONCE/install_ralink-7601.sh /home/pi/bin/_RUNONCE
+#
+#Recipe: 007-network-share
+#- Add files to setup SAMBA SMB folder share (need to run manually)
+../../pi-kitchen/007-network-share/_INSTALLONCE/install_smbshare.sh /home/pi/bin/_INSTALLONCE
+
+#
+#Recipe: 008-vnc
+#- Add files to setup VNC (need to run manually)
+../../pi-kitchen/008-vnc/_INSTALLONCE/install_vnc.sh /home/pi/bin/_INSTALLONCE
+../../pi-kitchen/008-vnc/bin/svnc.sh /home/pi/bin
+
+#
+#Recipe: 009-map-network-share
+#- Create mount location
+../../pi-kitchen/009-map-network-share/dummydir.txt /home/pi/network
+#- Add script to _RUNSTART folder
+../../pi-kitchen/_SETTINGS/009-map-network-share/mapnetworkshare.sh /home/pi/bin/_RUNSTART
+
+
+#
+#Recipe: 010-scratch-gpio
+#- Add script to _INSTALLONCE folder
+../../pi-kitchen/010-scratch-gpio/_INSTALLONCE/install_scratchgpio.sh /home/pi/bin/_INSTALLONCE
+
+
+#
+#Recipe: 016-display-switcher
+#- Add script to bin folder and replace inittab
+#../../pi-kitchen/016-display-switcher/bin/display_switcher.sh /home/pi/bin +x
+../../pi-kitchen/016-display-switcher/bin/display_switcher.py /home/pi/bin +x
+../../pi-kitchen/016-display-switcher/etc/inittab /etc 644 root root
+
+
+#-------------------------------------------------------------------
+#End

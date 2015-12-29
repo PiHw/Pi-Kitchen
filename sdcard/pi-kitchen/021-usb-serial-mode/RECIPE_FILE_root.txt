@@ -1,0 +1,6 @@
+#
+#Recipe: 021-usb-serial-mode
+#- Add script to _RUNONCE folder
+../../pi-kitchen/021-usb-serial-mode/_RUNONCE/install_usbserialdevicemodule.sh /home/pi/bin/_RUNONCE
+#- Replace the /etc/modules file
+../../pi-kitchen/021-usb-serial-mode/etc/modules /etc/

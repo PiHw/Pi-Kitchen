@@ -1,0 +1,6 @@
+#
+#Recipe: 022-usb-lan-mode
+#- Replace the /etc/modules file
+../../pi-kitchen/022-usb-lan-mode/etc/modules /etc/
+#- Replace the /etc/network/interfaces file
+../../pi-kitchen/022-usb-lan-mode/etc/network/interfaces /etc/network
