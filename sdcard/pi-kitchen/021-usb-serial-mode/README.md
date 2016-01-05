@@ -1,5 +1,5 @@
-#USB Device Mode - LAN#
-The Raspberry Pi Model A and Raspberry Pi Zero have the ability to be setup as USB devices (since they are wired directly to the Broadcom processor).  This recipe sets up the Raspberry Pi as a Virtual USB LAN Device.
+#USB Device Mode - Serial#
+The Raspberry Pi Model A and Raspberry Pi Zero have the ability to be setup as USB devices (since they are wired directly to the Broadcom processor).  This recipe sets up the Raspberry Pi as a Virtual USB Serial Device.
 
 This recipe is based on the hard work of Andrew Mulholland (@gbaman1), DaveB (PiForums) and LadyAda (AdaFruit).
 
@@ -7,6 +7,18 @@ The Adafruit guide ([https://learn.adafruit.com/turning-your-raspberry-pi-zero-i
 
 More information is also available at:
 [http://pi.gbaman.info/?p=699](http://pi.gbaman.info/?p=699 "RASPBERRY PI ZERO – PROGRAMMING OVER USB!")
+
+Modules included:
+
+- Serial (g_serial)
+- Ethernet (g_ether)
+- Mass storage (g_mass_storage)
+- MIDI (g_midi)
+- Audio (g_audio)
+- Mass storage and Serial (g_acm_ms)
+- Ethernet and Serial (g_cdc)
+- Multi (g_multi) Allows you to configure 2 from Ethernet, Mass storage and Serial
+
 
 ##020-usb-device-module recipe##
 The general process is as follows:
@@ -21,33 +33,8 @@ sudo mv tmp/boot/*dtb /boot
 sudo cp -R tmp/boot/modules/lib/* /lib
 </pre>
 
-##021-usb-serial-mode recipe##
-1. Update the module (Add `g_ether` to `etc/modules`).
-2. Add the following to `etc/network/interfaces:<pre>allow-hotplug usb0
-iface usb0 inet static
-        address 192.168.42.2
-        netmask 255.255.255.0
-        network 192.168.42.0
-        broadcast 192.168.42.255
-        gateway 192.168.42.1</pre>
+##022-usb-lan-mode recipe##
+1. Update the module (Add `g_serial` to `etc/modules`).
+2. Enable logging in for the Serial Gadget (Run `sudo systemctl enable getty@ttyGSO.service`).  You can check this using `sudo systemctl is-active getty@ttyGSO.service`.
 
-On restart the Raspberry Pi should be detected (by the connected computer) as a Ethernet device.
-
-On the host machine, setup the ethernet connection with the following manual settings:
-
-- IP Address: 192.168.42.1
-- Subnet Mask: 255.255.255.0
-- Default Gateway: 192.168.42.1
-- No DNS.
-
-Alternatively (instead of putting a fixed IP) install **Bonjour** on Windows (already included on Apple Mac) which will allow us to use the Raspberry Pi hostname `raspberry.local`.
-
-On Pi you may need:
-
-`sudo apt-get install avahi-daemon`
-
-For MAC support you may also need:
-
-`sudo apt-get install netatalk`
-
-On Windows either install iTunes (which includes it) or Bonjour Print Services for Windows 2.0.2 ([http://support.apple.com/kb/DL999](http://support.apple.com/kb/DL999 "Bonjour Print Services for Windows 2.0.2."))
+On restart the Raspberry Pi should be detected (by the connected computer) as a USB Serial device.  Connect using Putty (115200 Baud).
