@@ -1,0 +1,22 @@
+#Noobs config file for RaspbianPiStop_data (27/12/2015  11:17 PM)
+#-------------------------------------------------------------------
+#
+#Format is: filename destination attributes user group
+#Copy the Noobs config txt files to home directory for reference
+RaspbianPiStop_boot.txt
+RaspbianPiStop_root.txt
+RaspbianPiStop_data.txt
+
+
+
+
+
+
+
+
+
+
+
+
+#-------------------------------------------------------------------
+#End

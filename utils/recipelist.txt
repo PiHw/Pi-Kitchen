@@ -11,5 +11,11 @@
 009-map-network-share
 010-scratch-gpio
 011-boot-to-desktop
-012-shutdown-button
-013-enable-i2c-spi
+012-hw-shutdown-button
+013-enable-i2c-spi-i2s
+014-hw-ip-dongle
+015-hw-pistop-lighthouse
+016-display-switcher
+020-usb-device-module
+021-usb-serial-mode
+022-usb-lan-mode

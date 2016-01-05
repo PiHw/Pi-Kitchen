@@ -1,0 +1,42 @@
+#Noobs config file for RaspbianPiStop_boot (27/12/2015  11:17 PM)
+#-------------------------------------------------------------------
+#
+#Format is: filename destination attributes user group
+#Copy the Noobs config txt files to home directory for reference
+RaspbianPiStop_boot.txt
+RaspbianPiStop_root.txt
+RaspbianPiStop_data.txt
+
+
+
+#
+#Recipe: 002-bootdisplay
+#Configure the boot settings:
+#-- Only one config.txt file should be applied at any one time (only comment one out)
+#- HDMI Normal - Default setting will detect HDMI connection on power up
+../../pi-kitchen/002-bootdisplay/hdminormal/config.txt
+#- HDMI Forced - Will always select HDMI output
+#../../pi-kitchen/002-bootdisplay/hdmiforced/config.txt
+#- HDMI 2 VGA Adaptor - Settings which work with VGA Adaptors
+#../../pi-kitchen/002-bootdisplay/hdmiadapt/config.txt
+#- SD PAL - Set composite video output to PAL
+#../../pi-kitchen/002-bootdisplay/sdtvpal/config.txt
+#- SD NTSC - Set composite video output to NTSC
+#../../pi-kitchen/002-bootdisplay/sdtvntsc/config.txt
+#
+#Add switchdisp files:
+../../pi-kitchen/002-bootdisplay/hdminormal/config.txt /display/hdminormal
+../../pi-kitchen/002-bootdisplay/hdmiforced/config.txt /display/hdmiforced
+../../pi-kitchen/002-bootdisplay/hdmiadapt/config.txt /display/hdmiadapt
+../../pi-kitchen/002-bootdisplay/sdtvpal/config.txt /display/sdtvpal
+../../pi-kitchen/002-bootdisplay/sdtvntsc/config.txt /display/sdtvntsc
+
+
+
+
+
+
+
+
+#-------------------------------------------------------------------
+#End
