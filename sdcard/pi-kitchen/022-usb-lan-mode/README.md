@@ -8,17 +8,29 @@ The Adafruit guide ([https://learn.adafruit.com/turning-your-raspberry-pi-zero-i
 More information is also available at:
 [http://pi.gbaman.info/?p=699](http://pi.gbaman.info/?p=699 "RASPBERRY PI ZERO – PROGRAMMING OVER USB!")
 
+Modules included:
+
+- Serial (g_serial)
+- Ethernet (g_ether)
+- Mass storage (g_mass_storage)
+- MIDI (g_midi)
+- Audio (g_audio)
+- Mass storage and Serial (g_acm_ms)
+- Ethernet and Serial (g_cdc)
+- Multi (g_multi) Allows you to configure 2 from Ethernet, Mass storage and Serial
+
 ##020-usb-device-module recipe##
 The general process is as follows:
 
-1. Get gadgetkernel.tgz module (http://adafruit-download.s3.amazonaws.com/gadgetmodulekernel_151226a.tgz).
-2. Uncompress the kernel module (`tar -xvzf gadgetkernel.tgz`).
-3. Backup the current kernel.img (`sudo mv /boot/kernel.img /boot/kernelbackup.img`)
-4. Replace the boot `kernel.img` (`sudo mv tmp/boot/kernel.img /boot`).
-5. Install Overlays and Modules.<pre>
-sudo mv tmp/boot/overlays/* /boot/overlays
-sudo mv tmp/boot/*dtb /boot
-sudo cp -R tmp/boot/modules/lib/* /lib
+1. Get PiZeroCombined.tar.gz module (https://dl.dropboxusercontent.com/u/1122948/temp/PiOTGTest/
+PiZeroCombined.tar.gz).
+2. Uncompress the kernel module (`tar xvzfC $modulesource /tmp/`).
+3. Copy boot partition files:
+	`sudo cp -R /tmp/PiZeroCombined/fat32/* /boot/`
+4. Copy module files to root partition:
+	`sudo cp -R /tmp/PiZeroCombined/ext4/libboot/modules/lib/* /lib/`
+5. Remove extracted files:
+	`sudo rm /tmp/$modulefolder -Rf`
 </pre>
 
 ##022-usb-lan-mode recipe##
@@ -33,6 +45,8 @@ iface usb0 inet static
         gateway 192.168.42.1</pre>
 
 On restart the Raspberry Pi should be detected (by the connected computer) as a Ethernet device.
+
+<img src="img/piusblanmode.png" width=250 />
 
 On the host machine, setup the ethernet connection with the following manual settings:
 
@@ -62,13 +76,16 @@ On windows, this is achieved via the **Control Panel > Network and Internet > Ne
 
 
 - Right click on the network adaptor from which you normally connect to the internet (i.e. Wifi) and select **properties**.
-- Enable **Internet Connection Sharing** on the **Sharing**.
-- Select the Ethernet device which 
-- Take note of the IP address suggested, but don't accept it yet!  i.e. Suggested IP address: 192.168.137.1
+- Enable **Internet Connection Sharing** on the **Sharing** tab.
+
+<img src="img/ics_enable.png" width=250 />
+
+- Select the Ethernet device **EthernetX** which matches the one listed as **USB Ethernet/RNDIS Gadget** in the device manager.
+- Take note of the IP address suggested, but don't accept it yet (if it does not match the current IP of the Raspberry Pi)!  i.e. Suggested IP address: `192.168.137.1`
 
 Connect to the Raspberry Pi via Putty using the previously configured IP address (192.168.42.2).
 
-- You must set the Raspberry Pi's IP address to match the first three numbers, by editing `/etc/network/interfaces` (you can update your recipe file if you wish so this address is always used):
+- You must set the Raspberry Pi's IP address to match the first three numbers, by editing `/etc/network/interfaces` (this version of the file is available `_SETTINGS/022-usb-lan-mode/internet` folder):
 
         address 192.168.137.2
         netmask 255.255.255.0
@@ -76,4 +93,11 @@ Connect to the Raspberry Pi via Putty using the previously configured IP address
         broadcast 192.168.137.255
         gateway 192.168.137.1
 - Reboot the Raspberry Pi using `sudo reboot`
-- Finally, enable ICS and accept the suggested IP address (you should be able to connect using the newly set address for the Raspberry Pi 192.168.137.2 via Putty).
+- Finally, enable ICS and accept the suggested IP address.
+- You should now be able to connect using the newly set address for the Raspberry Pi 192.168.137.2 via Putty.
+
+You may also need to ensure that the Ethernet device **EthernetX** (which matches the one listed as **USB Ethernet/RNDIS Gadget** in the device manager) has the following settings:
+
+<img src="img/ics_settings.png" width=350 />
+
+This ensures the USB Ethernet adaptor which has the ICS linked to it has the same IP address group as the Raspberry Pi's fixed address.

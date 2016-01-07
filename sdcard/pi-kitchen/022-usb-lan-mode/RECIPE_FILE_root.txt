@@ -3,4 +3,7 @@
 #- Replace the /etc/modules file
 ../../pi-kitchen/022-usb-lan-mode/etc/modules /etc/
 #- Replace the /etc/network/interfaces file
+#Default (non-internet connection sharing setting)
 ../../pi-kitchen/022-usb-lan-mode/etc/network/interfaces /etc/network
+#Internet Connection Sharing settings (ensure this is suitable for your setup if ICS required)
+../../pi-kitchen/_SETTINGS/022-usb-lan-mode/internet/interfaces /etc/network

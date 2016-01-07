@@ -243,8 +243,8 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 #Recipe: 006-wifi-driver
 #Setup Wifi Driver Configuration
 ../../pi-kitchen/006-wifi-driver/etc/network/interfaces /etc/network
-#../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
-../../pi-kitchen/_SETTINGS/005-wifi/wifi_home/wpa.conf /etc
+../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
+#../../pi-kitchen/_SETTINGS/005-wifi/wifi_home/wpa.conf /etc
 #-Add driver for ZyXel G202 USB Wifi Adaptor
 ../../pi-kitchen/006-wifi-driver/_RUNONCE/install_zyxel-g202.sh /home/pi/bin/_RUNONCE
 #-Add driver for Realtek RALink 7601 USB Wifi Adaptor

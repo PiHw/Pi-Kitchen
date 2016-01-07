@@ -1,21 +1,18 @@
 #!/bin/sh
-#Set the path of the gadgetmodulekernel file
-modulesource="/home/pi/recovery/pi-kitchen/020-usb-device-module/module/gadgetmodulekernel.tgz"
+#Set the path of the PiZeroCombined file
+modulesource="/home/pi/recovery/pi-kitchen/020-usb-device-module/module/PiZeroCombined.tar.gz"
+modulefolder=PiZeroCombined
 
-#Extract the module to home directory
-cd /home/pi
-tar -xvzf $modulesource
+#Extract the module to tmp directory
+tar xvzfC $modulesource /tmp/
 
-#Copy the kernel.img to /boot
-sudo mv /boot/kernel.img /boot/kernelbackup.img
-sudo mv tmp/boot/kernel.img /boot
+#Copy the boot partition files to /boot
+sudo cp -R /tmp/PiZeroCombined/fat32/* /boot/
 
-#Copy Overlays and Modules
-sudo mv tmp/boot/overlays/* /boot/overlays
-sudo mv tmp/boot/*dtb /boot
-sudo cp -R tmp/boot/modules/lib/* /lib
+#Copy the root partition module files
+sudo cp -R /tmp/PiZeroCombined/ext4/lib/* /lib/
 
 #Remove extracted files
-sudo rm tmp -Rf
+sudo rm /tmp/$modulefolder -Rf
 
 echo "USB Device Module Installed!"

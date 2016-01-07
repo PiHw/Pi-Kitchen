@@ -26,7 +26,7 @@
 #Recipe Card#
 
 <font color = GREEN>
-<h1>(001) : Start Up - Run Once Install </h1>
+<h1>001 : Start Up - Run Once Install </h1>
 </font>
 
 <table style="width:35%" align="right" >

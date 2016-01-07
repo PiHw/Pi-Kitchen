@@ -175,8 +175,8 @@ For more information see the <a href="http://pihw.wordpress.com/guides/pi-kitche
 #- Setup Wifi interfaces file
 ../../pi-kitchen/005-wifi/etc/network/interfaces /etc/network
 #- Apply the user wifi SETTINGS
-#../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
-../../pi-kitchen/_SETTINGS/005-wifi/wifi_home/wpa.conf /etc
+../../pi-kitchen/_SETTINGS/005-wifi/wifi_example/wpa.conf /etc
+#../../pi-kitchen/_SETTINGS/005-wifi/wifi_home/wpa.conf /etc
 #-Install driver(s) for Wifi Adaptor(s)
 ../../pi-kitchen/005-wifi/_RUNONCE/install_wifi-devices.sh /home/pi/bin/_RUNONCE
 </pre>

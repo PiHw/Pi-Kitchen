@@ -83,14 +83,15 @@ Modules included:
 ##020-usb-device-module recipe##
 The general process is as follows:
 
-1. Get gadgetkernel.tgz module (http://adafruit-download.s3.amazonaws.com/gadgetmodulekernel_151226a.tgz).
-2. Uncompress the kernel module (`tar -xvzf gadgetkernel.tgz`).
-3. Backup the current kernel.img (`sudo mv /boot/kernel.img /boot/kernelbackup.img`)
-4. Replace the boot `kernel.img` (`sudo mv tmp/boot/kernel.img /boot`).
-5. Install Overlays and Modules.<pre>
-sudo mv tmp/boot/overlays/* /boot/overlays
-sudo mv tmp/boot/*dtb /boot
-sudo cp -R tmp/boot/modules/lib/* /lib
+1. Get PiZeroCombined.tar.gz module (https://dl.dropboxusercontent.com/u/1122948/temp/PiOTGTest/
+PiZeroCombined.tar.gz).
+2. Uncompress the kernel module (`tar xvzfC $modulesource /tmp/`).
+3. Copy boot partition files:
+	`sudo cp -R /tmp/PiZeroCombined/fat32/* /boot/`
+4. Copy module files to root partition:
+	`sudo cp -R /tmp/PiZeroCombined/ext4/lib/* /lib/`
+5. Remove extracted files:
+	`sudo rm /tmp/$modulefolder -Rf`
 </pre>
 
 ##022-usb-lan-mode recipe##
