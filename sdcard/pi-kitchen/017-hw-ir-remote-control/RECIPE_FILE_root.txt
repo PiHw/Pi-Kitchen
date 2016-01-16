@@ -1,0 +1,5 @@
+#
+#Recipe: 017-hw-ir-remote-control
+#The user config files are transfered after lirc is installed
+#- Add lirc software and device overlay module (via script)
+../../pi-kitchen/017-hw-ir-remote-control/_RUNONCE/install_ir-remote-control.sh /home/pi/bin/_RUNONCE

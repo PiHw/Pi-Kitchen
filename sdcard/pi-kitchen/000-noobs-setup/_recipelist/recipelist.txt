@@ -16,6 +16,8 @@
 014-hw-ip-dongle
 015-hw-pistop-lighthouse
 016-display-switcher
+017-hw-ir-remote-control
+018-x11vnc-display
 020-usb-device-module
 021-usb-serial-mode
 022-usb-lan-mode

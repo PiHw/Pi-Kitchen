@@ -1,0 +1,74 @@
+begin
+	prog=remote
+	button=KEY_OK
+	config=OK
+
+	prog=remote
+	button=KEY_UP
+	config=UP
+
+	prog=remote
+	button=KEY_DOWN
+	config=DOWN
+
+	prog=remote
+	button=KEY_RIGHT
+	config=RIGHT
+
+	prog=remote
+	button=KEY_LEFT
+	config=LEFT
+
+	prog=remote
+	button=KEY_ENTER
+	config=ENTER
+
+	prog=remote
+	button=KEY_EXIT
+	config=EXIT
+
+	prog=irexec
+	button=KEY_PRESENTATION
+	config=leafpad
+
+	prog=remote
+	button=KEY_POWER
+	config=POWER
+
+	prog=remote
+	button=KEY_MODE
+	config=MODE
+
+	prog=remote
+	button=KEY_PAGEUP
+	config=PAGEUP
+
+	prog=remote
+	button=KEY_PAGEDOWN
+	config=PAGEDOWN
+
+	prog=remote
+	button=KEY_SLEEP
+	config=SLEEP
+
+	prog=remote
+	button=KEY_BACK
+	config=BACK
+
+	prog=remote
+	button=KEY_OK
+	config=OK
+
+	prog=irexec
+	button=KEY_MUTE
+	config=sudo halt
+
+	prog=irexec
+	button=KEY_DISPLAYTOGGLE
+	config=echo "Display Toggle Pressed"
+
+	prog=remote
+	button=KEY_DELETE
+	config=DELETE
+
+end

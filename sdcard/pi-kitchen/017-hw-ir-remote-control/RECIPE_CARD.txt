@@ -1,0 +1,24 @@
+#define IMG_SRC		https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img
+
+#define RC_NUMBER	017
+#define RC_NAME		IR Remote Control
+
+#define RC_DESC      This recipe installs 
+
+#define RC_HOWTOUSE
+
+#define RC_SOURCE_LOCATION pi-kitchen/017-hw-ir-remote-control
+
+#define RC_INGREDIENTS	
+
+#define RC_ZIP 017-hw-ir-remote-control_INGREDIENTS.zip
+
+#define RC_RECIPECARD 017-hw-ir-remote-control_RECIPE_CARD.md
+
+#define RC_REQUIRED	001-startup
+
+#define RC_ROOT
+
+#define RC_TESTED	Raspbian
+
+#define RC_AUTHOR	@PiHardware

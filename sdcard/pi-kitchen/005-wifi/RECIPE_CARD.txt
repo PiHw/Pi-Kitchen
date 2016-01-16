@@ -21,6 +21,8 @@
 
 #define RC_SETTING_DESC	Ensure you update wpa.config with your own Wifi SSID and pass-phrase.
 
+#define RC_REQUIRED 	Recipe 001-Startup
+
 #define RC_ROOT
 
 #define RC_TESTED	Raspbian

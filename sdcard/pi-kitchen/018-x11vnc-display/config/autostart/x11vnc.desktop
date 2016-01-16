@@ -1,0 +1,9 @@
+[Destop Entry]
+Encoding=UTF-8
+Type=Application
+Name=X11VNC
+Comment=
+Exec=x11vnc -forever -usepw -display :0 -ultrafilexfer
+StartupNotify=false
+Terminal=false
+Hidden=false

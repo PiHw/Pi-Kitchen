@@ -1,0 +1,10 @@
+#
+#Recipe: 018-x11vnc-display
+#- Add installation script
+../../pi-kitchen/018-x11vnc-display/_RUNONCE/install_x11vnc_server.sh /home/pi/bin/_RUNONCE
+#- Add startup script
+#../../pi-kitchen/018-x11vnc-display/bin/x11vnc_start.sh /home/pi/bin/
+../../pi-kitchen/018-x11vnc-display/_RUNSTARTBG/x11vnc_start.sh /home/pi/_RUNSTARTBG/
+#- Install the x11vnc configuration files
+../../pi-kitchen/018-x11vnc-display/vnc/passwd /home/pi/.vnc
+../../pi-kitchen/018-x11vnc-display/config/autostart/x11vnc.desktop /home/pi/.config/autostart
