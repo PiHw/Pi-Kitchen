@@ -177,4 +177,4 @@ The recipe files support comments marked with # characters at the beginning of a
 ##Zero Sized SD-Card Issue##
 **Problem:** This issue is when you start NOOBS it reports it is unable to resize the partitions or it shows there no space available.
 
-**Fix:** To fix this perform a format (with Format Size Adjustment enabled) and re-extact the NOOBS files directly to the SD-Card.  You **must** extract the files directly from the NOOBS ZIP file (the order they are written to the SD-Card appears to makes a big difference in this case and has resolved the problem when any number of reformats has failed).
+**Fix:** To fix this perform a format (with Format Size Adjustment enabled) and re-extract the NOOBS files directly to the SD-Card.  You **must** extract the files directly from the NOOBS ZIP file (the order they are written to the SD-Card appears to makes a big difference in this case and has resolved the problem when any number of reformats has failed).
