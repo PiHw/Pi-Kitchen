@@ -13,8 +13,8 @@ wpa-conf /etc/wpa.conf
 
 allow-hotplug usb0
 iface usb0 inet static
-        address 192.168.42.2
+        address 169.254.64.64
         netmask 255.255.255.0
-        network 192.168.42.0
-        broadcast 192.168.42.255
-        gateway 192.168.42.1
+        network 169.254.64.0
+        broadcast 169.254.64.255
+        gateway 169.254.64.1

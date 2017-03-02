@@ -15,7 +15,7 @@
 
 #define RC_RECIPECARD 021-usb-serial-mode_RECIPE_CARD.md
 
-#define RC_REQUIRED 020-usb-device-module
+#define RC_REQUIRED 001-startup & 020-usb-device-module
 
 #define RC_ROOT
 

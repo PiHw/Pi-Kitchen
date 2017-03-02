@@ -38,21 +38,21 @@ PiZeroCombined.tar.gz).
 2. Add the following to `/etc/network/interfaces`:
 3. <pre>allow-hotplug usb0
 iface usb0 inet static
-        address 192.168.42.2
+        address 169.254.64.64
         netmask 255.255.255.0
-        network 192.168.42.0
-        broadcast 192.168.42.255
-        gateway 192.168.42.1</pre>
+        network 169.254.64.0
+        broadcast 169.254.64.255
+        gateway 169.254.64.1</pre>
 
 On restart the Raspberry Pi should be detected (by the connected computer) as a Ethernet device.
 
 <img src="img/piusblanmode.png" width=250 />
 
-On the host machine, setup the ethernet connection with the following manual settings:
+On the host machine, ensure the ethernet connection is set to **auto**.  Alternatively setup the ethernet connection with the following manual settings:
 
-- IP Address: 192.168.42.1
+- IP Address: 169.254.64.1
 - Subnet Mask: 255.255.255.0
-- Default Gateway: 192.168.42.1
+- Default Gateway: 169.254.64.1
 - No DNS.
 
 ###Using network hostnames###
@@ -83,7 +83,7 @@ On windows, this is achieved via the **Control Panel > Network and Internet > Ne
 - Select the Ethernet device **EthernetX** which matches the one listed as **USB Ethernet/RNDIS Gadget** in the device manager.
 - Take note of the IP address suggested, but don't accept it yet (if it does not match the current IP of the Raspberry Pi)!  i.e. Suggested IP address: `192.168.137.1`
 
-Connect to the Raspberry Pi via Putty using the previously configured IP address (192.168.42.2).
+Connect to the Raspberry Pi via Putty using the previously configured IP address (169.254.64.64).
 
 - You must set the Raspberry Pi's IP address to match the first three numbers, by editing `/etc/network/interfaces` (this version of the file is available `_SETTINGS/022-usb-lan-mode/internet` folder):
 
