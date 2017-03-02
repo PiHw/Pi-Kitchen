@@ -2,73 +2,136 @@ begin
 	prog=remote
 	button=KEY_OK
 	config=OK
+end
 
+begin
 	prog=remote
 	button=KEY_UP
 	config=UP
+end
 
+begin
 	prog=remote
 	button=KEY_DOWN
 	config=DOWN
+end
 
+begin
 	prog=remote
 	button=KEY_RIGHT
 	config=RIGHT
+end
 
+begin
 	prog=remote
 	button=KEY_LEFT
 	config=LEFT
+end
 
+begin
 	prog=remote
 	button=KEY_ENTER
 	config=ENTER
+end
 
+begin
 	prog=remote
 	button=KEY_EXIT
 	config=EXIT
+end
 
-	prog=irexec
-	button=KEY_PRESENTATION
-	config=leafpad
-
+begin
 	prog=remote
 	button=KEY_POWER
 	config=POWER
+end
 
+begin
 	prog=remote
 	button=KEY_MODE
 	config=MODE
+end
 
+begin
 	prog=remote
 	button=KEY_PAGEUP
 	config=PAGEUP
+end
 
+begin
 	prog=remote
 	button=KEY_PAGEDOWN
 	config=PAGEDOWN
+end
 
+begin
 	prog=remote
 	button=KEY_SLEEP
 	config=SLEEP
+end
 
+begin
 	prog=remote
 	button=KEY_BACK
 	config=BACK
+end
 
+begin
 	prog=remote
 	button=KEY_OK
 	config=OK
+end
 
-	prog=irexec
-	button=KEY_MUTE
-	config=sudo halt
-
-	prog=irexec
-	button=KEY_DISPLAYTOGGLE
-	config=echo "Display Toggle Pressed"
-
+begin
 	prog=remote
 	button=KEY_DELETE
-	config=DELETE
+	config=Backspace
+end
 
+begin
+	prog=remote
+	button=KEY_MENU
+	config=Ctrl+Esc
+end
+
+begin
+	prog=remote
+	button=KEY_RED
+	config=Ctrl+Alt+Backspace
+end
+
+begin
+	prog=remote
+	button=KEY_YELLOW
+	config=Alt+Tab
+end
+
+begin
+	prog=remote
+	button=KEY_BLUE
+	config=b
+end
+
+begin
+	button=KEY_GREEN
+	prog=irexec
+	config=term
+end
+
+begin
+	button=KEY_MUTE
+	prog=irexec
+	config=sudo halt
+end
+
+begin
+	button=KEY_PRESENTATION
+	prog=irexec
+	config=leafpad
+end
+
+begin
+	button=KEY_DISPLAYTOGGLE
+	prog=irexec
+	config=echo "Display Toggle Pressed"
 end

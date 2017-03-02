@@ -9,7 +9,9 @@ BCM GPIO24	(Pin18)	=	OUT
 GND		(Pin20)	=	GND
 3V3		(Pin17) =	VCC
 </pre>
-Where OUT, GND and VCC are the order of the pins (left-middle-right) when the IR Receiver is facing upwards. 
+Where OUT, GND and VCC are the order of the pins (left-middle-right) when the IR Receiver is facing upwards.
+
+<img src="img/ir_tsop38238.png" width=250 />
 
 The module is fitted directly onto the Raspberry Pi as follows:
 <pre>
