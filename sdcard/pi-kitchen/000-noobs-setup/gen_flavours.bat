@@ -1,4 +1,4 @@
-@echo off
+
 REM This script will generate the flavours.json file for NOOBS.
 REM If performing an automated install, only a single flavour should be listed.
 REM

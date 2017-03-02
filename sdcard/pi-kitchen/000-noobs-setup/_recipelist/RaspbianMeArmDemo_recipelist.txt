@@ -1,0 +1,12 @@
+#Ignore any recipes with # at the start of the line 
+000-noobs-setup
+001-startup
+002-bootdisplay
+006-wifi-driver
+007-network-share
+008-vnc
+009-map-network-share
+010-scratch-gpio
+015-hw-pistop-lighthouse
+016-display-switcher
+025-hw-mearm

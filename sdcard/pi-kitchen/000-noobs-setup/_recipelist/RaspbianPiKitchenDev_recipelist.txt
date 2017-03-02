@@ -16,4 +16,5 @@
 #014-hw-ip-dongle
 #015-hw-pistop-lighthouse
 016-display-switcher
-017-ir-remote-control
+017-hw-ir-remote-control
+019-hw-hdmi-touchscreen

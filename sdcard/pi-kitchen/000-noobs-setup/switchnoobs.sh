@@ -1,3 +1,4 @@
+#NOTE: THIS IS NOT CURRENTLY MAINTAINED!
 #!/bin/sh
 # Switch recovery.cmdline for NOOBS install and setup for auto/gui installs
 #

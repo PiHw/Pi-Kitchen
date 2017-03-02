@@ -10,10 +10,10 @@
     {
       "label": "root",
       "filesystem_type": "ext4",
-      "partition_size_nominal": 3482,
+      "partition_size_nominal": 3552,
       "want_maximised": true,
       "mkfs_options": "-O ^huge_file",
-      "uncompressed_tarball_size": 3082
+      "uncompressed_tarball_size": 3152
     },
     {
       "label": "data",

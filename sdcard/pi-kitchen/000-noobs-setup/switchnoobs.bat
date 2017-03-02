@@ -1,23 +1,78 @@
-@echo off
-setlocal EnableDelayedExpansion
 REM Switch recovery.cmdline for NOOBS install and setup for auto/gui installs
 REM
 REM Will perform the following steps (if cmdline isn't set):
+REM 0. Select software used for install (NOOBS/PINN)
 REM 1. Select NOOBS run mode (Normal/GUI/Auto/Keep)
 REM 2. Select video mode (for Normal, GUI and Auto only)
 REM [N/A yet] 3. Select distro (for Auto only)
 REM 4. Select flavour (for Auto only)
 REM
-REM switchnoobs.bat runmode videomode flavour distro
+REM switchnoobs.bat installsw runmode videomode flavour distro
+echo CMD: switchnoobs.bat %1 %2 %3 %4 %5 %6
 
-CALL :cmdlineSettings
+REM ==============================================
+REM Read in the command line inputs:
+REM INSTALLSW
+if [%2] == [] (
+  set INSTALLSW=ASK
+) else (
+  set INSTALLSW=%2
+  echo INSTALLSW=%INSTALLSW%
+)
+
+REM RUNMODE
+if [%3] == [] (
+  set RUNMODE=ASK
+) else (
+  set RUNMODE=%3
+  echo RUNMODE=%RUNMODE%
+)
+
+REM VIDEOMODE
+if [%4] == [] (
+  set VIDEOMODE=ASK
+) else (
+  set VIDEOMODE=%4
+  echo VIDEOMODE=%VIDEOMODE%
+)
+
+REM FLAVOUR
+if [%5] == [] (
+  set FLAVOUR=ASK
+) else (
+  set FLAVOUR=%5
+  echo FLAVOUR=%FLAVOUR%
+)
+
+REM DISTRO
+if [%6] == [] (
+  set DISTRO=ASK
+) else (
+  set DISTRO=%6
+  echo DISTRO=%DISTRO%
+)
+REM ==============================================
+
+pause
+
+setlocal EnableDelayedExpansion
 
 SET DISTRO=Raspbian
 SET DEST="..\..\recovery.cmdline"
 SET DISTRO_PATH=..\..\os\%DISTRO%
 SET RUNMODE_LIST=(normal,gui,auto,exit)
 SET VIDEOMODE_LIST=(HDMI,HDMIsafemode,PAL,NTSC,Default)
-SET DATA_PARTITION=TRUE
+REM SET DATA_PARTITION=TRUE
+SET DATA_PARTITION=FALSE
+
+REM 0. Use NOOBS or PINN to install
+if [%INSTALLSW%]==[ASK] (
+  CALL :selectINSTALLSW
+)
+echo Selected install software = %INSTALLSW%
+if [%INSTALLSW%]==[exit] goto end
+CALL :applyINSTALLSW
+cls
 
 REM 1. Handle NOOBS runmode
 if [%RUNMODE%]==[ASK] (
@@ -38,6 +93,8 @@ if %VIDEOMODE% LEQ 4 (
 cls
 
 REM 3. Handle select distro (for Auto only)
+echo RUNMODE=%RUNMODE% FLAVOUR=%FLAVOUR%
+pause
 if [%RUNMODE%] NEQ [auto] (
   CALL :applyAllFlavours
   GOTO finishSetup
@@ -51,39 +108,23 @@ CALL :applyFLAVOUR
 echo Flavour Selected: %FLAVOUR%
 GOTO finishSetup
 
+
 REM ==============================================
-:cmdlineSettings
-REM Read in the command line inputs:
-REM RUNMODE
-if [%1] == [] (
-  set RUNMODE=ASK
+:selectINSTALLSW
+REM We will just assume you are using NOOBS
+set INSTALLSW=NOOBS
+goto :eof
+REM ==============================================
+
+REM ==============================================
+:applyINSTALLSW
+echo Apply %INSTALLSW%
+if [%INSTALLSW%]==[PINN] (
+  set INSTALLSWPATH=_pinn
 ) else (
-  set RUNMODE=%1
-  echo RUNMODE=%RUNMODE%
-)
-REM VIDEOMODE
-if [%2] == [] (
-  set VIDEOMODE=ASK
-) else (
-  set VIDEOMODE=%2
-  echo VIDEOMODE=%VIDEOMODE%
+  set INSTALLSWPATH=_noobs
 )
 
-REM FLAVOUR
-if [%3] == [] (
-  set FLAVOUR=ASK
-) else (
-  set FLAVOUR=%3
-  echo FLAVOUR=%FLAVOUR%
-)
-
-REM DISTRO
-if [%4] == [] (
-  set DISTRO=ASK
-) else (
-  set DISTRO=%4
-  echo DISTRO=%DISTRO%
-)
 goto :eof
 REM ==============================================
 
@@ -116,8 +157,8 @@ REM ==============================================
 
 REM ==============================================
 :applyRUNMODE
-echo Apply %RUNMODE%
-SET SOURCE=".\%RUNMODE%\recovery.cmdline"
+echo Apply %INSTALLSWPATH%\_cmdline\%RUNMODE%
+SET SOURCE=".\%INSTALLSWPATH%\_cmdline\%RUNMODE%\recovery.cmdline"
 REM Replace the recovery.cmdline file
 copy %SOURCE% %DEST% /Y  >nul 2>&1
 goto :eof
@@ -228,12 +269,12 @@ REM ==============================================
 if %DATA_PARTITION% == TRUE  (
   echo Adding data paration...
   REM Replace partitions.json file to include datapartition
-  copy ".\_partitions\datapartitions.json" ..\..\os\%DISTRO%\partitions.json /Y  >nul 2>&1
+  copy ".\%INSTALLSWPATH%\_partitions\datapartitions.json" ..\..\os\%DISTRO%\partitions.json /Y  >nul 2>&1
   REM Add data.tar.xz (if not present)
-  if not exist "..\..\os\%DISTRO%\data.tar.xz" copy ".\_partitions\data.tar.xz" "..\..\os\%DISTRO%\*.*" >nul 2>&1
+  if not exist "..\..\os\%DISTRO%\data.tar.xz" copy ".\%INSTALLSWPATH%\_partitions\data.tar.xz" "..\..\os\%DISTRO%\*.*" >nul 2>&1
 ) else (
   REM Replace partitions.json file
-  copy ".\_partitions\standardpartitions.json" ..\..\os\%DISTRO%\partitions.json /Y  >nul 2>&1
+  copy ".\%INSTALLSWPATH%\_partitions\standardpartitions.json" ..\..\os\%DISTRO%\partitions.json /Y  >nul 2>&1
 )
 goto:eof
 REM ==============================================
@@ -249,6 +290,7 @@ REM ==============================================
 
 :end
 echo recovery.cmdline is:
+echo %SOURCE%
 type %DEST%
 echo.
 pause

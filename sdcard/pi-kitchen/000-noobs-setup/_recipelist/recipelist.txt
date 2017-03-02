@@ -18,6 +18,8 @@
 016-display-switcher
 017-hw-ir-remote-control
 018-x11vnc-display
+019-hw-hdmi-touchscreen
 020-usb-device-module
 021-usb-serial-mode
 022-usb-lan-mode
+023-webserver

@@ -1,4 +1,3 @@
-@echo off
 REM This script will generate the three flavour recipes files for a given flavour.
 REM i.e. RaspbianPiKitchen_root.txt, RaspbianPiKitchen_boot.txt, RaspbianPiKitchen_data.txt
 REM
