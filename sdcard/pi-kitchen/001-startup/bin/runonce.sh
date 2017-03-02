@@ -20,7 +20,7 @@ echo ">>> Running: $script"
 date >> $logfile
 #Capture the output of the script in the logfile since this should not require any user interaction.
 echo ">>> Running: $script" >> $logfile
-sh "$script" >> $logfile
+sh "$script" >> $logfile 2>&1
 done
 
 #Finish logfile

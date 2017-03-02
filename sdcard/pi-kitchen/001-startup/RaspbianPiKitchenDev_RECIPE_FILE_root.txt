@@ -18,7 +18,12 @@
 ../../pi-kitchen/001-startup/bin/runonce.sh /home/pi/bin
 ../../pi-kitchen/001-startup/_RUNONCE/runonce-end.sh /home/pi/bin/_RUNONCE
 ../../pi-kitchen/001-startup/bin/installonce.sh /home/pi/bin
+../../pi-kitchen/001-startup/bin/insert_line.sh /home/pi/bin
+##ONLY FOR PiKitchenDev
 ../../pi-kitchen/001-startup/bin/install_via_apt.sh /home/pi/bin
+##ONLY FOR PiKitchenDev
 #- Add automatic REBOOT or SHUTDOWN script at end of runonce sequence (optional)
 ../../pi-kitchen/001-startup/_RUNONCE/zzz-reboot.sh /home/pi/bin/_RUNONCE
 #../../pi-kitchen/001-startup/_RUNONCE/zzz-shutdown.sh /home/pi/bin/_RUNONCE
+#-Add apply_flavour script to allow manual switching between flavour setups
+../../pi-kitchen/001-startup/bin/apply_flavour.sh /home/pi/bin
