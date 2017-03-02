@@ -1,4 +1,3 @@
-@echo off
 REM www.pihardware.com Pi-Kitchen
 REM This script will copy the PiKitchen recipes to the SDCARD.
 REM 03installRecipes target recipesource

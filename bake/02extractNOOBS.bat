@@ -1,4 +1,3 @@
-@echo off
 REM www.pihardware.com Pi-Kitchen
 REM This script will extract the NOOBS setup files from the zip file.
 REM Command line:

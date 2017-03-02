@@ -1,4 +1,3 @@
-@echo off
 REM www.pihardware.com Pi-Kitchen
 REM This script will start the SDFormatter program to clear the SDCard.
 REM Command line:
