@@ -50,7 +50,7 @@
 <img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/warn.png" height=40/>
 <b>WARNING:</b> This recipe also requires the following recipe(s) to be setup on the SD-Card:<p>
 <font color = GREEN>
-<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/"></a><p>
+<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/001-startup">001-startup</a><p>
 </font>
 
 <br>

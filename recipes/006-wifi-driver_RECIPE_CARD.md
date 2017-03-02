@@ -21,6 +21,7 @@
 
 
 
+
 <img src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/pihwlogotm.png" width=180 />
 <hr>
 
@@ -49,6 +50,11 @@
   </tr>
   </table>
 
+<img style="float:left" src="https://raw.githubusercontent.com/PiHw/Pi-Kitchen/master/markdown_source/markdown/img/warn.png" height=40/>
+<b>WARNING:</b> This recipe also requires the following recipe(s) to be setup on the SD-Card:<p>
+<font color = GREEN>
+<a href="https://github.com/PiHw/Pi-Kitchen/blob/master/recipes/Recipe 001-Startup">Recipe 001-Startup</a><p>
+</font>
 
 <br>
 
