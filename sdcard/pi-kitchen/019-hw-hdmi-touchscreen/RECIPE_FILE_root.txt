@@ -1,0 +1,8 @@
+#
+#Recipe: 019-hw-hdmi-touchscreen
+#- Install HDMI 800x480 Screen
+../../pi-kitchen/019-hw-hdmi-touchscreen/_RUNONCE/hdmi_800_480/install_customhdmi.sh /home/pi/bin/_RUNONCE
+#- Install touchscreen driver and calibration
+../../pi-kitchen/019-hw-hdmi-touchscreen/_RUNONCE/touch_ads7846_xpt2046/install_touch.sh /home/pi/bin/_RUNONCE
+#- Copy xinput_calibrator_pointercal.sh to bin
+../../pi-kitchen/019-hw-hdmi-touchscreen/bin/xinput_calibrator_pointercal.sh /home/pi/bin
